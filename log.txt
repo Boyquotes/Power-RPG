@@ -1,0 +1,2 @@
+gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx => D:\Godot\项目\厉害RPG\Settings\dist\数据表\Item
+gen-INFO:跳过 Settings.gd

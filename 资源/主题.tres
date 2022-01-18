@@ -1,0 +1,94 @@
+[gd_resource type="Theme" load_steps=11 format=2]
+
+[ext_resource path="res://资源/字体/雅宋/雅宋45.tres" type="DynamicFont" id=1]
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 1, 1, 1, 0 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 0.309804 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 1, 1, 1, 0 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 0.509804 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 1, 1, 1, 0 )
+border_width_bottom = 2
+border_color = Color( 0.403922, 0.403922, 0.403922, 1 )
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0, 0, 0, 0.686275 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 1, 1, 1, 1 )
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.717647, 0.0784314, 0.0941176, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0, 0, 0, 1 )
+expand_margin_left = 20.0
+expand_margin_right = 20.0
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+
+[resource]
+default_font = ExtResource( 1 )
+Button/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_focus = Color( 0.94, 0.94, 0.94, 1 )
+Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = SubResource( 13 )
+Button/styles/focus = null
+Button/styles/hover = SubResource( 8 )
+Button/styles/normal = SubResource( 7 )
+Button/styles/pressed = SubResource( 9 )
+LineEdit/styles/focus = SubResource( 4 )
+LineEdit/styles/normal = SubResource( 5 )
+LineEdit/styles/read_only = SubResource( 6 )
+Panel/styles/panel = SubResource( 15 )
+PopupDialog/styles/panel = SubResource( 14 )

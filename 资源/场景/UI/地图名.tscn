@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://资源/字体/思源宋体/思源宋R-100.tres" type="DynamicFont" id=1]
+[ext_resource path="res://资源/字体/思源宋体/思源宋R-80-间距.tres" type="DynamicFont" id=2]
+[ext_resource path="res://脚本/数据/地图名.gd" type="Script" id=3]
+
+[node name="地图名" type="CanvasLayer"]
+script = ExtResource( 3 )
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+margin_bottom = 149.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="二号" type="Label" parent="Panel"]
+anchor_top = 0.376
+anchor_right = 1.0
+anchor_bottom = 1.376
+margin_top = -0.0240021
+margin_bottom = -0.0240021
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0.0980392 )
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = ExtResource( 2 )
+text = "WYTHE FOREST"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="一号" type="Label" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0.0980392 )
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = ExtResource( 1 )
+text = "怀特森林"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

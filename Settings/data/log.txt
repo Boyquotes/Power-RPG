@@ -1,0 +1,14 @@
+gen-WARNING:没有配置文件，将使用内置默认配置
+gen-ERROR:未捕获异常
+Traceback (most recent call last):
+  File "ee.py", line 3, in <module>
+  File "click\core.py", line 1128, in __call__
+  File "click\core.py", line 1053, in main
+  File "click\core.py", line 1659, in invoke
+  File "click\core.py", line 1395, in invoke
+  File "click\core.py", line 754, in invoke
+  File "excelexporter\cli.py", line 107, in gen_all
+  File "excelexporter\exporter.py", line 216, in gen_all
+  File "excelexporter\exporter.py", line 72, in on_completed
+  File "excelexporter\exporter.py", line 195, in completed_gd
+FileNotFoundError: [Errno 2] No such file or directory: 'dist\\Settings.gd'

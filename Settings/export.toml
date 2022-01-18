@@ -1,0 +1,7 @@
+[settings]
+ignore_sheet_mark = "*"
+custom_generator = ""
+completed_hook = ""
+input = "data"
+output = "dist"
+project_root = "../"

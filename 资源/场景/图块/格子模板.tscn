@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://资源/图片/图块/图块.png" type="Texture" id=1]
+[ext_resource path="res://脚本/地图/格子模板.gd" type="Script" id=2]
+
+[node name="格子模板" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 15
+vframes = 15
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 0, -64, 64, 0, 0, 63, -64, 0 )
+
+[connection signal="body_entered" from="." to="." method="_on_格子模板_body_entered"]

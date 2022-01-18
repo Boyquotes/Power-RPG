@@ -1,0 +1,80 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://脚本/UI/弹窗.gd" type="Script" id=1]
+[ext_resource path="res://资源/字体/雅宋/雅宋50.tres" type="DynamicFont" id=2]
+[ext_resource path="res://资源/主题.tres" type="Theme" id=3]
+
+[node name="弹窗" type="PopupDialog"]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -964.5
+margin_top = -245.0
+margin_right = 964.5
+margin_bottom = 245.0
+rect_min_size = Vector2( 747, 490 )
+rect_pivot_offset = Vector2( 374, 244 )
+theme = ExtResource( 3 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="身体" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -964.5
+margin_top = -251.0
+margin_right = 964.5
+margin_bottom = 251.0
+custom_constants/separation = 258
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="信息" type="VBoxContainer" parent="身体"]
+margin_right = 1929.0
+margin_bottom = 173.0
+custom_constants/separation = 30
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="标题" type="Label" parent="身体/信息"]
+margin_right = 1929.0
+margin_bottom = 60.0
+custom_fonts/font = ExtResource( 2 )
+text = "标题"
+align = 1
+
+[node name="ReferenceRect" type="ReferenceRect" parent="身体/信息"]
+margin_top = 90.0
+margin_right = 1929.0
+margin_bottom = 90.0
+border_color = Color( 1, 1, 1, 1 )
+border_width = 0.0
+editor_only = false
+
+[node name="内容" type="Label" parent="身体/信息"]
+margin_top = 120.0
+margin_right = 1929.0
+margin_bottom = 173.0
+text = "你的印记不能为空"
+align = 1
+
+[node name="按钮" type="VBoxContainer" parent="身体"]
+margin_top = 431.0
+margin_right = 1929.0
+margin_bottom = 488.0
+
+[node name="确认" type="Button" parent="身体/按钮"]
+margin_right = 1929.0
+margin_bottom = 57.0
+text = "确认"
+
+[connection signal="pressed" from="身体/按钮/确认" to="." method="_on_确认_pressed"]
