@@ -22,5 +22,4 @@ onready var 弹窗标题 = "出BUG辣！"
 onready var 弹窗内容 = "如果你看到这串话，说明游戏出BUG了，请反馈给开发者。"
 
 func _ready():
-	print(Item_data)
-	print(player["Hp"])
+	pass

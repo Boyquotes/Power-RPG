@@ -123,9 +123,12 @@
 [node name="Test" type="Node2D"]
 script = ExtResource( 4 )
 
-[node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -111
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+margin_right = 1920.0
+margin_bottom = 1080.0
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -137,7 +140,7 @@ cell_size = Vector2( 128, 128 )
 cell_custom_transform = Transform2D( 48, 0, 0, 48, 0, 0 )
 centered_textures = true
 format = 1
-tile_data = PoolIntArray( 131076, 0, 0, 131077, 4, 0, 131083, 0, 0, 327678, 2, 0, 262145, 2, 0, 262147, 3, 0, 262151, 7, 0, 262153, 0, 0, 262155, 6, 0, 262157, 0, 0, 327685, 5, 0, 393224, 0, 0, 458757, 6, 0 )
+tile_data = PoolIntArray( -131067, 3, 0, -131064, 7, 0, -65534, 7, 0, 196607, 3, 0, 131084, 6, 0, 196615, 7, 0, 262147, 1, 0, 262154, 7, 0, 393216, 4, 0, 393221, 2, 0, 393224, 7, 0, 458765, 2, 0, 524291, 7, 0, 589832, 2, 0, 589841, 1, 0, 720893, 5, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 466, 271 )
