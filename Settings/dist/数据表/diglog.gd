@@ -19,15 +19,11 @@ static func data():
 	var True = true
 
 	var data = \
-	{ 200001: { 'buy_price': 100,
-			'desc': '枪柄上印着玫瑰派的手枪。\n\n明明是很普通的手枪，却广为流行，和枪柄上的文字有什么关联吗？',
-			'id': 200001,
-			'name': '玫瑰派',
-			'overlap': 1,
-			'sell_price': 100,
-			'set': 0,
-			'type': 1,
-			'use_effect': 0}}
+	{ 700001: { 'event': 1,
+			'id': 700001,
+			'name': '劫匪',
+			'text': '你真可悲，你什么都不是，你毫无作为，你无足轻重，你一无是处。'
+			}}
 	return data
 
 

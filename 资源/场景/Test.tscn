@@ -120,7 +120,7 @@
 7/shapes = [  ]
 7/z_index = 0
 
-[node name="Test" type="Node2D"]
+[node name="Test" type="Node2D" groups=["地图"]]
 script = ExtResource( 4 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -140,7 +140,7 @@ cell_size = Vector2( 128, 128 )
 cell_custom_transform = Transform2D( 48, 0, 0, 48, 0, 0 )
 centered_textures = true
 format = 1
-tile_data = PoolIntArray( -131067, 3, 0, -131064, 7, 0, -65534, 7, 0, 196607, 3, 0, 131084, 6, 0, 196615, 7, 0, 262147, 1, 0, 262154, 7, 0, 393216, 4, 0, 393221, 2, 0, 393224, 7, 0, 458765, 2, 0, 524291, 7, 0, 589832, 2, 0, 589841, 1, 0, 720893, 5, 0 )
+tile_data = PoolIntArray( -131067, 3, 0, -131064, 7, 0, -65534, 7, 0, -65522, 7, 0, 196607, 3, 0, 131084, 6, 0, 196615, 7, 0, 262147, 1, 0, 262154, 7, 0, 393216, 4, 0, 393221, 2, 0, 393224, 7, 0, 458765, 2, 0, 524291, 7, 0, 589832, 2, 0, 589841, 1, 0, 720893, 5, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 466, 271 )

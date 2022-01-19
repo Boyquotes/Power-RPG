@@ -8,14 +8,6 @@ onready var 存档名1 = $"TextureRect/读取游戏/存档/存档一/存档名"
 func _ready():
 	animation.play("RESET")
 	animation.play("待机")
-#	var dialog_node = DialogNode.instance()
-#	add_child(dialog_node)
-#	dialog_node.show()
-#	dialog_node.show_text("Hello world!")
-#	if 数据.file.file_exists(数据.save_path):
-#		$TextureRect/main/继续.disabled = false
-#	else:
-#		$TextureRect/main/继续.disabled = true
 
 func _physics_process(delta):
 	pass

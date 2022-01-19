@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/textalog/nodes/dialogue_base_node/dialogue_base_node.tscn" type="PackedScene" id=2]
+[ext_resource path="res://脚本/UI/对话.gd" type="Script" id=4]
+
+[node name="对话" type="CanvasLayer" groups=["dialog"]]
+layer = 128
+script = ExtResource( 4 )
+
+[node name="DialogNode" parent="." instance=ExtResource( 2 )]

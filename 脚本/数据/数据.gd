@@ -6,6 +6,16 @@ var Skills_data = Settings.Skills.data()
 var Weapons_data = Settings.Weapons.data()
 var Enemy_data = Settings.Enemy.data()
 var Map_name_data = Settings.Map_name.data()
+var Npc_name_data = Settings.Npc_name.data()
+var Dialog_data = Settings.diglog.data()
+
+var dialog_node = DialogNode.instance()
+var dialog = "res://资源/场景/UI/对话.tscn"
+
+#	if 数据.file.file_exists(数据.save_path):
+#		$TextureRect/main/继续.disabled = false
+#	else:
+#		$TextureRect/main/继续.disabled = true
 
 var player = {
 	"Name": "Zero",
@@ -23,3 +33,4 @@ onready var 弹窗内容 = "如果你看到这串话，说明游戏出BUG了，�
 
 func _ready():
 	pass
+

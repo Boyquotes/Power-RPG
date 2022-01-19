@@ -3,7 +3,7 @@
 [ext_resource path="res://资源/图片/图块/图块.png" type="Texture" id=1]
 [ext_resource path="res://脚本/地图/格子模板.gd" type="Script" id=2]
 
-[node name="格子模板" type="Area2D"]
+[node name="格子模板" type="Area2D" groups=["图块"]]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]

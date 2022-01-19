@@ -13,7 +13,8 @@ func _ready():
 	instance_tiles("驿站", preload("res://资源/场景/图块/驿站.tscn"))
 	instance_tiles("森林", preload("res://资源/场景/图块/森林.tscn"))
 	
-	
+
+
 func instance_tiles(tile_name, scene):
 	var id = tilemap.tile_set.find_tile_by_name(tile_name)
 	assert(id != -1)
@@ -25,3 +26,6 @@ func instance_tiles(tile_name, scene):
 		tilemap.set_cellv(pos, -1)
 		
 
+func dialog():
+	get_tree().call_group("dialog", "start")
+	

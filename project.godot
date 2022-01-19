@@ -148,6 +148,7 @@ config/icon="res://icon.png"
 
 "数据"="*res://脚本/数据/数据.gd"
 "弹窗"="*res://资源/场景/UI/弹窗.tscn"
+"对话"="*res://资源/场景/UI/对话.tscn"
 
 [display]
 
