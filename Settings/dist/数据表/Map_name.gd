@@ -2,24 +2,24 @@
 extends Reference
 class Function extends Reference:
 
-    var func_name
-    var script_path
+	var func_name
+	var script_path
 
-    func _init(script_path, func_name):
-        self.func_name = func_name
-        self.script_path = script_path
+	func _init(script_path, func_name):
+		self.func_name = func_name
+		self.script_path = script_path
 
-    func call(args=[]):
-        var this_script = load(script_path)
-        return this_script.call(self.func_name, args)
+	func call(args=[]):
+		var this_script = load(script_path)
+		return this_script.call(self.func_name, args)
 
 static func data():
-    var None = null
-    var False = false
-    var True = true
+	var None = null
+	var False = false
+	var True = true
 
-    var data = \
-    { 500001: {'id': 500001, '地名': '瑟索', '地名英文': 'Thurso'},
+	var data = \
+	{ 500001: {'id': 500001, '地名': '瑟索', '地名英文': 'Thurso'},
   500002: {'id': 500002, '地名': '蒂尔伯里', '地名英文': 'Tilbury'},
   500003: {'id': 500003, '地名': '托伯莫里', '地名英文': 'Tobermory'},
   500004: {'id': 500004, '地名': '托普瑟姆', '地名英文': 'Topsham'},
@@ -194,15 +194,15 @@ static func data():
   500173: {'id': 500173, '地名': '佩福斯', '地名英文': 'Perforth'},
   500174: {'id': 500174, '地名': '瓦西利科湾', '地名英文': 'Vassiliko Bay'},
   500175: { 'id': 500175,
-            '地名': '德意志民主共和国',
-            '地名英文': 'German Democratic Republic'},
+			'地名': '德意志民主共和国',
+			'地名英文': 'German Democratic Republic'},
   500176: {'id': 500176, '地名': '罗斯托克', '地名英文': 'Rostock'},
   500177: {'id': 500177, '地名': '斯特拉尔松', '地名英文': 'Stralsund'},
   500178: {'id': 500178, '地名': '瓦尔内明德', '地名英文': 'Warnemünde'},
   500179: {'id': 500179, '地名': '维斯马', '地名英文': 'Wismar'},
   500180: { 'id': 500180,
-            '地名': '德意志联邦共和国',
-            '地名英文': 'Federal Republic of Germany'},
+			'地名': '德意志联邦共和国',
+			'地名英文': 'Federal Republic of Germany'},
   500181: {'id': 500181, '地名': '阿尔托纳', '地名英文': 'Altona'},
   500182: {'id': 500182, '地名': '波恩', '地名英文': 'Bonn'},
   500183: {'id': 500183, '地名': '布腊克', '地名英文': 'Brac'},
@@ -887,6 +887,6 @@ static func data():
   500862: {'id': 500862, '地名': '塔伯特', '地名英文': 'Tarbert'},
   500863: {'id': 500863, '地名': '提兹港', '地名英文': 'Teesport'},
   500864: {'id': 500864, '地名': '廷茅斯', '地名英文': 'Tinmouth'}}
-    return data
+	return data
 
 

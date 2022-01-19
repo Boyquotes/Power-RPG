@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://资源/图片/UI/行动点.png" type="Texture" id=1]
+
+[node name="行动点" type="Control"]
+margin_right = 125.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 125, 125 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
