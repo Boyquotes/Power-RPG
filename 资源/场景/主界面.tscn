@@ -1,0 +1,381 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://脚本/UI/主界面.gd" type="Script" id=4]
+[ext_resource path="res://资源/场景/UI/弹窗.tscn" type="PackedScene" id=5]
+[ext_resource path="res://资源/主题.tres" type="Theme" id=6]
+[ext_resource path="res://资源/图片/UI/背景图.png" type="Texture" id=7]
+[ext_resource path="res://资源/图片/立绘/主角1.png" type="Texture" id=8]
+[ext_resource path="res://资源/图片/UI/logo.png" type="Texture" id=9]
+[ext_resource path="res://资源/图片/立绘/主角小.png" type="Texture" id=10]
+[ext_resource path="res://资源/图片/UI/下一个.png" type="Texture" id=11]
+[ext_resource path="res://资源/图片/UI/上一个.png" type="Texture" id=12]
+
+[sub_resource type="Animation" id=11]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect/右边/Label:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TextureRect/角色创建:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TextureRect/右边:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextureRect/主角1:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TextureRect/读取游戏:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "创建角色"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect/角色创建:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TextureRect/右边:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TextureRect/主角1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "待机"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect/右边/Label:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.235294 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "新建存档"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect/读取游戏:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TextureRect/角色创建:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "读取游戏"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureRect/读取游戏:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TextureRect/主角1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TextureRect/右边:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="主界面" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 6 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="弹窗" parent="TextureRect" instance=ExtResource( 5 )]
+visible = false
+
+[node name="主角1" type="TextureRect" parent="TextureRect"]
+anchor_left = 0.177
+anchor_top = 0.5
+anchor_right = 0.177
+anchor_bottom = 0.5
+margin_left = -339.84
+margin_top = -324.0
+margin_right = 338.16
+margin_bottom = 996.0
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="右边" type="VBoxContainer" parent="TextureRect"]
+anchor_left = 0.553
+anchor_top = 0.243
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -0.76001
+margin_top = -0.440002
+custom_constants/separation = 140
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo" type="TextureRect" parent="TextureRect/右边"]
+margin_right = 859.0
+margin_bottom = 492.0
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="TextureRect/右边"]
+margin_top = 632.0
+margin_right = 859.0
+margin_bottom = 685.0
+rect_min_size = Vector2( 300, 53 )
+text = "按 空 格 键"
+valign = 1
+
+[node name="角色创建" type="VBoxContainer" parent="TextureRect"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -327.0
+margin_top = -420.0
+margin_right = 327.0
+margin_bottom = 420.0
+custom_constants/separation = 40
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="立绘选择" type="HBoxContainer" parent="TextureRect/角色创建"]
+margin_right = 654.0
+margin_bottom = 648.0
+custom_constants/separation = 0
+alignment = 1
+
+[node name="上一个" type="TextureButton" parent="TextureRect/角色创建/立绘选择"]
+margin_right = 160.0
+margin_bottom = 648.0
+texture_normal = ExtResource( 12 )
+texture_pressed = ExtResource( 12 )
+texture_hover = ExtResource( 12 )
+
+[node name="立绘" type="TextureRect" parent="TextureRect/角色创建/立绘选择"]
+margin_left = 160.0
+margin_right = 493.0
+margin_bottom = 648.0
+texture = ExtResource( 10 )
+
+[node name="下一个" type="TextureButton" parent="TextureRect/角色创建/立绘选择"]
+margin_left = 493.0
+margin_right = 654.0
+margin_bottom = 648.0
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 11 )
+texture_hover = ExtResource( 11 )
+
+[node name="LineEdit" type="LineEdit" parent="TextureRect/角色创建"]
+margin_top = 688.0
+margin_right = 654.0
+margin_bottom = 743.0
+align = 1
+placeholder_text = "伟大的名字"
+
+[node name="继续" type="Button" parent="TextureRect/角色创建"]
+margin_top = 783.0
+margin_right = 654.0
+margin_bottom = 840.0
+text = "继续"
+
+[node name="读取游戏" type="VBoxContainer" parent="TextureRect"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 57
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="存档" type="HBoxContainer" parent="TextureRect/读取游戏"]
+margin_top = 83.0
+margin_right = 1920.0
+margin_bottom = 807.0
+alignment = 1
+
+[node name="存档一" type="VBoxContainer" parent="TextureRect/读取游戏/存档"]
+margin_left = 793.0
+margin_right = 1126.0
+margin_bottom = 724.0
+custom_constants/separation = 23
+
+[node name="立绘" type="TextureRect" parent="TextureRect/读取游戏/存档/存档一"]
+margin_right = 333.0
+margin_bottom = 648.0
+texture = ExtResource( 10 )
+
+[node name="存档名" type="Label" parent="TextureRect/读取游戏/存档/存档一"]
+margin_top = 671.0
+margin_right = 333.0
+margin_bottom = 724.0
+text = "玩家名"
+align = 1
+
+[node name="按钮" type="VBoxContainer" parent="TextureRect/读取游戏"]
+margin_top = 864.0
+margin_right = 1920.0
+margin_bottom = 996.0
+custom_constants/separation = 18
+
+[node name="读取" type="Button" parent="TextureRect/读取游戏/按钮"]
+margin_right = 1920.0
+margin_bottom = 57.0
+rect_min_size = Vector2( 800, 57 )
+text = "读取"
+
+[node name="新建" type="Button" parent="TextureRect/读取游戏/按钮"]
+margin_top = 75.0
+margin_right = 1920.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 800, 57 )
+text = "新建"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+reset_on_save = false
+anims/RESET = SubResource( 11 )
+"anims/创建角色" = SubResource( 14 )
+"anims/待机" = SubResource( 13 )
+"anims/新建存档" = SubResource( 16 )
+"anims/读取游戏" = SubResource( 15 )
+
+[connection signal="pressed" from="TextureRect/角色创建/继续" to="." method="_on_继续_pressed"]
+[connection signal="pressed" from="TextureRect/读取游戏/按钮/读取" to="." method="_on_读取_pressed"]
+[connection signal="pressed" from="TextureRect/读取游戏/按钮/新建" to="." method="_on_新建存档_pressed"]

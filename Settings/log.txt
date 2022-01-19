@@ -1,0 +1,8 @@
+gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:道具表-Item => D:\Godot\项目\厉害RPG\Settings\dist\数据表\Item
+gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:武器表-Weapons => D:\Godot\项目\厉害RPG\Settings\dist\数据表\Weapons
+gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:技能表-Skills => D:\Godot\项目\厉害RPG\Settings\dist\数据表\Skills
+gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:敌人表-Enemy => D:\Godot\项目\厉害RPG\Settings\dist\数据表\Enemy
+gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:地名表-Map_name => D:\Godot\项目\厉害RPG\Settings\dist\数据表\Map_name
+gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:人名表-Npc_name => D:\Godot\项目\厉害RPG\Settings\dist\数据表\Npc_name
+gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:对话表-diglog => D:\Godot\项目\厉害RPG\Settings\dist\数据表\diglog
+gen-INFO:跳过 Settings.gd
