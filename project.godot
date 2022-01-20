@@ -14,6 +14,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://addons/textalog/resources/character_class/character_class.gd"
 }, {
+"base": "Reference",
+"class": "DTS",
+"language": "GDScript",
+"path": "res://addons/dialogic/Localization/translation_service.gd"
+}, {
 "base": "DialogNode",
 "class": "DialogBubble",
 "language": "GDScript",
@@ -28,6 +33,31 @@ _global_script_classes=[ {
 "class": "DialogNode",
 "language": "GDScript",
 "path": "res://addons/textalog/nodes/dialogue_base_node/dialogue_base_node.gd"
+}, {
+"base": "Node",
+"class": "Dialogic",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicClass.gd"
+}, {
+"base": "Control",
+"class": "DialogicBackgroundMusic",
+"language": "GDScript",
+"path": "res://addons/dialogic/Nodes/BackgroundMusic.gd"
+}, {
+"base": "Node",
+"class": "DialogicDefinitionsUtil",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicDefinitionsUtil.gd"
+}, {
+"base": "Reference",
+"class": "DialogicResources",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicResources.gd"
+}, {
+"base": "Reference",
+"class": "DialogicUtil",
+"language": "GDScript",
+"path": "res://addons/dialogic/Other/DialogicUtil.gd"
 }, {
 "base": "Resource",
 "class": "Event",
@@ -116,9 +146,15 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Character": "res://addons/textalog/assets/icons/character_icon.png",
+"DTS": "",
 "DialogBubble": "",
 "DialogManager": "",
 "DialogNode": "",
+"Dialogic": "",
+"DialogicBackgroundMusic": "",
+"DialogicDefinitionsUtil": "",
+"DialogicResources": "",
+"DialogicUtil": "",
 "Event": "res://addons/event_system_plugin/assets/icons/timeline_icon.png",
 "EventCall": "",
 "EventChangeTimeline": "",
@@ -149,6 +185,7 @@ config/icon="res://icon.png"
 "数据"="*res://脚本/数据/数据.gd"
 "弹窗"="*res://资源/场景/UI/弹窗.tscn"
 "对话"="*res://资源/场景/UI/对话.tscn"
+changer_scence="*res://资源/场景/UI/场景过渡.tscn"
 
 [display]
 
@@ -161,7 +198,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/GDExcelExporter/plugin.cfg", "res://addons/event_system_plugin/plugin.cfg", "res://addons/textalog/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/GDExcelExporter/plugin.cfg", "res://addons/dialogic/plugin.cfg" )
 
 [importer_defaults]
 

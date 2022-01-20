@@ -1,10 +1,12 @@
 extends CanvasLayer
 
-onready var dialog = $DialogNode
 
 func _ready():
 	pass
 
 func start():
-	dialog.show()
-	dialog.show_text(数据.Dialog_data[700001].text)
+	Dialogic.start("test")
+
+func 进入战斗():
+#	get_tree().change_scene("res://资源/场景/战斗系统.tscn")
+	pass

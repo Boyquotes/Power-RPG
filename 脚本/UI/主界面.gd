@@ -9,9 +9,6 @@ func _ready():
 	animation.play("RESET")
 	animation.play("待机")
 
-func _physics_process(delta):
-	pass
-
 func _input(event):
 	if event.is_action_released("space"):
 		if 数据.file.file_exists(数据.save_path):
@@ -43,7 +40,7 @@ func _on_继续_pressed():
 		数据.file.store_var(数据.player)
 		数据.file.close()
 		print(数据.player["Name"])
-		get_tree().change_scene("res://资源/场景/Test.tscn")
+		changer_scence.changer("res://资源/场景/Test.tscn")
 	pass
 
 
@@ -56,5 +53,5 @@ func _on_新建存档_pressed():
 
 
 func _on_读取_pressed():
-	get_tree().change_scene("res://资源/场景/Test.tscn")
+	changer_scence.changer("res://资源/场景/Test.tscn")
 	pass

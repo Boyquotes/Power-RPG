@@ -21,11 +21,18 @@ var player = {
 	"Name": "Zero",
 	"Attack": 100,
 	"Hp": 100,
-	"Speed": 100,
-	"Cost": 0
+	"Speed": 20,
+	"Cost": 0,
+	"Img": "res://资源/图片/立绘/主角小.png",
+	"Skills": "300001"
 }
 
+var player_skills = [300001]
+
 var file = File.new()
+
+var 这次战斗敌人 = "出BUG了"
+var 这次战斗敌人名 = "出BUG了"
 
 onready var save_nodes = get_tree().get_nodes_in_group("持久化")
 onready var 弹窗标题 = "出BUG辣！"

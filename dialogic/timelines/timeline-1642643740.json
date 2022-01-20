@@ -1,0 +1,39 @@
+{
+	"events": [
+		{
+			"action": "join",
+			"character": "character-1642643600.json",
+			"event_id": "dialogic_002",
+			"mirror": false,
+			"portrait": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			}
+		},
+		{
+			"character": "character-1642643600.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "你真可悲，你什么都不是，你毫无作为，你无足轻重，你一无是处。"
+		},
+		{
+			"call_node": {
+				"arguments": [
+
+				],
+				"method_name": "",
+				"target_node_path": "弹窗"
+			},
+			"event_id": "dialogic_042"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1642643740.json",
+		"name": "test"
+	}
+}
