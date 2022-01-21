@@ -19,7 +19,7 @@ static func data():
 	var True = true
 
 	var data = \
-	{300001: {'attack': 999, 'desc': '跳脸攻击', 'id': 300001, 'name': '跳脸攻击'}}
+	{300001: {'attack': 999, 'desc': '跳脸攻击', 'id': 300001, 'name': '跳脸攻击', 'img':"res://资源/图片/UI/道具.png" ,}}
 	return data
 
 

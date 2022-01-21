@@ -21,7 +21,7 @@ var player = {
 	"Name": "Zero",
 	"Attack": 100,
 	"Hp": 100,
-	"Speed": 20,
+	"Speed": 2,
 	"Cost": 0,
 	"Img": "res://资源/图片/立绘/主角小.png",
 	"Skills": "300001"
@@ -33,10 +33,14 @@ var file = File.new()
 
 var 这次战斗敌人 = "出BUG了"
 var 这次战斗敌人名 = "出BUG了"
+var 行动点 = 0
 
 onready var save_nodes = get_tree().get_nodes_in_group("持久化")
 onready var 弹窗标题 = "出BUG辣！"
 onready var 弹窗内容 = "如果你看到这串话，说明游戏出BUG了，请反馈给开发者。"
+
+func _大地图初始化():
+	pass
 
 func _ready():
 	pass

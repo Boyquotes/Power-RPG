@@ -12,6 +12,7 @@ func _ready():
 	instance_tiles("劫匪", preload("res://资源/场景/图块/劫匪.tscn"))
 	instance_tiles("驿站", preload("res://资源/场景/图块/驿站.tscn"))
 	instance_tiles("森林", preload("res://资源/场景/图块/森林.tscn"))
+	pass
 	
 
 

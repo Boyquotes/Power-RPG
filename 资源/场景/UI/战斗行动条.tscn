@@ -61,6 +61,8 @@ margin_left = -24.0
 margin_top = 762.0
 margin_right = 101.0
 margin_bottom = 1016.0
+rect_rotation = 180.0
+rect_pivot_offset = Vector2( 62, 127 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -68,8 +70,8 @@ __meta__ = {
 [node name="行动点" type="VBoxContainer" parent="Panel/CenterContainer" groups=["行动点容器"]]
 margin_right = 125.0
 margin_bottom = 254.0
-grow_horizontal = 2
-grow_vertical = 2
+rect_min_size = Vector2( 125, 254 )
+rect_pivot_offset = Vector2( 62, 127 )
 script = ExtResource( 5 )
 
 [node name="行动点" parent="Panel/CenterContainer/行动点" instance=ExtResource( 3 )]
