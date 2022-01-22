@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://资源/场景/UI/背景.tscn" type="PackedScene" id=1]
 [ext_resource path="res://资源/场景/UI/战斗选项.tscn" type="PackedScene" id=2]
@@ -6,6 +6,37 @@
 [ext_resource path="res://资源/图片/立绘/主角小.png" type="Texture" id=4]
 [ext_resource path="res://脚本/功能/战斗系统.gd" type="Script" id=5]
 [ext_resource path="res://资源/场景/UI/战斗行动条-敌人.tscn" type="PackedScene" id=6]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("玩家:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 388, 326 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "玩家攻击"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("玩家:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 388, 326 ), Vector2( 1396, 286 ) ]
+}
 
 [node name="战斗系统" type="Node2D" groups=["战斗系统"]]
 script = ExtResource( 5 )
@@ -25,12 +56,12 @@ margin_left = -0.0400391
 margin_right = 0.0
 
 [node name="玩家" type="Sprite" parent="."]
-position = Vector2( 532.75, 582.432 )
+position = Vector2( 388, 326 )
 scale = Vector2( 0.45, 0.45 )
 texture = ExtResource( 4 )
 
 [node name="敌人" type="Sprite" parent="."]
-position = Vector2( 1336, 304 )
+position = Vector2( 1512, 324 )
 scale = Vector2( 0.45, 0.45 )
 texture = ExtResource( 4 )
 flip_h = true
@@ -38,5 +69,9 @@ flip_h = true
 [node name="玩家回合" type="Timer" parent="."]
 
 [node name="敌人回合" type="Timer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+"anims/玩家攻击" = SubResource( 2 )
 
 [connection signal="timeout" from="玩家回合" to="." method="_on_玩家_timeout"]

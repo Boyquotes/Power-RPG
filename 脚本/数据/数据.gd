@@ -21,7 +21,7 @@ var player = {
 	"Name": "Zero",
 	"Attack": 100,
 	"Hp": 100,
-	"Speed": 2,
+	"Speed": 5,
 	"Cost": 0,
 	"Img": "res://资源/图片/立绘/主角小.png",
 	"Skills": "300001"

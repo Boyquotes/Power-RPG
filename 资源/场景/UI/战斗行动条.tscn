@@ -69,7 +69,7 @@ __meta__ = {
 
 [node name="行动点" type="VBoxContainer" parent="Panel/CenterContainer" groups=["行动点容器"]]
 margin_right = 125.0
-margin_bottom = 254.0
+margin_bottom = 641.0
 rect_min_size = Vector2( 125, 254 )
 rect_pivot_offset = Vector2( 62, 127 )
 script = ExtResource( 5 )
@@ -79,5 +79,17 @@ script = ExtResource( 5 )
 [node name="行动点2" parent="Panel/CenterContainer/行动点" instance=ExtResource( 3 )]
 margin_top = 129.0
 margin_bottom = 254.0
+
+[node name="行动点3" parent="Panel/CenterContainer/行动点" instance=ExtResource( 3 )]
+margin_top = 258.0
+margin_bottom = 383.0
+
+[node name="行动点4" parent="Panel/CenterContainer/行动点" instance=ExtResource( 3 )]
+margin_top = 387.0
+margin_bottom = 512.0
+
+[node name="行动点5" parent="Panel/CenterContainer/行动点" instance=ExtResource( 3 )]
+margin_top = 516.0
+margin_bottom = 641.0
 
 [node name="Tween" type="Tween" parent="."]

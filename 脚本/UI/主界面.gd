@@ -40,7 +40,7 @@ func _on_继续_pressed():
 		数据.file.store_var(数据.player)
 		数据.file.close()
 		print(数据.player["Name"])
-		changer_scence.changer("res://资源/场景/Test.tscn")
+		changer_scence.changer("res://资源/场景/Test2.tscn")
 	pass
 
 
@@ -53,5 +53,5 @@ func _on_新建存档_pressed():
 
 
 func _on_读取_pressed():
-	changer_scence.changer("res://资源/场景/Test.tscn")
+	changer_scence.changer("res://资源/场景/Test2.tscn")
 	pass
