@@ -20,14 +20,14 @@ static func data():
 
 	var data = \
 	{ 400001: { ' hp': 999,
-			' mp': 999,
+			'mp': 999,
 			'attack': 999,
 			'defense': 999,
+			'speed': 5,
 			'desc': '一个彻彻底底的坏蛋',
 			'id': 400001,
 			'img': 'res://资源/图片/立绘/主角小.png',
 			'name': 'RUI·陈',
-			'speed': 999,
 			'type': 1}}
 	return data
 

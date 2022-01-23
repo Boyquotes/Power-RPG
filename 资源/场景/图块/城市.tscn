@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://资源/场景/图块/格子模板.tscn" type="PackedScene" id=1]
+[ext_resource path="res://脚本/地图/图块/城市.gd" type="Script" id=2]
+
+[node name="城市" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Sprite" parent="." index="0"]
+frame = 76

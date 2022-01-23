@@ -9,7 +9,6 @@ var Map_name_data = Settings.Map_name.data()
 var Npc_name_data = Settings.Npc_name.data()
 var Dialog_data = Settings.diglog.data()
 
-var dialog_node = DialogNode.instance()
 var dialog = "res://资源/场景/UI/对话.tscn"
 
 #	if 数据.file.file_exists(数据.save_path):
@@ -33,6 +32,7 @@ var file = File.new()
 
 var 这次战斗敌人 = "出BUG了"
 var 这次战斗敌人名 = "出BUG了"
+var 敌人立绘 = "res://资源/图片/立绘/主角小.png"
 var 行动点 = 0
 
 onready var save_nodes = get_tree().get_nodes_in_group("持久化")

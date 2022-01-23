@@ -21,14 +21,12 @@
 			"text": "你真可悲，你什么都不是，你毫无作为，你无足轻重，你一无是处。"
 		},
 		{
-			"call_node": {
-				"arguments": [
-
-				],
-				"method_name": "",
-				"target_node_path": "弹窗"
-			},
-			"event_id": "dialogic_042"
+			"definition": "1642862954-787",
+			"event_id": "dialogic_014",
+			"operation": "=",
+			"random_upper_limit": 100,
+			"set_random": false,
+			"set_value": "true"
 		}
 	],
 	"metadata": {
