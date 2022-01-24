@@ -38,11 +38,6 @@ _global_script_classes=[ {
 "class": "DialogicUtil",
 "language": "GDScript",
 "path": "res://addons/dialogic/Other/DialogicUtil.gd"
-}, {
-"base": "Reference",
-"class": "Settings",
-"language": "GDScript",
-"path": "res://Settings/dist/Settings.gd"
 } ]
 _global_script_class_icons={
 "DTS": "",
@@ -50,8 +45,7 @@ _global_script_class_icons={
 "DialogicBackgroundMusic": "",
 "DialogicDefinitionsUtil": "",
 "DialogicResources": "",
-"DialogicUtil": "",
-"Settings": ""
+"DialogicUtil": ""
 }
 
 [application]
@@ -62,6 +56,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
+Settings="*res://Settings/dist/Settings.gd"
 "数据"="*res://脚本/数据/数据.gd"
 "弹窗"="*res://资源/场景/UI/弹窗.tscn"
 "对话"="*res://资源/场景/UI/对话.tscn"
