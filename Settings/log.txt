@@ -7,3 +7,4 @@ gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:人名�
 gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:对话表-diglog => D:\Godot\项目\厉害RPG\Settings\dist\数据表\diglog
 gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:装备表-Armor => D:\Godot\项目\厉害RPG\Settings\dist\数据表\Armor
 gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:类型表-type => D:\Godot\项目\厉害RPG\Settings\dist\数据表\type
+gen-INFO:跳过 Settings.gd

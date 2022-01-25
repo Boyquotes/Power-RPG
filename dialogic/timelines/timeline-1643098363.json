@@ -1,0 +1,19 @@
+{
+	"events": [
+		{
+			"event_id": "dialogic_024",
+			"set_theme": "theme-1643098154.cfg"
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "你走进一片森林，捡到了一片叶子。"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.3",
+		"file": "timeline-1643098363.json",
+		"name": "奇遇测试"
+	}
+}
