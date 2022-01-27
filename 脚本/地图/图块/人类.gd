@@ -7,6 +7,7 @@ var human = tele.new()
 var dialog = Dialogic.start("测试2")
 
 func _ready():
+	print("人类准备好了")
 	var number = randi()%1123+600001
 	npc_name = 数据.Npc_name_data[number]
 	human.name = npc_name.人名

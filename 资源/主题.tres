@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=11 format=2]
+[gd_resource type="Theme" load_steps=13 format=2]
 
 [ext_resource path="res://资源/字体/雅宋/雅宋45.tres" type="DynamicFont" id=1]
 
@@ -73,6 +73,18 @@ expand_margin_right = 20.0
 expand_margin_top = 20.0
 expand_margin_bottom = 20.0
 
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_top = 4
+border_width_bottom = 4
+border_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_top = 4
+border_width_bottom = 4
+border_color = Color( 0, 0, 0, 1 )
+
 [resource]
 default_font = ExtResource( 1 )
 Button/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
@@ -92,3 +104,5 @@ LineEdit/styles/normal = SubResource( 5 )
 LineEdit/styles/read_only = SubResource( 6 )
 Panel/styles/panel = SubResource( 15 )
 PopupDialog/styles/panel = SubResource( 14 )
+ProgressBar/styles/bg = SubResource( 16 )
+ProgressBar/styles/fg = SubResource( 17 )

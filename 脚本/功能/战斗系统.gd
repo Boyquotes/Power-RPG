@@ -22,7 +22,6 @@ func _ready():
 	初始化()
 	
 
-
 func 初始化():
 	数据.行动点 = 0
 	time.wait_time = speed

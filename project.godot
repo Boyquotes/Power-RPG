@@ -61,6 +61,7 @@ Settings="*res://Settings/dist/Settings.gd"
 "弹窗"="*res://资源/场景/UI/弹窗.tscn"
 "对话"="*res://资源/场景/UI/对话.tscn"
 changer_scence="*res://资源/场景/UI/场景过渡.tscn"
+Uhd="*res://资源/场景/UI/UHD.tscn"
 
 [display]
 
