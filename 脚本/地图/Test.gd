@@ -40,7 +40,6 @@ func _ready():
 	Uhd.layer = 1
 	
 
-
 func instance_tiles(tile_name, scene):
 	var id = tilemap.tile_set.find_tile_by_name(tile_name)
 	assert(id != -1)

@@ -8,3 +8,5 @@ script = ExtResource( 2 )
 
 [node name="Sprite" parent="." index="0"]
 frame = 94
+
+[connection signal="body_entered" from="." to="." method="_on_乞丐_body_entered"]

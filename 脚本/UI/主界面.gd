@@ -6,6 +6,7 @@ onready var r = $TextureRect/右边
 onready var 存档名1 = $"TextureRect/读取游戏/存档/存档一/存档名"
 
 var npc_n = "默认NPC"
+var on_main = true
 
 func _ready():
 	animation.play("RESET")
@@ -16,19 +17,23 @@ func _ready():
 
 func _input(event):
 	if event.is_action_released("space"):
-		print("存档存在")
-		if 数据.file.file_exists(数据.save_path):
-			数据.file.open(数据.save_path, File.READ)
-			数据.player = 数据.file.get_var()
-			数据.file.close()
-			存档名1.text = 数据.player["Name"]
-			$TextureRect/读取游戏.show()
-			animation.play("读取游戏")
-			yield(animation, "animation_finished")
-		else:
-			$TextureRect/角色创建.show()
-			animation.play("创建角色")
-			yield(animation, "animation_finished")
+		if on_main == true:
+			print("存档存在")
+			if 数据.file.file_exists(数据.save_path):
+				数据.file.open(数据.save_path, File.READ)
+				数据.player = 数据.file.get_var()
+				数据.file.close()
+				存档名1.text = 数据.player["Name"]
+				on_main = false
+				$TextureRect/读取游戏.show()
+				animation.play("读取游戏")
+				yield(animation, "animation_finished")
+			else:
+				on_main = false
+				$TextureRect/角色创建.show()
+				animation.play("创建角色")
+				yield(animation, "animation_finished")
+		
 
 func _on_继续_pressed():
 	if player_name.text == "":
