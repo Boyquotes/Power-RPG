@@ -37,7 +37,7 @@ func _ready():
 	instance_tiles("陷阱", preload("res://资源/场景/图块/陷阱.tscn"))
 	instance_tiles("高原", preload("res://资源/场景/图块/高原.tscn"))
 	instance_tiles("人类", preload("res://资源/场景/图块/人类.tscn"))
-	Uhd.layer = 1
+	数据.在大地图 = true
 	
 
 func instance_tiles(tile_name, scene):

@@ -11,7 +11,7 @@ func _ready():
 	var number = randi()%1123+600001
 	npc_name = 数据.Npc_name_data[number]
 	human.name = npc_name.人名
-	print(human.name)
+	print("生成人名:" + human.name)
 	
 
 func _on_人类_body_entered(body):

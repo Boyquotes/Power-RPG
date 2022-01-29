@@ -8,6 +8,7 @@ extents = Vector2( 21, 60.25 )
 
 [node name="Player" type="KinematicBody2D" groups=["持久化"]]
 script = ExtResource( 2 )
+speed = 250
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.2, 0.2 )

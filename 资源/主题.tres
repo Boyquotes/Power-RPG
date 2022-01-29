@@ -1,6 +1,7 @@
-[gd_resource type="Theme" load_steps=13 format=2]
+[gd_resource type="Theme" load_steps=17 format=2]
 
 [ext_resource path="res://资源/字体/雅宋/雅宋45.tres" type="DynamicFont" id=1]
+[ext_resource path="res://资源/图片/UI/指示器2.png" type="Texture" id=2]
 
 [sub_resource type="StyleBoxFlat" id=13]
 bg_color = Color( 1, 1, 1, 0 )
@@ -85,6 +86,16 @@ border_width_top = 4
 border_width_bottom = 4
 border_color = Color( 0, 0, 0, 1 )
 
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 1, 1, 1, 1 )
+border_width_left = 4
+
 [resource]
 default_font = ExtResource( 1 )
 Button/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
@@ -106,3 +117,9 @@ Panel/styles/panel = SubResource( 15 )
 PopupDialog/styles/panel = SubResource( 14 )
 ProgressBar/styles/bg = SubResource( 16 )
 ProgressBar/styles/fg = SubResource( 17 )
+VSlider/icons/grabber = ExtResource( 2 )
+VSlider/icons/grabber_disabled = ExtResource( 2 )
+VSlider/icons/grabber_highlight = ExtResource( 2 )
+VSlider/styles/grabber_area = SubResource( 18 )
+VSlider/styles/grabber_area_highlight = SubResource( 19 )
+VSlider/styles/slider = SubResource( 20 )
