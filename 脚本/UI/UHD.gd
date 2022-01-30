@@ -2,10 +2,7 @@ extends CanvasLayer
 
 var 打开UHD
 
-func _physics_process(delta):
-	get_input()
-
-func get_input():
+func _input(event):
 	if Input.is_action_just_pressed("esc"):
 		if 数据.在大地图 == true:
 			if 打开UHD == false:

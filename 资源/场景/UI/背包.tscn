@@ -2,12 +2,10 @@
 
 [ext_resource path="res://资源/主题.tres" type="Theme" id=1]
 [ext_resource path="res://资源/字体/思源宋体/思源宋R-80.tres" type="DynamicFont" id=2]
-[ext_resource path="res://资源/字体/思源宋体/思源宋R-100.tres" type="DynamicFont" id=4]
+[ext_resource path="res://资源/场景/UI/占位符.tscn" type="PackedScene" id=3]
+[ext_resource path="res://资源/字体/思源宋体/思源宋R-100-阴影.tres" type="DynamicFont" id=4]
 [ext_resource path="res://资源/场景/UI/背景.tscn" type="PackedScene" id=5]
 [ext_resource path="res://脚本/UI/背包.gd" type="Script" id=6]
-
-[sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 1, 1, 1, 0 )
@@ -40,18 +38,14 @@ custom_constants/separation = 26
 
 [node name="容器2" type="HBoxContainer" parent="容器1/功能"]
 margin_right = 1320.0
-margin_bottom = 1035.0
+margin_bottom = 1080.0
 
-[node name="占位符" type="Panel" parent="容器1/功能/容器2"]
-margin_right = 25.0
-margin_bottom = 1035.0
-rect_min_size = Vector2( 25, 909 )
-custom_styles/panel = SubResource( 2 )
+[node name="占位符" parent="容器1/功能/容器2" instance=ExtResource( 3 )]
 
 [node name="容器3" type="VBoxContainer" parent="容器1/功能/容器2"]
 margin_left = 29.0
 margin_right = 1229.0
-margin_bottom = 1035.0
+margin_bottom = 1080.0
 custom_constants/separation = 40
 
 [node name="标题" type="HBoxContainer" parent="容器1/功能/容器2/容器3"]
@@ -62,8 +56,6 @@ rect_min_size = Vector2( 312, 145 )
 [node name="大标题" type="Label" parent="容器1/功能/容器2/容器3/标题"]
 margin_right = 209.0
 margin_bottom = 145.0
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 0.537255 )
 custom_fonts/font = ExtResource( 4 )
 text = "背包"
 
@@ -73,7 +65,7 @@ margin_top = 46.0
 margin_right = 316.0
 margin_bottom = 99.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0.392157 )
 text = "BAG"
 
 [node name="装备格" type="HBoxContainer" parent="容器1/功能/容器2/容器3"]

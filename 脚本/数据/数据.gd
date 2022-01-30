@@ -41,6 +41,13 @@ var player = {
 	"Bag": 100001
 }
 
+#任务相关
+var todo_title = "出BUG的任务"
+var todo_text = "如果你看到这串文字，说明你的游戏出BUG了，请反馈给开发者。"
+var todo1_name = "BUG任务一"
+var todo2_name = "BUG任务二"
+var todo3_name = "BUG任务三"
+
 #文件相关
 var file = File.new()
 
@@ -54,7 +61,6 @@ var 行动点 = 0
 func add_item(item_id):
 	player_bag.push_back(item_id)
 	
-	
 
 #系统相关
 onready var save_nodes = get_tree().get_nodes_in_group("持久化")
@@ -62,8 +68,6 @@ onready var 弹窗标题 = "出BUG辣！"
 onready var 弹窗内容 = "如果你看到这串话，说明游戏出BUG了，请反馈给开发者。"
 
 #函数
-
-
 func _ready():
 	pass
 

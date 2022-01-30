@@ -10,6 +10,7 @@ func _ready():
 
 func 初始化():
 	print(数据.player_bag)
+	#读取玩家背包数据，添加格子数量
 	for i in 数据.player_bag.size():
 		grid.add_child(item)
 	
