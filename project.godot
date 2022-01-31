@@ -74,7 +74,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/Quest_edit/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/hierarchical_finite_state_machine/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/Quest_edit/plugin.cfg", "res://addons/dialogic/plugin.cfg" )
 
 [importer_defaults]
 

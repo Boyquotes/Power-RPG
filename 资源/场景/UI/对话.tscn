@@ -2,6 +2,7 @@
 
 [ext_resource path="res://脚本/UI/对话.gd" type="Script" id=4]
 
+
 [node name="对话" type="CanvasLayer" groups=["dialog"]]
 layer = 128
 script = ExtResource( 4 )

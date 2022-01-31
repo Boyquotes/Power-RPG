@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=32 format=2]
+[gd_resource type="Theme" load_steps=17 format=2]
 
 [ext_resource path="res://资源/字体/雅宋/雅宋45.tres" type="DynamicFont" id=1]
 [ext_resource path="res://资源/图片/UI/方块指示器.png" type="Texture" id=2]
@@ -35,13 +35,6 @@ border_width_right = 2
 border_width_bottom = 2
 border_color = Color( 1, 1, 1, 1 )
 
-[sub_resource type="StyleBoxFlat" id=35]
-bg_color = Color( 0, 0, 0, 1 )
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.6, 0.6, 0.6, 0 )
 border_width_bottom = 2
@@ -58,7 +51,7 @@ border_width_bottom = 2
 border_color = Color( 0.403922, 0.403922, 0.403922, 1 )
 
 [sub_resource type="StyleBoxFlat" id=15]
-bg_color = Color( 0, 0, 0, 0 )
+bg_color = Color( 0, 0, 0, 0.686275 )
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -93,83 +86,6 @@ border_width_top = 4
 border_width_bottom = 4
 border_color = Color( 0, 0, 0, 1 )
 
-[sub_resource type="StyleBoxFlat" id=21]
-bg_color = Color( 0.733333, 0.733333, 0.733333, 0 )
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color( 1, 1, 1, 1 )
-
-[sub_resource type="StyleBoxFlat" id=22]
-bg_color = Color( 0, 0, 0, 0 )
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color( 0.486275, 0.486275, 0.486275, 1 )
-
-[sub_resource type="StyleBoxFlat" id=23]
-bg_color = Color( 0, 0, 0, 0 )
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_color = Color( 0.254902, 0.254902, 0.254902, 1 )
-corner_detail = 1
-
-[sub_resource type="StyleBoxFlat" id=24]
-bg_color = Color( 1, 1, 1, 0 )
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_color = Color( 1, 1, 1, 1 )
-
-[sub_resource type="StyleBoxFlat" id=25]
-bg_color = Color( 1, 1, 1, 0 )
-
-[sub_resource type="StyleBoxFlat" id=26]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
-[sub_resource type="StyleBoxFlat" id=27]
-bg_color = Color( 0, 0, 0, 1 )
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color( 1, 1, 1, 1 )
-
-[sub_resource type="StyleBoxFlat" id=28]
-bg_color = Color( 0, 0, 0, 1 )
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color( 1, 1, 1, 1 )
-
-[sub_resource type="StyleBoxFlat" id=29]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
-[sub_resource type="StyleBoxFlat" id=30]
-bg_color = Color( 0.6, 0.6, 0.6, 0 )
-
-[sub_resource type="StyleBoxFlat" id=31]
-bg_color = Color( 0, 0, 0, 0 )
-border_width_bottom = 2
-border_color = Color( 1, 1, 1, 1 )
-
-[sub_resource type="StyleBoxFlat" id=32]
-bg_color = Color( 0, 0, 0, 0 )
-border_width_bottom = 2
-border_color = Color( 0.737255, 0.0901961, 0.101961, 1 )
-
-[sub_resource type="StyleBoxFlat" id=33]
-bg_color = Color( 1, 1, 1, 1 )
-
-[sub_resource type="StyleBoxFlat" id=34]
-bg_color = Color( 1, 1, 1, 0 )
-border_width_left = 7
-border_color = Color( 0.8, 0.8, 0.8, 0 )
-
 [sub_resource type="StyleBoxFlat" id=18]
 bg_color = Color( 1, 1, 1, 1 )
 
@@ -194,7 +110,6 @@ Button/styles/focus = null
 Button/styles/hover = SubResource( 8 )
 Button/styles/normal = SubResource( 7 )
 Button/styles/pressed = SubResource( 9 )
-ColorPickerButton/styles/normal = SubResource( 35 )
 LineEdit/styles/focus = SubResource( 4 )
 LineEdit/styles/normal = SubResource( 5 )
 LineEdit/styles/read_only = SubResource( 6 )
@@ -202,20 +117,6 @@ Panel/styles/panel = SubResource( 15 )
 PopupDialog/styles/panel = SubResource( 14 )
 ProgressBar/styles/bg = SubResource( 16 )
 ProgressBar/styles/fg = SubResource( 17 )
-TabContainer/styles/panel = SubResource( 21 )
-TabContainer/styles/tab_bg = SubResource( 22 )
-TabContainer/styles/tab_disabled = SubResource( 23 )
-TabContainer/styles/tab_fg = SubResource( 24 )
-TextEdit/styles/completion = SubResource( 25 )
-TextEdit/styles/focus = SubResource( 26 )
-TextEdit/styles/normal = SubResource( 27 )
-TextEdit/styles/read_only = SubResource( 28 )
-Tree/styles/bg = SubResource( 29 )
-Tree/styles/bg_focus = SubResource( 30 )
-Tree/styles/selected = SubResource( 31 )
-Tree/styles/selected_focus = SubResource( 32 )
-VScrollBar/styles/grabber = SubResource( 33 )
-VScrollBar/styles/scroll = SubResource( 34 )
 VSlider/icons/grabber = ExtResource( 2 )
 VSlider/icons/grabber_disabled = ExtResource( 2 )
 VSlider/icons/grabber_highlight = ExtResource( 2 )

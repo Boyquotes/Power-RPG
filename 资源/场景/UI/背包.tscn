@@ -13,7 +13,7 @@ bg_color = Color( 1, 1, 1, 0 )
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 1, 1, 1 )
 
-[node name="背包" type="Control"]
+[node name="背包" type="Control" groups=["背包"]]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
@@ -73,6 +73,7 @@ margin_top = 185.0
 margin_right = 1200.0
 margin_bottom = 1035.0
 rect_min_size = Vector2( 1200, 850 )
+custom_constants/separation = -58
 
 [node name="格子" type="GridContainer" parent="容器1/功能/容器2/容器3/装备格"]
 margin_right = 1100.0
@@ -83,8 +84,8 @@ custom_constants/hseparation = 30
 columns = 5
 
 [node name="滑动条" type="VSlider" parent="容器1/功能/容器2/容器3/装备格"]
-margin_left = 1104.0
-margin_right = 1134.0
+margin_left = 1042.0
+margin_right = 1163.0
 margin_bottom = 850.0
 rect_min_size = Vector2( 16, 0 )
 rounded = true

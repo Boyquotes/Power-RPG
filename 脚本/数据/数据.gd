@@ -17,6 +17,8 @@ var loader = ResourceInteractiveLoader
 var load_path = "res://资源/场景/Test3.tscn"
 
 #关于大地图
+var big_map = []
+
 var 在大地图 = false
 
 func 大地图初始化():
@@ -29,7 +31,6 @@ func 大地图初始化():
 
 #玩家相关
 var player_skills = [300001]
-var player_bag = []
 var player = {
 	"Name": "Zero",
 	"Attack": 100,
@@ -58,6 +59,8 @@ var 敌人立绘 = "res://资源/图片/立绘/主角小.png"
 var 行动点 = 0
 
 #背包相关
+var player_bag_temp
+var player_bag = []
 func add_item(item_id):
 	player_bag.push_back(item_id)
 	

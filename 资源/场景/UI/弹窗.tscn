@@ -4,6 +4,7 @@
 [ext_resource path="res://资源/字体/雅宋/雅宋50.tres" type="DynamicFont" id=2]
 [ext_resource path="res://资源/主题.tres" type="Theme" id=3]
 
+
 [node name="弹窗" type="PopupDialog"]
 visible = true
 anchor_left = 0.5

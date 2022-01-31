@@ -3,6 +3,7 @@
 [ext_resource path="res://资源/场景/图块/格子模板.tscn" type="PackedScene" id=1]
 [ext_resource path="res://脚本/地图/图块/奇遇.gd" type="Script" id=2]
 
+
 [node name="奇遇" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 

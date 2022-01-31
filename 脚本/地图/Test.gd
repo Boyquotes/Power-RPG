@@ -2,8 +2,6 @@ extends Node2D
 
 onready var tilemap = $TileMap2
 
-var noise = OpenSimplexNoise.new()
-
 func _ready():
 	instance_tiles("奇遇", preload("res://资源/场景/图块/奇遇.tscn"))
 	instance_tiles("BOSS", preload("res://资源/场景/图块/BOSS.tscn"))
