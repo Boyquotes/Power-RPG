@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://资源/地图/图块.tres" type="TileSet" id=1]
 [ext_resource path="res://资源/场景/实体/Player.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://脚本/地图/Test.gd" type="Script" id=4]
 [ext_resource path="res://资源/场景/UI/地图名.tscn" type="PackedScene" id=5]
 [ext_resource path="res://脚本/地图/born_map.gd" type="Script" id=6]
+[ext_resource path="res://资源/音乐/top.wav" type="AudioStream" id=7]
 
 [node name="Test" type="Node2D" groups=["地图"]]
 script = ExtResource( 4 )
@@ -24,3 +25,6 @@ script = ExtResource( 6 )
 position = Vector2( 962, 591 )
 
 [node name="地图名" parent="." instance=ExtResource( 5 )]
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )

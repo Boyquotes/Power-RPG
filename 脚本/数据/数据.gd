@@ -60,7 +60,7 @@ var 行动点 = 0
 
 #背包相关
 var player_bag_temp
-var player_bag = []
+var player_bag = [100001]
 func add_item(item_id):
 	player_bag.push_back(item_id)
 	

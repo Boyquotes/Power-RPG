@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
+[ext_resource path="res://资源/音乐/top.wav" type="AudioStream" id=1]
 [ext_resource path="res://脚本/UI/主界面.gd" type="Script" id=4]
 [ext_resource path="res://资源/场景/UI/弹窗.tscn" type="PackedScene" id=5]
 [ext_resource path="res://资源/主题.tres" type="Theme" id=6]
@@ -221,7 +222,6 @@ __meta__ = {
 visible = false
 
 [node name="主角1" type="TextureRect" parent="TextureRect"]
-modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.177
 anchor_top = 0.5
 anchor_right = 0.177
@@ -236,7 +236,6 @@ __meta__ = {
 }
 
 [node name="右边" type="VBoxContainer" parent="TextureRect"]
-modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.553
 anchor_top = 0.243
 anchor_right = 1.0
@@ -262,6 +261,7 @@ text = "按 空 格 键"
 valign = 1
 
 [node name="角色创建" type="VBoxContainer" parent="TextureRect"]
+modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -329,7 +329,6 @@ margin_bottom = 840.0
 text = "继续"
 
 [node name="读取游戏" type="VBoxContainer" parent="TextureRect"]
-visible = false
 modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -389,6 +388,10 @@ anims/RESET = SubResource( 11 )
 "anims/待机" = SubResource( 13 )
 "anims/新建存档" = SubResource( 16 )
 "anims/读取游戏" = SubResource( 15 )
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
 
 [connection signal="pressed" from="TextureRect/角色创建/继续" to="." method="_on_继续_pressed"]
 [connection signal="pressed" from="TextureRect/读取游戏/按钮/读取" to="." method="_on_读取_pressed"]

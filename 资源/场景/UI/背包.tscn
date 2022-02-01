@@ -4,7 +4,7 @@
 [ext_resource path="res://资源/字体/思源宋体/思源宋R-80.tres" type="DynamicFont" id=2]
 [ext_resource path="res://资源/场景/UI/占位符.tscn" type="PackedScene" id=3]
 [ext_resource path="res://资源/字体/思源宋体/思源宋R-100-阴影.tres" type="DynamicFont" id=4]
-[ext_resource path="res://资源/场景/UI/背景.tscn" type="PackedScene" id=5]
+[ext_resource path="res://资源/图片/UI/背景图.png" type="Texture" id=5]
 [ext_resource path="res://脚本/UI/背包.gd" type="Script" id=6]
 
 [sub_resource type="StyleBoxFlat" id=3]
@@ -22,9 +22,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="背景" type="CanvasLayer" parent="."]
+layer = -128
+
+[node name="TextureRect" type="TextureRect" parent="背景"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="容器1" type="HBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = 1874.0
+margin_bottom = 1080.0
 custom_constants/separation = -46
 __meta__ = {
 "_edit_use_anchors_": false
@@ -32,7 +45,7 @@ __meta__ = {
 
 [node name="功能" type="VBoxContainer" parent="容器1"]
 margin_right = 1320.0
-margin_bottom = 1080.0
+margin_bottom = 2160.0
 rect_min_size = Vector2( 1320, 1080 )
 custom_constants/separation = 26
 
@@ -93,7 +106,7 @@ rounded = true
 [node name="信息" type="VBoxContainer" parent="容器1"]
 margin_left = 1274.0
 margin_right = 1874.0
-margin_bottom = 1080.0
+margin_bottom = 2160.0
 rect_min_size = Vector2( 600, 1080 )
 custom_constants/separation = 79
 
@@ -146,15 +159,15 @@ margin_top = 824.0
 margin_right = 600.0
 margin_bottom = 942.0
 
-[node name="Button" type="Button" parent="容器1/信息/按钮"]
+[node name="装备" type="Button" parent="容器1/信息/按钮"]
 margin_right = 600.0
 margin_bottom = 57.0
 text = "装备"
 
-[node name="Button2" type="Button" parent="容器1/信息/按钮"]
+[node name="丢弃" type="Button" parent="容器1/信息/按钮"]
 margin_top = 61.0
 margin_right = 600.0
 margin_bottom = 118.0
 text = "丢弃"
 
-[node name="背景" parent="." instance=ExtResource( 5 )]
+[connection signal="pressed" from="容器1/信息/按钮/装备" to="." method="_on_装备_pressed"]
