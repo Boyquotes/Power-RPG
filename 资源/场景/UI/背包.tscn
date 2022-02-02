@@ -36,8 +36,6 @@ __meta__ = {
 [node name="容器1" type="HBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = 1874.0
-margin_bottom = 1080.0
 custom_constants/separation = -46
 __meta__ = {
 "_edit_use_anchors_": false
@@ -45,7 +43,7 @@ __meta__ = {
 
 [node name="功能" type="VBoxContainer" parent="容器1"]
 margin_right = 1320.0
-margin_bottom = 2160.0
+margin_bottom = 1080.0
 rect_min_size = Vector2( 1320, 1080 )
 custom_constants/separation = 26
 
@@ -106,7 +104,7 @@ rounded = true
 [node name="信息" type="VBoxContainer" parent="容器1"]
 margin_left = 1274.0
 margin_right = 1874.0
-margin_bottom = 2160.0
+margin_bottom = 1080.0
 rect_min_size = Vector2( 600, 1080 )
 custom_constants/separation = 79
 
