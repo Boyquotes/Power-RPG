@@ -252,13 +252,15 @@ margin_right = 859.0
 margin_bottom = 492.0
 texture = ExtResource( 9 )
 
-[node name="Label" type="Label" parent="TextureRect/右边"]
+[node name="Label" type="RichTextLabel" parent="TextureRect/右边"]
 margin_top = 632.0
 margin_right = 859.0
-margin_bottom = 685.0
+margin_bottom = 686.0
 rect_min_size = Vector2( 300, 53 )
+bbcode_enabled = true
+bbcode_text = "按 空 [color=#000000]格[/color] 键"
 text = "按 空 格 键"
-valign = 1
+fit_content_height = true
 
 [node name="角色创建" type="VBoxContainer" parent="TextureRect"]
 modulate = Color( 1, 1, 1, 0 )
