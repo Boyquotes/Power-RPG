@@ -5,7 +5,19 @@ onready var player_name = $"TextureRect/角色创建/LineEdit"
 onready var r = $TextureRect/右边
 onready var 存档名1 = $"TextureRect/读取游戏/存档/存档一/存档名"
 
-var npc_n = "默认NPC"
+var npc_n = {
+	"名字": "默认NPC",
+	"年龄": 64,
+	"性别": 1, #1男2女
+	"职业": "无业游民",
+	"血量": 100,
+	"攻击力": 100,
+	"防御力": 100,
+	"速度": 100,
+	"技能": [300001],
+	"背包": [100001,100002,100003]
+}
+
 #这个变量是为了屏蔽玩家的空格键
 var on_main = true
 
@@ -15,6 +27,7 @@ func _ready():
 	$TextureRect/角色创建.hide()
 	$TextureRect/读取游戏.hide()
 	animation.play("待机")
+	Print.line(str(Print.BLACK + Print.WHITE_BACKGROUND, "Nihao") + Print.BLUE, "蓝色测试一下")
 
 func _input(event):
 	if event.is_action_released("space"):
@@ -42,17 +55,39 @@ func _on_继续_pressed():
 
 func save():
 	数据.player["Name"] = player_name.text
-#	打开文件
+	#打开文件
 	数据.file.open(数据.save_path, File.WRITE)
-#	写入文件
+	#把玩家信息写入文件
 	数据.file.store_var(数据.player)
 	print(数据.player["Name"])
-	#随机生成人名
+	#随机生成NPC名 & 把NPC信息写入文件
 	for num in 500:
 		var name_num = randi()%1123+600001
-		npc_n = 数据.Npc_name_data[name_num]
-		print(npc_n.人名)
-		数据.file.store_var(npc_n.人名)
+		npc_n["名字"] = 数据.Npc_name_data[name_num].人名
+		npc_n["年龄"] = randi()%99+0
+		npc_n["性别"] = randi()%2+0 #1男2女
+		npc_n["职业"] = randi()%2+0 #数字详见表
+		npc_n["血量"] = randi()%200+0
+		npc_n["攻击力"] = randi()%200+0
+		npc_n["防御力"] = randi()%200+0
+		npc_n["速度"] = randi()%200+0
+		npc_n["技能"] = randi()%9+300001 #300001····
+		npc_n["背包"] = randi()%25+100001 #100001····
+		#打印存档玩家数据
+		print(
+			"当前NPC名：" + str(npc_n["名字"]) + 
+			"当前NPC年龄：" + str(npc_n["年龄"]) + 
+			"当前NPC性别：" + str(npc_n["性别"]) + 
+			"当前NPC血量：" + str(npc_n["血量"]) + 
+			"当前NPC攻击力：" + str(npc_n["攻击力"]) + 
+			"当前NPC防御力：" + str(npc_n["防御力"]) + 
+			"当前NPC速度：" + str(npc_n["速度"]) + 
+			"当前NPC技能：" + str(npc_n["技能"]) + 
+			"当前NPC背包：" + str(npc_n["背包"])
+			)
+		数据.file.store_var(npc_n)
+	#添加地图数组
+	
 	#添加初始背包道具
 	数据.player_bag_temp = 100001
 	数据.add_item(数据.player_bag_temp)
@@ -67,7 +102,7 @@ func save():
 	get_tree().call_group("loading", "loading")
 	changer_scence.changer("res://资源/场景/UI/Loding.tscn")
 
-#加载函数哈哈哈哈哈哈哈哈哈哈
+#加载函数
 func load_save():
 	#打开文件
 	数据.file.open(数据.save_path, File.READ)
@@ -93,10 +128,8 @@ func 读取游戏():
 	存档名1.text = 数据.player["Name"]
 	#不在开始菜单了
 	on_main = false
-	
 	#显示出读取游戏
 	$TextureRect/读取游戏.show()
-	
 	#播放动画并等待完成
 	animation.play("读取游戏")
 	yield(animation, "animation_finished")
