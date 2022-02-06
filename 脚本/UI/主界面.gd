@@ -100,7 +100,7 @@ func save():
 	load_save()
 	数据.load_path = "res://资源/场景/Test2.tscn"
 	get_tree().call_group("loading", "loading")
-	changer_scence.changer("res://资源/场景/UI/Loding.tscn")
+	changer_scence.changer("res://资源/场景/UI/Loding.tscn", "nothing")
 
 #加载函数
 func load_save():
@@ -149,4 +149,6 @@ func _on_读取_pressed():
 	print(数据.player)
 	数据.load_path = "res://资源/场景/Test2.tscn"
 	get_tree().call_group("loading", "loading")
-	changer_scence.changer("res://资源/场景/UI/Loding.tscn")
+	黑屏对话.read_dialog('res://D-L-BUT-NO-C/开场黑屏.txt')
+	changer_scence.changer("res://资源/场景/UI/黑屏对话.tscn", "")
+#	changer_scence.changer("res://资源/场景/UI/Loding.tscn", "开场黑屏")

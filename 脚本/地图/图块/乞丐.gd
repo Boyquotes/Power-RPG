@@ -6,4 +6,4 @@ func _ready():
 
 
 func _on_乞丐_body_entered(body):
-	changer_scence.changer("res://资源/场景/Test3.tscn")
+	changer_scence.changer("res://资源/场景/Test3.tscn", "nothing")

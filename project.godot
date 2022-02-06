@@ -68,6 +68,7 @@ Settings="*res://Settings/dist/Settings.gd"
 "对话"="*res://资源/场景/UI/对话.tscn"
 changer_scence="*res://资源/场景/UI/场景过渡.tscn"
 Uhd="*res://资源/场景/UI/UHD.tscn"
+"黑屏对话"="*res://资源/场景/UI/黑屏对话.tscn"
 
 [display]
 

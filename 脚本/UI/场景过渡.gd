@@ -3,7 +3,11 @@ extends CanvasLayer
 onready var ract = $ColorRect
 onready var animal = $AnimationPlayer
 
-func changer(path):
+func _ready():
+	ract.hide()
+	animal.play("RESET")
+
+func changer(path, _dialog):
 	ract.show()
 	animal.play("过渡")
 	yield(animal, "animation_finished")
