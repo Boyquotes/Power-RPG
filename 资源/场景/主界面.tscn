@@ -1,11 +1,11 @@
 [gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://资源/音乐/top.wav" type="AudioStream" id=1]
+[ext_resource path="res://资源/图片/立绘/主角小-黑.png" type="Texture" id=2]
 [ext_resource path="res://脚本/UI/主界面.gd" type="Script" id=4]
 [ext_resource path="res://资源/场景/UI/弹窗.tscn" type="PackedScene" id=5]
 [ext_resource path="res://资源/主题.tres" type="Theme" id=6]
 [ext_resource path="res://资源/图片/UI/背景图.png" type="Texture" id=7]
-[ext_resource path="res://资源/图片/立绘/主角1.png" type="Texture" id=8]
 [ext_resource path="res://资源/图片/UI/logo.png" type="Texture" id=9]
 [ext_resource path="res://资源/图片/立绘/主角小.png" type="Texture" id=10]
 [ext_resource path="res://资源/图片/UI/下一个.png" type="Texture" id=11]
@@ -222,40 +222,42 @@ __meta__ = {
 visible = false
 
 [node name="主角1" type="TextureRect" parent="TextureRect"]
-anchor_left = 0.177
+anchor_left = 0.222
 anchor_top = 0.5
-anchor_right = 0.177
+anchor_right = 0.222
 anchor_bottom = 0.5
-margin_left = -339.84
+margin_left = -338.24
 margin_top = -324.0
-margin_right = 338.16
+margin_right = 339.76
 margin_bottom = 996.0
-texture = ExtResource( 8 )
+texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="右边" type="VBoxContainer" parent="TextureRect"]
-anchor_left = 0.553
-anchor_top = 0.243
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -0.76001
-margin_top = -0.440002
-custom_constants/separation = 140
+anchor_left = 0.544
+anchor_top = 0.139
+anchor_right = 0.992
+anchor_bottom = 0.825
+margin_left = 0.519897
+margin_top = 7.87999
+margin_right = -0.640137
+margin_bottom = -67.0001
+custom_constants/separation = 100
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Logo" type="TextureRect" parent="TextureRect/右边"]
 margin_right = 859.0
-margin_bottom = 492.0
+margin_bottom = 579.0
 texture = ExtResource( 9 )
 
 [node name="Label" type="RichTextLabel" parent="TextureRect/右边"]
-margin_top = 632.0
+margin_top = 679.0
 margin_right = 859.0
-margin_bottom = 686.0
+margin_bottom = 733.0
 rect_min_size = Vector2( 300, 53 )
 bbcode_enabled = true
 bbcode_text = "按 空 [color=#000000]格[/color] 键"

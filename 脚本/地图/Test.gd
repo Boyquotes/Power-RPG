@@ -5,9 +5,20 @@ onready var tilemap = $TileMap2
 export var map_size = 0
 export var map_block = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14
 ,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
+
 var born_map_block
+var rng = RandomNumberGenerator.new()
+var CellSize = Vector2(128, 128)
+var width = 1024/CellSize.x
+var height = 1024/CellSize.y
+var abab = []
+var Tiles = {
+    "空": -1,
+    "图块": 0,
+}
 
 func _ready():
+	rng.randomize()
 	map_born()
 	instance_tiles("奇遇", preload("res://资源/场景/图块/奇遇.tscn"))
 	instance_tiles("BOSS", preload("res://资源/场景/图块/BOSS.tscn"))
@@ -47,10 +58,12 @@ func _ready():
 
 
 func map_born():
-	for i in 31:
-		born_map_block = randi()%31+1
-		print(born_map_block)
-		
+	abab = []
+	for x in width:
+		abab.append([])
+		for y in height:
+			abab[x].append(-1)
+			print(abab)
 
 func instance_tiles(tile_name, scene):
 	var id = tilemap.tile_set.find_tile_by_name(tile_name)
