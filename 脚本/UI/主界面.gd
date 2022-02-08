@@ -4,6 +4,7 @@ onready var animation = $AnimationPlayer
 onready var player_name = $"TextureRect/角色创建/LineEdit"
 onready var r = $TextureRect/右边
 onready var 存档名1 = $"TextureRect/读取游戏/存档/存档一/存档名"
+onready var 立绘节点 = $"TextureRect/主角1"
 
 var npc_n = {
 	"名字": "默认NPC",
@@ -17,16 +18,24 @@ var npc_n = {
 	"技能": [300001],
 	"背包": [100001,100002,100003]
 }
-
+var 立绘
 #这个变量是为了屏蔽玩家的空格键
 var on_main = true
 
 func _ready():
+	randomize()
 	animation.play("RESET")
 	yield(animation, "animation_finished")
 	$TextureRect/角色创建.hide()
 	$TextureRect/读取游戏.hide()
 	animation.play("待机")
+	#返回0到2的随机整数
+	立绘 = randi()%2+1
+	print(立绘)
+	if 立绘 == 1:
+		立绘节点.texture = load("res://资源/图片/立绘/主角小-黑.png")
+	else:
+		立绘节点.texture = load("res://资源/图片/立绘/黑/剑士立绘黑.png")
 	Print.line(str(Print.BLACK + Print.WHITE_BACKGROUND, "Nihao") + Print.BLUE, "蓝色测试一下")
 
 func _input(event):
@@ -62,17 +71,20 @@ func save():
 	print(数据.player["Name"])
 	#随机生成NPC名 & 把NPC信息写入文件
 	for num in 500:
-		var name_num = randi()%1123+600001
+		var name_num = randi()%1123+600002
 		npc_n["名字"] = 数据.Npc_name_data[name_num].人名
-		npc_n["年龄"] = randi()%99+0
-		npc_n["性别"] = randi()%2+0 #1男2女
-		npc_n["职业"] = randi()%2+0 #数字详见表
-		npc_n["血量"] = randi()%200+0
-		npc_n["攻击力"] = randi()%200+0
-		npc_n["防御力"] = randi()%200+0
-		npc_n["速度"] = randi()%200+0
-		npc_n["技能"] = randi()%9+300001 #300001····
-		npc_n["背包"] = randi()%25+100001 #100001····
+		#返回1到99的随机整数
+		npc_n["年龄"] = randi()%99+2
+		#返回1到2的随机整数
+		npc_n["性别"] = randi()%2+2 #1男2女
+		#返回1到99的随机整数
+		npc_n["职业"] = randi()%2+2 #数字详见表
+		npc_n["血量"] = randi()%200+2
+		npc_n["攻击力"] = randi()%200+2
+		npc_n["防御力"] = randi()%200+2
+		npc_n["速度"] = randi()%200+2
+		npc_n["技能"] = randi()%9+300002 #300001····
+		npc_n["背包"] = randi()%25+100002 #100001····
 		#打印存档玩家数据
 		print(
 			"当前NPC名：" + str(npc_n["名字"]) + 

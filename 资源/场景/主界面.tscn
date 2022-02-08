@@ -222,6 +222,7 @@ __meta__ = {
 visible = false
 
 [node name="主角1" type="TextureRect" parent="TextureRect"]
+modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.222
 anchor_top = 0.5
 anchor_right = 0.222
@@ -236,6 +237,7 @@ __meta__ = {
 }
 
 [node name="右边" type="VBoxContainer" parent="TextureRect"]
+modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.544
 anchor_top = 0.139
 anchor_right = 0.992
@@ -250,13 +252,13 @@ __meta__ = {
 }
 
 [node name="Logo" type="TextureRect" parent="TextureRect/右边"]
-margin_right = 859.0
+margin_right = 858.0
 margin_bottom = 579.0
 texture = ExtResource( 9 )
 
 [node name="Label" type="RichTextLabel" parent="TextureRect/右边"]
 margin_top = 679.0
-margin_right = 859.0
+margin_right = 858.0
 margin_bottom = 733.0
 rect_min_size = Vector2( 300, 53 )
 bbcode_enabled = true
@@ -265,7 +267,6 @@ text = "按 空 格 键"
 fit_content_height = true
 
 [node name="角色创建" type="VBoxContainer" parent="TextureRect"]
-modulate = Color( 1, 1, 1, 0 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5

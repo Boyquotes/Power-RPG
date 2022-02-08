@@ -1,0 +1,124 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+syntax_version = 2
+raw_text = "~ Test
+
+厉害RPG是一个厉害的世界
+Nathan: 第二句[color=#000000]黑色[/color]
+- 选项一
+	Nathan: 第一个选项
+- 选项二
+	Nathan: You picked the second one.
+- Start again => Test
+- End the conversation => END
+Nathan: For more information about conditional dialogue, mutations, and all the fun stuff, see the online documentation."
+errors = [  ]
+titles = {
+"Test": "2"
+}
+lines = {
+"0": {
+"next_id": "2",
+"text": "Test",
+"type": "title"
+},
+"10": {
+"character": "Nathan",
+"inline_mutations": [  ],
+"next_id": "",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "For more information about conditional dialogue, mutations, and all the fun stuff, see the online documentation.",
+"translation_key": "For more information about conditional dialogue, mutations, and all the fun stuff, see the online documentation.",
+"type": "dialogue"
+},
+"2": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "3",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "厉害RPG是一个厉害的世界",
+"translation_key": "厉害RPG是一个厉害的世界",
+"type": "dialogue"
+},
+"3": {
+"character": "Nathan",
+"inline_mutations": [  ],
+"next_id": "4",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "第二句[color=#000000]黑色[/color]",
+"translation_key": "第二句[color=#000000]黑色[/color]",
+"type": "dialogue"
+},
+"4": {
+"next_id": "5",
+"next_id_after": "10",
+"replacements": [  ],
+"responses": PoolStringArray( "4", "6", "8", "9" ),
+"text": "选项一",
+"translation_key": "选项一",
+"type": "response"
+},
+"5": {
+"character": "Nathan",
+"inline_mutations": [  ],
+"next_id": "10",
+"parent_id": "4",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "第一个选项",
+"translation_key": "第一个选项",
+"type": "dialogue"
+},
+"6": {
+"next_id": "7",
+"next_id_after": "10",
+"replacements": [  ],
+"text": "选项二",
+"translation_key": "选项二",
+"type": "response"
+},
+"7": {
+"character": "Nathan",
+"inline_mutations": [  ],
+"next_id": "10",
+"parent_id": "6",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "You picked the second one.",
+"translation_key": "You picked the second one.",
+"type": "dialogue"
+},
+"8": {
+"next_id": "2",
+"next_id_after": "10",
+"replacements": [  ],
+"text": "Start again",
+"translation_key": "Start again",
+"type": "response"
+},
+"9": {
+"next_id": "end",
+"next_id_after": "10",
+"replacements": [  ],
+"text": "End the conversation",
+"translation_key": "End the conversation",
+"type": "response"
+}
+}
