@@ -4,7 +4,7 @@ onready var npc_name = 数据.Npc_name_data[600001]
 
 var tele = load("res://脚本/数据/NPC类.gd")
 var human = tele.new()
-var dialog = Dialogic.start("测试2")
+#var dialog = Dialogic.start("测试2")
 
 func _ready():
 	print("人类准备好了")
@@ -15,5 +15,5 @@ func _ready():
 	
 
 func _on_人类_body_entered(body):
-	add_child(dialog)
-	
+#	add_child(dialog)
+	pass

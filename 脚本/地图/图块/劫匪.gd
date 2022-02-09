@@ -1,6 +1,6 @@
 extends "res://脚本/地图/格子模板.gd"
 
-var dialog = Dialogic.start("test")
+#var dialog = Dialogic.start("test")
 
 func _ready():
 	print("劫匪准备好了")

@@ -70,6 +70,9 @@ onready var save_nodes = get_tree().get_nodes_in_group("持久化")
 onready var 弹窗标题 = "出BUG辣！"
 onready var 弹窗内容 = "如果你看到这串话，说明游戏出BUG了，请反馈给开发者。"
 
+#对话相关：
+var dialog_res = preload("res://资源/对话/测试对话.tres")
+
 #函数
 func _ready():
 	pass

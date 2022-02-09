@@ -9,55 +9,31 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Reference",
-"class": "DTS",
-"language": "GDScript",
-"path": "res://addons/dialogic/Localization/translation_service.gd"
-}, {
-"base": "Node",
-"class": "Dialogic",
-"language": "GDScript",
-"path": "res://addons/dialogic/Other/DialogicClass.gd"
-}, {
-"base": "Control",
-"class": "DialogicBackgroundMusic",
-"language": "GDScript",
-"path": "res://addons/dialogic/Nodes/BackgroundMusic.gd"
-}, {
-"base": "Node",
-"class": "DialogicDefinitionsUtil",
-"language": "GDScript",
-"path": "res://addons/dialogic/Other/DialogicDefinitionsUtil.gd"
-}, {
-"base": "Reference",
-"class": "DialogicResources",
-"language": "GDScript",
-"path": "res://addons/dialogic/Other/DialogicResources.gd"
-}, {
-"base": "Reference",
-"class": "DialogicUtil",
-"language": "GDScript",
-"path": "res://addons/dialogic/Other/DialogicUtil.gd"
-}, {
 "base": "Resource",
 "class": "DialogueResource",
 "language": "GDScript",
 "path": "res://addons/dialogue_manager/dialogue_resource.gd"
 }, {
 "base": "Node",
+"class": "Goal",
+"language": "GDScript",
+"path": "res://addons/gdquests/Custom Types/bool_goal.gd"
+}, {
+"base": "Node",
 "class": "Print",
 "language": "GDScript",
 "path": "res://addons/katuiche-colorful-console/class/print.gd"
+}, {
+"base": "Node",
+"class": "Walker",
+"language": "GDScript",
+"path": "res://脚本/数据/walker.gd"
 } ]
 _global_script_class_icons={
-"DTS": "",
-"Dialogic": "",
-"DialogicBackgroundMusic": "",
-"DialogicDefinitionsUtil": "",
-"DialogicResources": "",
-"DialogicUtil": "",
 "DialogueResource": "",
-"Print": "res://addons/katuiche-colorful-console/class/icons/class.svg"
+"Goal": "",
+"Print": "res://addons/katuiche-colorful-console/class/icons/class.svg",
+"Walker": ""
 }
 
 [application]
@@ -75,7 +51,7 @@ Settings="*res://Settings/dist/Settings.gd"
 "对话"="*res://资源/场景/UI/对话.tscn"
 changer_scence="*res://资源/场景/UI/场景过渡.tscn"
 Uhd="*res://资源/场景/UI/UHD.tscn"
-"黑屏对话"="*res://资源/场景/UI/黑屏对话.tscn"
+GameState="*res://game_state.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [display]
@@ -89,7 +65,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/Quest_edit/plugin.cfg", "res://addons/dialogic/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/katuiche-colorful-console/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/dialogue_manager/plugin.cfg", "res://addons/gdquests/plugin.cfg", "res://addons/katuiche-colorful-console/plugin.cfg" )
 
 [importer_defaults]
 

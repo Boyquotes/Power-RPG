@@ -7,18 +7,23 @@ script = ExtResource( 1 )
 syntax_version = 2
 raw_text = "~ Test
 
-厉害RPG是一个厉害的世界
+Nathan: 厉害RPG是一个厉害的世界
 Nathan: 第二句[color=#000000]黑色[/color]
 - 选项一
 	Nathan: 第一个选项
 - 选项二
-	Nathan: You picked the second one.
-- Start again => Test
-- End the conversation => END
-Nathan: For more information about conditional dialogue, mutations, and all the fun stuff, see the online documentation."
+	Nathan: 你选择了第一个选项
+- 进入第二句测试 => Test2
+- 结束游戏 => END
+Nathan: 嗯嗯嗯
+
+~ Test2
+
+这是第二句"
 errors = [  ]
 titles = {
-"Test": "2"
+"Test": "2",
+"Test2": "14"
 }
 lines = {
 "0": {
@@ -29,17 +34,34 @@ lines = {
 "10": {
 "character": "Nathan",
 "inline_mutations": [  ],
+"next_id": "end",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "嗯嗯嗯",
+"translation_key": "嗯嗯嗯",
+"type": "dialogue"
+},
+"12": {
+"next_id": "14",
+"text": "Test2",
+"type": "title"
+},
+"14": {
+"character": "",
+"inline_mutations": [  ],
 "next_id": "",
 "pauses": {
 },
 "replacements": [  ],
 "speeds": [  ],
-"text": "For more information about conditional dialogue, mutations, and all the fun stuff, see the online documentation.",
-"translation_key": "For more information about conditional dialogue, mutations, and all the fun stuff, see the online documentation.",
+"text": "这是第二句",
+"translation_key": "这是第二句",
 "type": "dialogue"
 },
 "2": {
-"character": "",
+"character": "Nathan",
 "inline_mutations": [  ],
 "next_id": "3",
 "pauses": {
@@ -101,24 +123,24 @@ lines = {
 },
 "replacements": [  ],
 "speeds": [  ],
-"text": "You picked the second one.",
-"translation_key": "You picked the second one.",
+"text": "你选择了第一个选项",
+"translation_key": "你选择了第一个选项",
 "type": "dialogue"
 },
 "8": {
-"next_id": "2",
+"next_id": "14",
 "next_id_after": "10",
 "replacements": [  ],
-"text": "Start again",
-"translation_key": "Start again",
+"text": "进入第二句测试",
+"translation_key": "进入第二句测试",
 "type": "response"
 },
 "9": {
 "next_id": "end",
 "next_id_after": "10",
 "replacements": [  ],
-"text": "End the conversation",
-"translation_key": "End the conversation",
+"text": "结束游戏",
+"translation_key": "结束游戏",
 "type": "response"
 }
 }
