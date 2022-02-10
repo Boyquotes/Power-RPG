@@ -64,4 +64,4 @@ func _input(event):
 
 func hide_go_main():
 	Uhd.layer = -128
-	changer_scence.changer("res://资源/场景/主界面.tscn", "nothing")
+	changer_scence.changer("res://资源/场景/主界面.tscn")

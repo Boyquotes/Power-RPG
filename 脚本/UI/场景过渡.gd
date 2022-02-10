@@ -7,7 +7,7 @@ func _ready():
 	ract.hide()
 	animal.play("RESET")
 
-func changer(path, _dialog):
+func changer(path):
 	ract.show()
 	animal.play("过渡")
 	yield(animal, "animation_finished")

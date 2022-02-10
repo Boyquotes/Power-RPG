@@ -20,3 +20,4 @@ func loading():
 	item_loder = 数据.loader.get_stage_count()
 	$ProgressBar.max_value = item_loder - 1
 	set_process(true)
+	
