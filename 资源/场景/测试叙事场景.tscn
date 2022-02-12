@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://资源/图片/立绘/主角1.png" type="Texture" id=1]
+[ext_resource path="res://资源/场景/UI/背景.tscn" type="PackedScene" id=2]
+
+[node name="测试叙事场景" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="背景" parent="." instance=ExtResource( 2 )]
+
+[node name="anima" type="AnimationPlayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -339.0
+margin_top = -500.0
+margin_right = 339.0
+margin_bottom = 820.0
+texture = ExtResource( 1 )

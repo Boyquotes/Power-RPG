@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Parhelion.mp3-06f2f85a3ea388d4d48fd30ac9ce96a1.mp3str"
+
+[deps]
+
+source_file="res://资源/音乐/Parhelion.mp3"
+dest_files=[ "res://.import/Parhelion.mp3-06f2f85a3ea388d4d48fd30ac9ce96a1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

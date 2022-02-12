@@ -63,12 +63,21 @@ var player_bag_temp
 var player_bag = [100001]
 func add_item(item_id):
 	player_bag.push_back(item_id)
-	
+
+func add_武器(item_id):
+	player_bag.push_back(item_id)
+
+func add_技能(item_id):
+	player_bag.push_back(item_id)
+
+func add_装备(item_id):
+	player_bag.push_back(item_id)
+
 
 #系统相关
-onready var save_nodes = get_tree().get_nodes_in_group("持久化")
-onready var 弹窗标题 = "出BUG辣！"
-onready var 弹窗内容 = "如果你看到这串话，说明游戏出BUG了，请反馈给开发者。"
+var 第一次游戏 = true
+var 弹窗标题 = "出BUG辣！"
+var 弹窗内容 = "如果你看到这串话，说明游戏出BUG了，请反馈给开发者。"
 
 #对话相关：
 var dialog_res = preload("res://资源/对话/测试对话.tres")

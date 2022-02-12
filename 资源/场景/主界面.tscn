@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://资源/音乐/top.wav" type="AudioStream" id=1]
+[ext_resource path="res://资源/音乐/电子游戏大片.mp3" type="AudioStream" id=1]
 [ext_resource path="res://资源/图片/立绘/主角小-黑.png" type="Texture" id=2]
 [ext_resource path="res://脚本/UI/主界面.gd" type="Script" id=4]
 [ext_resource path="res://资源/场景/UI/弹窗.tscn" type="PackedScene" id=5]
@@ -219,7 +219,6 @@ __meta__ = {
 }
 
 [node name="弹窗" parent="TextureRect" instance=ExtResource( 5 )]
-visible = false
 
 [node name="主角1" type="TextureRect" parent="TextureRect"]
 anchor_left = 0.222

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://资源/场景/UI/背景.tscn" type="PackedScene" id=1]
 [ext_resource path="res://资源/主题.tres" type="Theme" id=2]
 [ext_resource path="res://脚本/过场/开场剧情.gd" type="Script" id=3]
+[ext_resource path="res://资源/音乐/开场剧情.mp3" type="AudioStream" id=4]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -286,3 +287,7 @@ __meta__ = {
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 1 )
 "anims/开始" = SubResource( 2 )
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true

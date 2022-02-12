@@ -4,9 +4,7 @@
 [ext_resource path="res://资源/字体/雅宋/雅宋50.tres" type="DynamicFont" id=2]
 [ext_resource path="res://资源/主题.tres" type="Theme" id=3]
 
-
-[node name="弹窗" type="PopupDialog"]
-visible = true
+[node name="弹窗" type="PopupDialog" groups=["弹窗"]]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -15,8 +13,7 @@ margin_left = -964.5
 margin_top = -245.0
 margin_right = 964.5
 margin_bottom = 245.0
-rect_min_size = Vector2( 747, 490 )
-rect_pivot_offset = Vector2( 374, 244 )
+rect_min_size = Vector2( 1929, 490 )
 theme = ExtResource( 3 )
 script = ExtResource( 1 )
 __meta__ = {
@@ -32,6 +29,7 @@ margin_left = -964.5
 margin_top = -251.0
 margin_right = 964.5
 margin_bottom = 251.0
+rect_min_size = Vector2( 1929, 502 )
 custom_constants/separation = 258
 __meta__ = {
 "_edit_use_anchors_": false
@@ -40,6 +38,7 @@ __meta__ = {
 [node name="信息" type="VBoxContainer" parent="身体"]
 margin_right = 1929.0
 margin_bottom = 173.0
+rect_min_size = Vector2( 1929, 173 )
 custom_constants/separation = 30
 alignment = 1
 __meta__ = {
@@ -49,6 +48,7 @@ __meta__ = {
 [node name="标题" type="Label" parent="身体/信息"]
 margin_right = 1929.0
 margin_bottom = 60.0
+rect_min_size = Vector2( 1929, 60 )
 custom_fonts/font = ExtResource( 2 )
 text = "标题"
 align = 1
@@ -57,6 +57,7 @@ align = 1
 margin_top = 90.0
 margin_right = 1929.0
 margin_bottom = 90.0
+rect_min_size = Vector2( 1929, 0 )
 border_color = Color( 1, 1, 1, 1 )
 border_width = 0.0
 editor_only = false
@@ -65,6 +66,7 @@ editor_only = false
 margin_top = 120.0
 margin_right = 1929.0
 margin_bottom = 173.0
+rect_min_size = Vector2( 1929, 53 )
 text = "你的印记不能为空"
 align = 1
 
@@ -72,10 +74,12 @@ align = 1
 margin_top = 431.0
 margin_right = 1929.0
 margin_bottom = 488.0
+rect_min_size = Vector2( 1929, 57 )
 
 [node name="确认" type="Button" parent="身体/按钮"]
 margin_right = 1929.0
 margin_bottom = 57.0
+rect_min_size = Vector2( 1929, 57 )
 text = "确认"
 
 [connection signal="pressed" from="身体/按钮/确认" to="." method="_on_确认_pressed"]

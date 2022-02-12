@@ -53,6 +53,14 @@ func _ready():
 	instance_tiles("人类", preload("res://资源/场景/图块/人类.tscn"))
 	数据.在大地图 = true
 	
+	if 数据.第一次游戏 == true:
+		数据.弹窗标题 = "教程"
+		数据.弹窗内容 = "按下 W A S D 进行移动\n E键为交互 \n 你要打败新王，夺取王位"
+		Uhd.弹窗()
+		return "第一次游戏"
+	else:
+		return "不是第一次游戏"
+	
 
 func instance_tiles(tile_name, scene):
 	var id = tilemap.tile_set.find_tile_by_name(tile_name)
@@ -65,7 +73,7 @@ func instance_tiles(tile_name, scene):
 		
 
 func 地图生成初始化():
-	tilemap.clear()
+#	tilemap.clear()
 	poss = tilemap.map_to_world(Vector2(0.8, 0.4))
 	确定图块坐标()
 
@@ -98,3 +106,8 @@ func 确定图块坐标():
 			print("x：" + str(xx) + ";" + "y：" + str(yy))
 			tilemap.set_cellv(poss, 图块表)
 			
+
+
+func _input(event):
+	if Input.is_action_just_pressed("tab"):
+		Uhd.tab()

@@ -11,4 +11,4 @@ func _on_劫匪_body_entered(body):
 #	数据.这次战斗敌人名 = 数据.Enemy_data[400001].name
 #	数据.敌人立绘 = "res://资源/图片/立绘/主角小.png"
 	数据.这次战斗敌人 = 400001
-	changer_scence.changer("res://资源/场景/战斗系统.tscn", "nothing")
+	changer_scence.changer("res://资源/场景/战斗系统.tscn")

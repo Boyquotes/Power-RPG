@@ -1,0 +1,94 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_manager/dialogue_resource.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+syntax_version = 2
+raw_text = "~ 诗人1
+
+你看到一个诗人。
+诗人: 羊群拥抱我，彩云拥抱太阳。
+诗人: 亲爱的朋友，坐下来
+
+~ 诗人2
+
+你又看到了那名诗人。
+诗人：缘，妙不可言。"
+errors = [  ]
+titles = {
+"诗人1": "2",
+"诗人2": "8"
+}
+lines = {
+"0": {
+"next_id": "2",
+"text": "诗人1",
+"type": "title"
+},
+"2": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "3",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "你看到一个诗人。",
+"translation_key": "你看到一个诗人。",
+"type": "dialogue"
+},
+"3": {
+"character": "诗人",
+"inline_mutations": [  ],
+"next_id": "4",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "羊群拥抱我，彩云拥抱太阳。",
+"translation_key": "羊群拥抱我，彩云拥抱太阳。",
+"type": "dialogue"
+},
+"4": {
+"character": "诗人",
+"inline_mutations": [  ],
+"next_id": "end",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "亲爱的朋友，坐下来",
+"translation_key": "亲爱的朋友，坐下来",
+"type": "dialogue"
+},
+"6": {
+"next_id": "8",
+"text": "诗人2",
+"type": "title"
+},
+"8": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "9",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "你又看到了那名诗人。",
+"translation_key": "你又看到了那名诗人。",
+"type": "dialogue"
+},
+"9": {
+"character": "",
+"inline_mutations": [  ],
+"next_id": "",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "诗人：缘，妙不可言。",
+"translation_key": "诗人：缘，妙不可言。",
+"type": "dialogue"
+}
+}

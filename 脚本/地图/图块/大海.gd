@@ -5,4 +5,4 @@ func _ready():
 
 
 func _on_大海_body_entered(body):
-	changer_scence.changer("res://资源/场景/Test5.tscn", "nothing")
+	pass

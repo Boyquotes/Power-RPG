@@ -19,7 +19,15 @@ Nathan: 嗯嗯嗯
 
 ~ Test2
 
-这是第二句"
+Nathan: 厉害RPG是一个厉害的世界
+Nathan: 第二句[color=#000000]黑色[/color]
+- 选项一
+	Nathan: 第一个选项
+- 选项二
+	Nathan: 你选择了第一个选项
+- 进入第二句测试 => Test2
+- 结束游戏 => END
+Nathan: 嗯嗯嗯"
 errors = [  ]
 titles = {
 "Test": "2",
@@ -49,15 +57,70 @@ lines = {
 "type": "title"
 },
 "14": {
-"character": "",
+"character": "Nathan",
 "inline_mutations": [  ],
-"next_id": "",
+"next_id": "15",
 "pauses": {
 },
 "replacements": [  ],
 "speeds": [  ],
-"text": "这是第二句",
-"translation_key": "这是第二句",
+"text": "厉害RPG是一个厉害的世界",
+"translation_key": "厉害RPG是一个厉害的世界",
+"type": "dialogue"
+},
+"15": {
+"character": "Nathan",
+"inline_mutations": [  ],
+"next_id": "16",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "第二句[color=#000000]黑色[/color]",
+"translation_key": "第二句[color=#000000]黑色[/color]",
+"type": "dialogue"
+},
+"16": {
+"next_id": "17",
+"next_id_after": "22",
+"replacements": [  ],
+"responses": PoolStringArray( "16", "18", "20", "21" ),
+"text": "选项一",
+"translation_key": "选项一",
+"type": "response"
+},
+"17": {
+"character": "Nathan",
+"inline_mutations": [  ],
+"next_id": "22",
+"parent_id": "16",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "第一个选项",
+"translation_key": "第一个选项",
+"type": "dialogue"
+},
+"18": {
+"next_id": "19",
+"next_id_after": "22",
+"replacements": [  ],
+"text": "选项二",
+"translation_key": "选项二",
+"type": "response"
+},
+"19": {
+"character": "Nathan",
+"inline_mutations": [  ],
+"next_id": "22",
+"parent_id": "18",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "你选择了第一个选项",
+"translation_key": "你选择了第一个选项",
 "type": "dialogue"
 },
 "2": {
@@ -70,6 +133,34 @@ lines = {
 "speeds": [  ],
 "text": "厉害RPG是一个厉害的世界",
 "translation_key": "厉害RPG是一个厉害的世界",
+"type": "dialogue"
+},
+"20": {
+"next_id": "14",
+"next_id_after": "22",
+"replacements": [  ],
+"text": "进入第二句测试",
+"translation_key": "进入第二句测试",
+"type": "response"
+},
+"21": {
+"next_id": "end",
+"next_id_after": "22",
+"replacements": [  ],
+"text": "结束游戏",
+"translation_key": "结束游戏",
+"type": "response"
+},
+"22": {
+"character": "Nathan",
+"inline_mutations": [  ],
+"next_id": "",
+"pauses": {
+},
+"replacements": [  ],
+"speeds": [  ],
+"text": "嗯嗯嗯",
+"translation_key": "嗯嗯嗯",
 "type": "dialogue"
 },
 "3": {

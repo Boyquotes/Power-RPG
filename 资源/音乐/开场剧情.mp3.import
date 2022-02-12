@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/开场剧情.mp3-f24cce617b034bf35d945715956faada.mp3str"
+
+[deps]
+
+source_file="res://资源/音乐/开场剧情.mp3"
+dest_files=[ "res://.import/开场剧情.mp3-f24cce617b034bf35d945715956faada.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

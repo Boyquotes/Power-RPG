@@ -25,10 +25,10 @@ var on_main = true
 func _ready():
 	randomize()
 #	数据.dialog_res = preload("res://资源/对话/测试对话.tres")
-#	DialogueManager.show_example_dialogue_balloon(
+#	Uhd.dialog_normal(
 #		"Test",
 #		数据.dialog_res
-#	)	
+#	)
 	animation.play("RESET")
 	yield(animation, "animation_finished")
 	$TextureRect/角色创建.hide()
@@ -63,7 +63,7 @@ func _on_继续_pressed():
 		数据.弹窗内容 = "名称不能为空"
 		print(数据.弹窗标题)
 		print(数据.弹窗内容)
-		弹窗.popup()
+		Uhd.弹窗()
 	else:
 		save()
 
@@ -91,18 +91,19 @@ func save():
 		npc_n["技能"] = randi()%9+300002 #300001····
 		npc_n["背包"] = randi()%25+100002 #100001····
 		#打印存档玩家数据
-		print(
-			"当前NPC名：" + str(npc_n["名字"]) + 
-			"当前NPC年龄：" + str(npc_n["年龄"]) + 
-			"当前NPC性别：" + str(npc_n["性别"]) + 
-			"当前NPC血量：" + str(npc_n["血量"]) + 
-			"当前NPC攻击力：" + str(npc_n["攻击力"]) + 
-			"当前NPC防御力：" + str(npc_n["防御力"]) + 
-			"当前NPC速度：" + str(npc_n["速度"]) + 
-			"当前NPC技能：" + str(npc_n["技能"]) + 
-			"当前NPC背包：" + str(npc_n["背包"])
-			)
+#		print(
+#			"当前NPC名：" + str(npc_n["名字"]) + 
+#			"当前NPC年龄：" + str(npc_n["年龄"]) + 
+#			"当前NPC性别：" + str(npc_n["性别"]) + 
+#			"当前NPC血量：" + str(npc_n["血量"]) + 
+#			"当前NPC攻击力：" + str(npc_n["攻击力"]) + 
+#			"当前NPC防御力：" + str(npc_n["防御力"]) + 
+#			"当前NPC速度：" + str(npc_n["速度"]) + 
+#			"当前NPC技能：" + str(npc_n["技能"]) + 
+#			"当前NPC背包：" + str(npc_n["背包"])
+#			)
 		数据.file.store_var(npc_n)
+	print("NPC生成OK")
 	#添加地图数组
 	
 	#添加初始背包道具
