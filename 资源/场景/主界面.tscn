@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://资源/音乐/电子游戏大片.mp3" type="AudioStream" id=1]
 [ext_resource path="res://资源/图片/立绘/主角小-黑.png" type="Texture" id=2]
+[ext_resource path="res://addons/saveNode/scripts/saveNode.gd" type="Script" id=3]
 [ext_resource path="res://脚本/UI/主界面.gd" type="Script" id=4]
 [ext_resource path="res://资源/场景/UI/弹窗.tscn" type="PackedScene" id=5]
 [ext_resource path="res://资源/主题.tres" type="Theme" id=6]
@@ -250,13 +251,13 @@ __meta__ = {
 
 [node name="Logo" type="TextureRect" parent="TextureRect/右边"]
 margin_right = 858.0
-margin_bottom = 579.0
+margin_bottom = 98.0
 texture = ExtResource( 9 )
 
 [node name="Label" type="RichTextLabel" parent="TextureRect/右边"]
-margin_top = 679.0
+margin_top = 198.0
 margin_right = 858.0
-margin_bottom = 733.0
+margin_bottom = 252.0
 rect_min_size = Vector2( 300, 53 )
 bbcode_enabled = true
 bbcode_text = "按 空 [color=#000000]格[/color] 键"
@@ -395,6 +396,10 @@ anims/RESET = SubResource( 11 )
 [node name="music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
 autoplay = true
+
+[node name="SaveNode" type="Node" parent="."]
+script = ExtResource( 3 )
+filePath = "user://"
 
 [connection signal="pressed" from="TextureRect/角色创建/继续" to="." method="_on_继续_pressed"]
 [connection signal="pressed" from="TextureRect/读取游戏/按钮/读取" to="." method="_on_读取_pressed"]

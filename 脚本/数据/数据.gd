@@ -1,8 +1,6 @@
 extends Node
 
 var save_path = "user://存档一.存档"
-var save_path2 = "user://存档二.存档"
-var save_path3 = "user://存档三.存档"
 
 var Item_data = Settings.Item.data()
 var Skills_data = Settings.Skills.data()
@@ -17,7 +15,7 @@ var loader = ResourceInteractiveLoader
 var load_path = "res://资源/场景/Test3.tscn"
 
 #关于大地图
-var big_map = []
+var map_data = []
 
 var 在大地图 = false
 

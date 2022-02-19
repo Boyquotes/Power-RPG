@@ -65,7 +65,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/dialogue_manager/plugin.cfg", "res://addons/gdquests/plugin.cfg", "res://addons/katuiche-colorful-console/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/dialogue_manager/plugin.cfg", "res://addons/gdquests/plugin.cfg", "res://addons/katuiche-colorful-console/plugin.cfg", "res://addons/saveNode/plugin.cfg" )
 
 [importer_defaults]
 

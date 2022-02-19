@@ -105,7 +105,7 @@ func save():
 		数据.file.store_var(npc_n)
 	print("NPC生成OK")
 	#添加地图数组
-	
+	数据.file.store_var(数据.map_data)
 	#添加初始背包道具
 	数据.player_bag_temp = 100001
 	数据.add_item(数据.player_bag_temp)
@@ -124,20 +124,16 @@ func save():
 func load_save():
 	#打开文件
 	数据.file.open(数据.save_path, File.READ)
-	
 #	把文件内容赋值到player
 	数据.player = 数据.file.get_var()
-	
 	#把文件内容读到背包
 	数据.add_item(数据.player_bag)
-	
 	#把文件内容读到人物配置
 	
 	#把文件内容读到任务
 	
 	#关闭文件
 	数据.file.close()
-	
 	读取游戏()
 
 
