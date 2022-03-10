@@ -15,14 +15,29 @@ _global_script_classes=[ {
 "path": "res://addons/dialogue_manager/dialogue_resource.gd"
 }, {
 "base": "Node",
-"class": "Goal",
-"language": "GDScript",
-"path": "res://addons/gdquests/Custom Types/bool_goal.gd"
-}, {
-"base": "Node",
 "class": "Print",
 "language": "GDScript",
 "path": "res://addons/katuiche-colorful-console/class/print.gd"
+}, {
+"base": "Node",
+"class": "SubtitleData",
+"language": "GDScript",
+"path": "res://addons/subtitles/scenes/SubtitleData.gd"
+}, {
+"base": "CanvasLayer",
+"class": "SubtitlesLayer2D",
+"language": "GDScript",
+"path": "res://addons/subtitles/scenes/SubtitlesLayer2D.gd"
+}, {
+"base": "CanvasLayer",
+"class": "SubtitlesLayer3D",
+"language": "GDScript",
+"path": "res://addons/subtitles/scenes/SubtitlesLayer3D.gd"
+}, {
+"base": "CanvasLayer",
+"class": "SubtitlesLayerDialogue",
+"language": "GDScript",
+"path": "res://addons/subtitles/scenes/SubtitlesLayerDialogue.gd"
 }, {
 "base": "Node",
 "class": "Walker",
@@ -31,8 +46,11 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "DialogueResource": "",
-"Goal": "",
 "Print": "res://addons/katuiche-colorful-console/class/icons/class.svg",
+"SubtitleData": "",
+"SubtitlesLayer2D": "",
+"SubtitlesLayer3D": "",
+"SubtitlesLayerDialogue": "",
 "Walker": ""
 }
 
@@ -65,7 +83,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/dialogue_manager/plugin.cfg", "res://addons/gdquests/plugin.cfg", "res://addons/katuiche-colorful-console/plugin.cfg", "res://addons/saveNode/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/dialogue_manager/plugin.cfg", "res://addons/gdfxr/plugin.cfg", "res://addons/katuiche-colorful-console/plugin.cfg", "res://addons/radial_menu/plugin.cfg", "res://addons/saveNode/plugin.cfg" )
 
 [importer_defaults]
 

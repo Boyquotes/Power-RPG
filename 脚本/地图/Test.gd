@@ -76,7 +76,7 @@ func instance_tiles(tile_name, scene):
 		
 
 func 地图生成初始化():
-	if file.file_exists(数据.save_path):
+#	if file.file_exists(数据.save_path):
 		
 	tilemap.clear()
 	poss = tilemap.map_to_world(Vector2(0.8, 0.4))
@@ -117,9 +117,9 @@ func 确定图块坐标():
 			
 
 func 保存图块():
-	map_data2.push_back(poss)
-	map_data2.push_back(图块表)
-	数据.map_data.append_array(map_data2)
+#	map_data2.push_back(poss)
+#	map_data2.push_back(图块表)
+#	数据.map_data.append_array(map_data2)
 	数据.file.store_var(数据.map_data)
 
 

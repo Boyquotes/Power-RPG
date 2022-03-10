@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://资源/音乐/电子游戏大片.mp3" type="AudioStream" id=1]
-[ext_resource path="res://资源/图片/立绘/主角小-黑.png" type="Texture" id=2]
+[ext_resource path="res://资源/图片/UI/开始菜单图.png" type="Texture" id=2]
 [ext_resource path="res://addons/saveNode/scripts/saveNode.gd" type="Script" id=3]
 [ext_resource path="res://脚本/UI/主界面.gd" type="Script" id=4]
 [ext_resource path="res://资源/场景/UI/弹窗.tscn" type="PackedScene" id=5]
@@ -222,42 +222,42 @@ __meta__ = {
 [node name="弹窗" parent="TextureRect" instance=ExtResource( 5 )]
 
 [node name="主角1" type="TextureRect" parent="TextureRect"]
-anchor_left = 0.222
-anchor_top = 0.5
-anchor_right = 0.222
-anchor_bottom = 0.5
-margin_left = -338.24
-margin_top = -324.0
-margin_right = 339.76
-margin_bottom = 996.0
+anchor_left = 0.276
+anchor_top = 0.479
+anchor_right = 0.276
+anchor_bottom = 0.479
+margin_left = -529.92
+margin_top = -461.32
+margin_right = 531.08
+margin_bottom = 460.68
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="右边" type="VBoxContainer" parent="TextureRect"]
-anchor_left = 0.544
-anchor_top = 0.139
-anchor_right = 0.992
+anchor_left = 0.573
+anchor_top = 0.146
+anchor_right = 0.945
 anchor_bottom = 0.825
-margin_left = 0.519897
-margin_top = 7.87999
-margin_right = -0.640137
-margin_bottom = -67.0001
+margin_left = 0.839966
+margin_top = 0.319992
+margin_right = 0.599854
+margin_bottom = -6.10352e-05
 custom_constants/separation = 100
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Logo" type="TextureRect" parent="TextureRect/右边"]
-margin_right = 858.0
-margin_bottom = 98.0
+margin_right = 714.0
+margin_bottom = 579.0
 texture = ExtResource( 9 )
 
 [node name="Label" type="RichTextLabel" parent="TextureRect/右边"]
-margin_top = 198.0
-margin_right = 858.0
-margin_bottom = 252.0
+margin_top = 679.0
+margin_right = 714.0
+margin_bottom = 733.0
 rect_min_size = Vector2( 300, 53 )
 bbcode_enabled = true
 bbcode_text = "按 空 [color=#000000]格[/color] 键"
