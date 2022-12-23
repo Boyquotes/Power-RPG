@@ -57,7 +57,7 @@ _global_script_class_icons={
 [application]
 
 config/name="厉害RPG"
-run/main_scene="res://资源/场景/主界面.tscn"
+run/main_scene="res://资源/场景/UI/主界面.tscn"
 boot_splash/image="res://资源/图片/welcome.png"
 config/icon="res://icon.png"
 
@@ -71,6 +71,7 @@ changer_scence="*res://资源/场景/UI/场景过渡.tscn"
 Uhd="*res://资源/场景/UI/UHD.tscn"
 GameState="*res://game_state.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+ggsManager="*res://addons/GGS/src/ggs_manager.gd"
 
 [display]
 
@@ -95,7 +96,7 @@ texture={
 "compress/normal_map": 0,
 "detect_3d": false,
 "flags/anisotropic": false,
-"flags/filter": true,
+"flags/filter": false,
 "flags/mipmaps": false,
 "flags/repeat": 0,
 "flags/srgb": 2,

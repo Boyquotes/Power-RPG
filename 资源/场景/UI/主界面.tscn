@@ -1,0 +1,123 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://资源/图片/背景/一个骑士_火堆.png" type="Texture" id=1]
+[ext_resource path="res://资源/图片/UI/logo.png" type="Texture" id=2]
+[ext_resource path="res://资源/主题.tres" type="Theme" id=3]
+[ext_resource path="res://资源/字体/思源宋体/思源宋R-60.tres" type="DynamicFont" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 1, 1, 0 )
+draw_center = false
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+draw_center = false
+border_color = Color( 0.8, 0.8, 0.8, 0 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+draw_center = false
+
+[node name="主界面" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="背景" type="CanvasLayer" parent="."]
+layer = -128
+
+[node name="图片" type="TextureRect" parent="背景"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo" type="TextureRect" parent="背景"]
+anchor_left = 0.287
+anchor_top = 0.307
+anchor_right = 0.287
+anchor_bottom = 0.307
+margin_left = -454.54
+margin_top = -234.56
+margin_right = 456.46
+margin_bottom = 235.44
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="按钮" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="盒子" type="VBoxContainer" parent="按钮"]
+anchor_left = 0.125
+anchor_top = 0.715
+anchor_right = 0.125
+anchor_bottom = 0.715
+margin_left = -120.0
+margin_top = -182.2
+margin_right = 120.0
+margin_bottom = 181.8
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="新游戏" type="Button" parent="按钮/盒子"]
+margin_right = 240.0
+margin_bottom = 88.0
+custom_colors/font_color_hover = Color( 0.0196078, 0.0196078, 0.0196078, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "新游戏"
+align = 0
+
+[node name="读取存档" type="Button" parent="按钮/盒子"]
+margin_top = 92.0
+margin_right = 240.0
+margin_bottom = 180.0
+custom_colors/font_color_hover = Color( 0.0196078, 0.0196078, 0.0196078, 1 )
+custom_fonts/font = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "读取存档"
+align = 0
+
+[node name="设置" type="Button" parent="按钮/盒子"]
+margin_top = 184.0
+margin_right = 240.0
+margin_bottom = 272.0
+custom_colors/font_color_hover = Color( 0.0196078, 0.0196078, 0.0196078, 1 )
+custom_fonts/font = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "设置"
+align = 0
+
+[node name="退出" type="Button" parent="按钮/盒子"]
+margin_top = 276.0
+margin_right = 240.0
+margin_bottom = 364.0
+custom_colors/font_color_hover = Color( 0.0196078, 0.0196078, 0.0196078, 1 )
+custom_fonts/font = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "退出"
+align = 0
+
+[node name="FX" type="AudioStreamPlayer" parent="."]

@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://资源/主题.tres" type="Theme" id=1]
 [ext_resource path="res://资源/字体/思源宋体/思源宋R-80.tres" type="DynamicFont" id=2]
 [ext_resource path="res://资源/场景/UI/占位符.tscn" type="PackedScene" id=3]
 [ext_resource path="res://资源/场景/UI/标题.tscn" type="PackedScene" id=4]
-[ext_resource path="res://资源/图片/UI/背景图.png" type="Texture" id=5]
 [ext_resource path="res://脚本/UI/背包.gd" type="Script" id=6]
 
 [sub_resource type="StyleBoxFlat" id=3]
@@ -28,7 +27,6 @@ layer = -128
 [node name="TextureRect" type="TextureRect" parent="背景"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

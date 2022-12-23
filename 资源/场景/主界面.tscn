@@ -1,12 +1,11 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://资源/音乐/电子游戏大片.mp3" type="AudioStream" id=1]
-[ext_resource path="res://资源/图片/UI/开始菜单图.png" type="Texture" id=2]
+[ext_resource path="res://资源/图片/UI/背景图.png" type="Texture" id=2]
 [ext_resource path="res://addons/saveNode/scripts/saveNode.gd" type="Script" id=3]
 [ext_resource path="res://脚本/UI/主界面.gd" type="Script" id=4]
 [ext_resource path="res://资源/场景/UI/弹窗.tscn" type="PackedScene" id=5]
 [ext_resource path="res://资源/主题.tres" type="Theme" id=6]
-[ext_resource path="res://资源/图片/UI/背景图.png" type="Texture" id=7]
 [ext_resource path="res://资源/图片/UI/logo.png" type="Texture" id=9]
 [ext_resource path="res://资源/图片/立绘/主角小.png" type="Texture" id=10]
 [ext_resource path="res://资源/图片/UI/下一个.png" type="Texture" id=11]
@@ -51,24 +50,12 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("TextureRect/主角1:modulate")
+tracks/3/path = NodePath("TextureRect/读取游戏:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ) ]
-}
-tracks/4/type = "value"
-tracks/4/path = NodePath("TextureRect/读取游戏:modulate")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
@@ -97,18 +84,6 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("TextureRect/主角1:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -176,24 +151,12 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("TextureRect/主角1:modulate")
+tracks/1/path = NodePath("TextureRect/右边:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("TextureRect/右边:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -211,29 +174,16 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 0.858824, 0.854902, 0.854902, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 7 )
+rect_scale = Vector2( 0.63, 0.63 )
+texture = ExtResource( 2 )
 __meta__ = {
-"_edit_lock_": true,
-"_edit_use_anchors_": false
+"_edit_lock_": true
 }
 
 [node name="弹窗" parent="TextureRect" instance=ExtResource( 5 )]
-
-[node name="主角1" type="TextureRect" parent="TextureRect"]
-anchor_left = 0.276
-anchor_top = 0.479
-anchor_right = 0.276
-anchor_bottom = 0.479
-margin_left = -529.92
-margin_top = -461.32
-margin_right = 531.08
-margin_bottom = 460.68
-texture = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="右边" type="VBoxContainer" parent="TextureRect"]
 anchor_left = 0.573
@@ -250,14 +200,14 @@ __meta__ = {
 }
 
 [node name="Logo" type="TextureRect" parent="TextureRect/右边"]
-margin_right = 714.0
-margin_bottom = 579.0
+margin_right = 1142.0
+margin_bottom = 470.0
 texture = ExtResource( 9 )
 
 [node name="Label" type="RichTextLabel" parent="TextureRect/右边"]
-margin_top = 679.0
-margin_right = 714.0
-margin_bottom = 733.0
+margin_top = 570.0
+margin_right = 1142.0
+margin_bottom = 624.0
 rect_min_size = Vector2( 300, 53 )
 bbcode_enabled = true
 bbcode_text = "按 空 [color=#000000]格[/color] 键"
@@ -343,14 +293,14 @@ __meta__ = {
 }
 
 [node name="存档" type="HBoxContainer" parent="TextureRect/读取游戏"]
-margin_top = 83.0
-margin_right = 1920.0
-margin_bottom = 807.0
+margin_top = 567.0
+margin_right = 3072.0
+margin_bottom = 1291.0
 alignment = 1
 
 [node name="存档一" type="VBoxContainer" parent="TextureRect/读取游戏/存档"]
-margin_left = 793.0
-margin_right = 1126.0
+margin_left = 1369.0
+margin_right = 1702.0
 margin_bottom = 724.0
 custom_constants/separation = 23
 
@@ -367,20 +317,20 @@ text = "玩家名"
 align = 1
 
 [node name="按钮" type="VBoxContainer" parent="TextureRect/读取游戏"]
-margin_top = 864.0
-margin_right = 1920.0
-margin_bottom = 996.0
+margin_top = 1348.0
+margin_right = 3072.0
+margin_bottom = 1480.0
 custom_constants/separation = 18
 
 [node name="读取" type="Button" parent="TextureRect/读取游戏/按钮"]
-margin_right = 1920.0
+margin_right = 3072.0
 margin_bottom = 57.0
 rect_min_size = Vector2( 800, 57 )
 text = "读取"
 
 [node name="新建" type="Button" parent="TextureRect/读取游戏/按钮"]
 margin_top = 75.0
-margin_right = 1920.0
+margin_right = 3072.0
 margin_bottom = 132.0
 rect_min_size = Vector2( 800, 57 )
 text = "新建"
