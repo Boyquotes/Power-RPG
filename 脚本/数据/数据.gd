@@ -9,10 +9,30 @@ var Enemy_data = Settings.Enemy.data()
 var Map_name_data = Settings.Map_name.data()
 var Npc_name_data = Settings.Npc_name.data()
 var Dialog_data = Settings.diglog.data()
+var Event_data = Settings.event.data()
 
 var dialog = "res://资源/场景/UI/对话.tscn"
 var loader = ResourceInteractiveLoader
 var load_path = "res://资源/场景/Test3.tscn"
+
+# Class
+class map_block:
+	var name:String
+	
+	var time:int
+	var type:int
+	var wood:int
+	var food:int
+	var metals:int
+	var medicinal:int
+	var fabric:int
+	var coin:int
+	var event:Array
+	var npcs:Array
+	
+	func sout():
+		print("[MapBlock]: 索引:%s 名称:%s 食物:%s 木材:%s 事件:%s NPC:%s 金币:%s 时间:%s"
+		%[type, name, food, wood, event, npcs, coin, time])
 
 #关于大地图
 var map_data = []

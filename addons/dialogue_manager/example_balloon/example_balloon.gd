@@ -5,7 +5,7 @@ signal actioned(next_id)
 
 
 const Line = preload("res://addons/dialogue_manager/dialogue_line.gd")
-const MenuItem = preload("res://addons/dialogue_manager/example_balloon/menu_item.tscn")
+const MenuItem = preload("res://资源/场景/UI/选项.tscn")
 
 
 onready var balloon := $Balloon

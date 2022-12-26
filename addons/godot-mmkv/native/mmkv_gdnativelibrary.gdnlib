@@ -1,0 +1,16 @@
+[general]
+
+singleton=false
+load_once=true
+symbol_prefix="godot_"
+reloadable=true
+
+[entry]
+
+Android.arm64-v8a="res://addons/godot-mmkv/native/android/arm64-v8a/libgodot_mmkv.so"
+Windows.64="res://addons/godot-mmkv/native/win/GodotMMKV.dll"
+
+[dependencies]
+
+Android.arm64-v8a=[  ]
+Windows.64=[  ]

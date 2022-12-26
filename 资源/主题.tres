@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=32 format=2]
 
-[ext_resource path="res://资源/字体/雅宋/雅宋45.tres" type="DynamicFont" id=1]
+[ext_resource path="res://资源/字体/思源黑体/思源黑_普通22.tres" type="DynamicFont" id=1]
 [ext_resource path="res://资源/图片/UI/方块指示器.png" type="Texture" id=2]
 
 [sub_resource type="StyleBoxFlat" id=13]
@@ -58,12 +58,12 @@ border_width_bottom = 2
 border_color = Color( 0.403922, 0.403922, 0.403922, 1 )
 
 [sub_resource type="StyleBoxFlat" id=15]
-bg_color = Color( 0.027451, 0.027451, 0.027451, 1 )
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color( 1, 1, 1, 1 )
+bg_color = Color( 0.0627451, 0.0627451, 0.0627451, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.756863, 0.709804, 0.635294, 1 )
 
 [sub_resource type="StyleBoxFlat" id=14]
 bg_color = Color( 0.717647, 0.0784314, 0.0941176, 1 )
