@@ -1,14 +1,34 @@
 gen-WARNING:没有配置文件，将使用内置默认配置
 gen-ERROR:未捕获异常
 Traceback (most recent call last):
-  File "ee.py", line 3, in <module>
-  File "click\core.py", line 1128, in __call__
-  File "click\core.py", line 1053, in main
-  File "click\core.py", line 1659, in invoke
-  File "click\core.py", line 1395, in invoke
-  File "click\core.py", line 754, in invoke
-  File "excelexporter\cli.py", line 107, in gen_all
-  File "excelexporter\exporter.py", line 216, in gen_all
-  File "excelexporter\exporter.py", line 72, in on_completed
-  File "excelexporter\exporter.py", line 195, in completed_gd
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\Applications\Scoop\apps\python\current\Scripts\ee.exe\__main__.py", line 4, in <module>
+    from excelexporter.__main__ import main
+  File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\excelexporter\__main__.py", line 3, in <module>
+    main()
+  File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\click\core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\click\core.py", line 1055, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\click\core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\click\core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\click\core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\excelexporter\cli.py", line 109, in gen_all
+    exporter.gen_all(cwd)
+  File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\excelexporter\exporter.py", line 266, in gen_all
+    on_completed()
+  File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\excelexporter\exporter.py", line 53, in on_completed
+    completed_gd()
+  File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\excelexporter\exporter.py", line 247, in completed_gd
+    with open(settings_file_path, "w", newline="\n", encoding="utf-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 FileNotFoundError: [Errno 2] No such file or directory: 'dist\\Settings.gd'

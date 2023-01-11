@@ -6,16 +6,25 @@
 script = ExtResource( 1 )
 syntax_version = 2
 raw_text = "~ Test
-
-Nathan: 厉害RPG是一个厉害的世界
-Nathan: 第二句[color=#000000]黑色[/color]
-- 选项一
-	Nathan: 第一个选项
-- 选项二
-	Nathan: 你选择了第一个选项
-- 进入第二句测试 => Test2
-- 结束游戏 => END
-Nathan: 嗯嗯嗯
+你卸下身上的盔甲，走到自己的卧室准备休息。
+但在躺到床上之前，你看到一封用鲜红色火漆封起来的信件摆放在你的床头，你知道，这是吉尔西送过来的。
+打开信封，里面的信纸只写着一行字:
+“明天来找我”
+你推开了了[name=\"悲伤之海\", desc=\"这是吉尔西酒吧的名字\"]的大门，穿过赌鬼与酒鬼筑起的高墙，到达酒馆最深处的楼梯。
+穿过楼梯，到达酒馆的地下室，左转走八小步，直面一扇金属门。
+- 敲门
+你抬起手在门上有节奏的敲击，三轻一重，两短两长。
+几秒后，门被打开，出现吉尔西的脸庞。
+等你走进房间，吉尔西把门从内反锁。
+- 什么事？
+- 沉默不语
+吉尔西: 你知道吧，“风暴”想做皇帝，“阿波罗”实际上已经被风暴软禁。
+吉尔西: 而你，海菲尔德大名鼎鼎的“不死者之王”、“阿波罗”最有才气的亲系，对现在的风暴来说，你是第一威胁。
+吉尔西: 听着，以你一己之力对抗不了风暴。海菲尔德也将要沦陷，对你来说唯一安全的地方就是马摩尔，那里以前不受帝国统治，现在也不。
+吉尔西: 你要逃到那里，再好好计划，重振帝国。
+吉尔西: 我很想和你一起去，但我已经被风暴的人监视，我不能离开。
+- 逃亡到马摩尔
+- 直接面对风暴 => END
 
 ~ Test2
 
@@ -30,208 +39,258 @@ Nathan: 第二句[color=#000000]黑色[/color]
 Nathan: 嗯嗯嗯"
 errors = [  ]
 titles = {
-"Test": "2",
-"Test2": "14"
+"Test": "1",
+"Test2": "23"
 }
 lines = {
 "0": {
-"next_id": "2",
+"next_id": "1",
 "text": "Test",
 "type": "title"
 },
-"10": {
-"character": "Nathan",
-"inline_mutations": [  ],
-"next_id": "end",
-"pauses": {
-},
+"1": {
+"character": "",
+"next_id": "2",
 "replacements": [  ],
-"speeds": [  ],
-"text": "嗯嗯嗯",
-"translation_key": "嗯嗯嗯",
+"text": "你卸下身上的盔甲，走到自己的卧室准备休息。",
+"translation_key": "你卸下身上的盔甲，走到自己的卧室准备休息。",
 "type": "dialogue"
 },
+"10": {
+"character": "",
+"next_id": "11",
+"replacements": [  ],
+"text": "等你走进房间，吉尔西把门从内反锁。",
+"translation_key": "等你走进房间，吉尔西把门从内反锁。",
+"type": "dialogue"
+},
+"11": {
+"next_id": "13",
+"next_id_after": "13",
+"replacements": [  ],
+"responses": PoolStringArray( "11", "12" ),
+"text": "什么事？",
+"translation_key": "什么事？",
+"type": "response"
+},
 "12": {
+"next_id": "13",
+"next_id_after": "13",
+"replacements": [  ],
+"text": "沉默不语",
+"translation_key": "沉默不语",
+"type": "response"
+},
+"13": {
+"character": "吉尔西",
+"character_replacements": [  ],
 "next_id": "14",
-"text": "Test2",
-"type": "title"
+"replacements": [  ],
+"text": "你知道吧，“风暴”想做皇帝，“阿波罗”实际上已经被风暴软禁。",
+"translation_key": "你知道吧，“风暴”想做皇帝，“阿波罗”实际上已经被风暴软禁。",
+"type": "dialogue"
 },
 "14": {
-"character": "Nathan",
-"inline_mutations": [  ],
+"character": "吉尔西",
+"character_replacements": [  ],
 "next_id": "15",
-"pauses": {
-},
 "replacements": [  ],
-"speeds": [  ],
-"text": "厉害RPG是一个厉害的世界",
-"translation_key": "厉害RPG是一个厉害的世界",
+"text": "而你，海菲尔德大名鼎鼎的“不死者之王”、“阿波罗”最有才气的亲系，对现在的风暴来说，你是第一威胁。",
+"translation_key": "而你，海菲尔德大名鼎鼎的“不死者之王”、“阿波罗”最有才气的亲系，对现在的风暴来说，你是第一威胁。",
 "type": "dialogue"
 },
 "15": {
-"character": "Nathan",
-"inline_mutations": [  ],
+"character": "吉尔西",
+"character_replacements": [  ],
 "next_id": "16",
-"pauses": {
-},
 "replacements": [  ],
-"speeds": [  ],
-"text": "第二句[color=#000000]黑色[/color]",
-"translation_key": "第二句[color=#000000]黑色[/color]",
+"text": "听着，以你一己之力对抗不了风暴。海菲尔德也将要沦陷，对你来说唯一安全的地方就是马摩尔，那里以前不受帝国统治，现在也不。",
+"translation_key": "听着，以你一己之力对抗不了风暴。海菲尔德也将要沦陷，对你来说唯一安全的地方就是马摩尔，那里以前不受帝国统治，现在也不。",
 "type": "dialogue"
 },
 "16": {
+"character": "吉尔西",
+"character_replacements": [  ],
 "next_id": "17",
-"next_id_after": "22",
 "replacements": [  ],
-"responses": PoolStringArray( "16", "18", "20", "21" ),
-"text": "选项一",
-"translation_key": "选项一",
-"type": "response"
+"text": "你要逃到那里，再好好计划，重振帝国。",
+"translation_key": "你要逃到那里，再好好计划，重振帝国。",
+"type": "dialogue"
 },
 "17": {
-"character": "Nathan",
-"inline_mutations": [  ],
-"next_id": "22",
-"parent_id": "16",
-"pauses": {
-},
+"character": "吉尔西",
+"character_replacements": [  ],
+"next_id": "18",
 "replacements": [  ],
-"speeds": [  ],
-"text": "第一个选项",
-"translation_key": "第一个选项",
+"text": "我很想和你一起去，但我已经被风暴的人监视，我不能离开。",
+"translation_key": "我很想和你一起去，但我已经被风暴的人监视，我不能离开。",
 "type": "dialogue"
 },
 "18": {
-"next_id": "19",
-"next_id_after": "22",
+"next_id": "end!",
+"next_id_after": "end!",
 "replacements": [  ],
-"text": "选项二",
-"translation_key": "选项二",
+"responses": PoolStringArray( "18", "19" ),
+"text": "逃亡到马摩尔",
+"translation_key": "逃亡到马摩尔",
 "type": "response"
 },
 "19": {
-"character": "Nathan",
-"inline_mutations": [  ],
-"next_id": "22",
-"parent_id": "18",
-"pauses": {
-},
+"next_id": "end",
+"next_id_after": "end!",
 "replacements": [  ],
-"speeds": [  ],
-"text": "你选择了第一个选项",
-"translation_key": "你选择了第一个选项",
-"type": "dialogue"
+"text": "直接面对风暴",
+"translation_key": "直接面对风暴",
+"type": "response"
 },
 "2": {
-"character": "Nathan",
-"inline_mutations": [  ],
+"character": "",
 "next_id": "3",
-"pauses": {
-},
 "replacements": [  ],
-"speeds": [  ],
+"text": "但在躺到床上之前，你看到一封用鲜红色火漆封起来的信件摆放在你的床头，你知道，这是吉尔西送过来的。",
+"translation_key": "但在躺到床上之前，你看到一封用鲜红色火漆封起来的信件摆放在你的床头，你知道，这是吉尔西送过来的。",
+"type": "dialogue"
+},
+"21": {
+"next_id": "23",
+"text": "Test2",
+"type": "title"
+},
+"23": {
+"character": "Nathan",
+"character_replacements": [  ],
+"next_id": "24",
+"replacements": [  ],
 "text": "厉害RPG是一个厉害的世界",
 "translation_key": "厉害RPG是一个厉害的世界",
 "type": "dialogue"
 },
-"20": {
-"next_id": "14",
-"next_id_after": "22",
-"replacements": [  ],
-"text": "进入第二句测试",
-"translation_key": "进入第二句测试",
-"type": "response"
-},
-"21": {
-"next_id": "end",
-"next_id_after": "22",
-"replacements": [  ],
-"text": "结束游戏",
-"translation_key": "结束游戏",
-"type": "response"
-},
-"22": {
+"24": {
 "character": "Nathan",
-"inline_mutations": [  ],
-"next_id": "",
-"pauses": {
-},
+"character_replacements": [  ],
+"next_id": "25",
 "replacements": [  ],
-"speeds": [  ],
-"text": "嗯嗯嗯",
-"translation_key": "嗯嗯嗯",
-"type": "dialogue"
-},
-"3": {
-"character": "Nathan",
-"inline_mutations": [  ],
-"next_id": "4",
-"pauses": {
-},
-"replacements": [  ],
-"speeds": [  ],
 "text": "第二句[color=#000000]黑色[/color]",
 "translation_key": "第二句[color=#000000]黑色[/color]",
 "type": "dialogue"
 },
-"4": {
-"next_id": "5",
-"next_id_after": "10",
+"25": {
+"next_id": "26",
+"next_id_after": "31",
 "replacements": [  ],
-"responses": PoolStringArray( "4", "6", "8", "9" ),
+"responses": PoolStringArray( "25", "27", "29", "30" ),
 "text": "选项一",
 "translation_key": "选项一",
 "type": "response"
 },
-"5": {
+"26": {
 "character": "Nathan",
-"inline_mutations": [  ],
-"next_id": "10",
-"parent_id": "4",
-"pauses": {
-},
+"character_replacements": [  ],
+"next_id": "31",
+"parent_id": "25",
 "replacements": [  ],
-"speeds": [  ],
 "text": "第一个选项",
 "translation_key": "第一个选项",
 "type": "dialogue"
 },
-"6": {
-"next_id": "7",
-"next_id_after": "10",
+"27": {
+"next_id": "28",
+"next_id_after": "31",
 "replacements": [  ],
 "text": "选项二",
 "translation_key": "选项二",
 "type": "response"
 },
-"7": {
+"28": {
 "character": "Nathan",
-"inline_mutations": [  ],
-"next_id": "10",
-"parent_id": "6",
-"pauses": {
-},
+"character_replacements": [  ],
+"next_id": "31",
+"parent_id": "27",
 "replacements": [  ],
-"speeds": [  ],
 "text": "你选择了第一个选项",
 "translation_key": "你选择了第一个选项",
 "type": "dialogue"
 },
-"8": {
-"next_id": "14",
-"next_id_after": "10",
+"29": {
+"next_id": "23",
+"next_id_after": "31",
 "replacements": [  ],
 "text": "进入第二句测试",
 "translation_key": "进入第二句测试",
 "type": "response"
 },
-"9": {
+"3": {
+"character": "",
+"next_id": "4",
+"replacements": [  ],
+"text": "打开信封，里面的信纸只写着一行字:",
+"translation_key": "打开信封，里面的信纸只写着一行字:",
+"type": "dialogue"
+},
+"30": {
 "next_id": "end",
-"next_id_after": "10",
+"next_id_after": "31",
 "replacements": [  ],
 "text": "结束游戏",
 "translation_key": "结束游戏",
 "type": "response"
+},
+"31": {
+"character": "Nathan",
+"character_replacements": [  ],
+"next_id": "",
+"replacements": [  ],
+"text": "嗯嗯嗯",
+"translation_key": "嗯嗯嗯",
+"type": "dialogue"
+},
+"4": {
+"character": "",
+"next_id": "5",
+"replacements": [  ],
+"text": "“明天来找我”",
+"translation_key": "“明天来找我”",
+"type": "dialogue"
+},
+"5": {
+"character": "",
+"next_id": "6",
+"replacements": [  ],
+"text": "你推开了了[name=\"悲伤之海\", desc=\"这是吉尔西酒吧的名字\"]的大门，穿过赌鬼与酒鬼筑起的高墙，到达酒馆最深处的楼梯。",
+"translation_key": "你推开了了[name=\"悲伤之海\", desc=\"这是吉尔西酒吧的名字\"]的大门，穿过赌鬼与酒鬼筑起的高墙，到达酒馆最深处的楼梯。",
+"type": "dialogue"
+},
+"6": {
+"character": "",
+"next_id": "7",
+"replacements": [  ],
+"text": "穿过楼梯，到达酒馆的地下室，左转走八小步，直面一扇金属门。",
+"translation_key": "穿过楼梯，到达酒馆的地下室，左转走八小步，直面一扇金属门。",
+"type": "dialogue"
+},
+"7": {
+"next_id": "8",
+"next_id_after": "8",
+"replacements": [  ],
+"responses": PoolStringArray( "7" ),
+"text": "敲门",
+"translation_key": "敲门",
+"type": "response"
+},
+"8": {
+"character": "",
+"next_id": "9",
+"replacements": [  ],
+"text": "你抬起手在门上有节奏的敲击，三轻一重，两短两长。",
+"translation_key": "你抬起手在门上有节奏的敲击，三轻一重，两短两长。",
+"type": "dialogue"
+},
+"9": {
+"character": "",
+"next_id": "10",
+"replacements": [  ],
+"text": "几秒后，门被打开，出现吉尔西的脸庞。",
+"translation_key": "几秒后，门被打开，出现吉尔西的脸庞。",
+"type": "dialogue"
 }
 }

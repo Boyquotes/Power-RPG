@@ -6,7 +6,7 @@ var item_randi
 
 func _ready():
 	数据.dialog_res = preload("res://资源/对话/诗人.tres")
-	print("诗人准备好了")
+	pass
 
 func _on_诗人_body_entered(body):
 	randomize()
@@ -19,4 +19,4 @@ func _on_诗人_body_entered(body):
 	elif dialog == 1:
 		Uhd.dialog_normal("诗人2",数据.dialog_res)
 	else:
-		print("1")
+		pass

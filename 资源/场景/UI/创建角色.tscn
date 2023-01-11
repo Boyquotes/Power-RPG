@@ -1,0 +1,617 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://资源/主题.tres" type="Theme" id=1]
+[ext_resource path="res://脚本/UI/捏脸.gd" type="Script" id=2]
+[ext_resource path="res://资源/图片/捏脸/脸型/脸型1.png" type="Texture" id=3]
+[ext_resource path="res://资源/图片/捏脸/眉毛/眉毛1.png" type="Texture" id=4]
+[ext_resource path="res://资源/图片/捏脸/头发/头发1.png" type="Texture" id=5]
+[ext_resource path="res://资源/图片/捏脸/嘴巴/嘴巴1.png" type="Texture" id=6]
+[ext_resource path="res://资源/图片/捏脸/眼睛/眼睛1.png" type="Texture" id=7]
+[ext_resource path="res://资源/图片/捏脸/鼻子/鼻子1.png" type="Texture" id=8]
+[ext_resource path="res://资源/图片/捏脸/衣服/衣服1.png" type="Texture" id=9]
+[ext_resource path="res://资源/字体/思源黑体/思源黑_普通22.tres" type="DynamicFont" id=10]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.101961, 0.113725, 0.141176, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.219608, 0.207843, 0.172549, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.0666667, 0.0705882, 0.0862745, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.219608, 0.207843, 0.172549, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.176471, 0.188235, 0.215686, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.305882, 0.317647, 0.337255, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.0862745, 0.0980392, 0.117647, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.176471, 0.188235, 0.215686, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.639216, 0.541176, 0.321569, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.305882, 0.317647, 0.337255, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.305882, 0.317647, 0.337255, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.192157, 0.192157, 0.223529, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.447059, 0.407843, 0.372549, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.305882, 0.317647, 0.337255, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.305882, 0.317647, 0.337255, 1 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.113725, 0.113725, 0.145098, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.447059, 0.407843, 0.372549, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="ButtonGroup" id=13]
+
+[sub_resource type="ButtonGroup" id=14]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.0823529, 0.0941176, 0.121569, 1 )
+
+[node name="创建角色" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="立绘" type="Sprite" parent="."]
+position = Vector2( 1272, 104 )
+
+[node name="衣服" type="Sprite" parent="立绘"]
+position = Vector2( -335, 524 )
+texture = ExtResource( 9 )
+
+[node name="头" type="Sprite" parent="立绘"]
+position = Vector2( -336, 176 )
+
+[node name="脸型" type="Sprite" parent="立绘/头"]
+texture = ExtResource( 3 )
+
+[node name="头发" type="Sprite" parent="立绘/头"]
+texture = ExtResource( 5 )
+
+[node name="左眉毛" type="Sprite" parent="立绘/头"]
+position = Vector2( -32, -16 )
+texture = ExtResource( 4 )
+
+[node name="右眉毛" type="Sprite" parent="立绘/头"]
+position = Vector2( 32, -16 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="左眼睛" type="Sprite" parent="立绘/头"]
+position = Vector2( -32, 16 )
+texture = ExtResource( 7 )
+
+[node name="右眼睛" type="Sprite" parent="立绘/头"]
+position = Vector2( 32, 16 )
+texture = ExtResource( 7 )
+flip_h = true
+
+[node name="鼻子" type="Sprite" parent="立绘/头"]
+position = Vector2( 0, 24 )
+texture = ExtResource( 8 )
+
+[node name="嘴巴" type="Sprite" parent="立绘/头"]
+position = Vector2( 0, 72 )
+texture = ExtResource( 6 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 1920, 1080 )
+theme = ExtResource( 1 )
+
+[node name="Vbox" type="VBoxContainer" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 169
+alignment = 1
+
+[node name="Hbox" type="HBoxContainer" parent="Control/Vbox"]
+margin_top = 31.0
+margin_right = 1920.0
+margin_bottom = 780.0
+custom_constants/separation = 705
+alignment = 1
+
+[node name="Panel" type="Panel" parent="Control/Vbox/Hbox"]
+margin_left = 47.0
+margin_right = 567.0
+margin_bottom = 749.0
+rect_min_size = Vector2( 520, 533 )
+custom_styles/panel = SubResource( 3 )
+
+[node name="Vbox2" type="VBoxContainer" parent="Control/Vbox/Hbox/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 500, 0 )
+custom_constants/separation = 44
+
+[node name="Title" type="Panel" parent="Control/Vbox/Hbox/Panel/Vbox2"]
+margin_right = 520.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 0, 80 )
+custom_styles/panel = SubResource( 4 )
+
+[node name="Label" type="Label" parent="Control/Vbox/Hbox/Panel/Vbox2/Title"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0.639216, 0.541176, 0.321569, 1 )
+custom_fonts/font = ExtResource( 10 )
+text = "基础信息"
+align = 1
+valign = 1
+
+[node name="Marigin" type="MarginContainer" parent="Control/Vbox/Hbox/Panel/Vbox2"]
+margin_top = 124.0
+margin_right = 520.0
+margin_bottom = 344.0
+custom_constants/margin_right = 30
+custom_constants/margin_left = 30
+
+[node name="Vbox" type="VBoxContainer" parent="Control/Vbox/Hbox/Panel/Vbox2/Marigin"]
+margin_left = 30.0
+margin_right = 490.0
+margin_bottom = 220.0
+custom_constants/separation = 20
+
+[node name="名字" type="Panel" parent="Control/Vbox/Hbox/Panel/Vbox2/Marigin/Vbox"]
+margin_right = 460.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 300, 100 )
+custom_styles/panel = SubResource( 6 )
+
+[node name="Vbox" type="VBoxContainer" parent="Control/Vbox/Hbox/Panel/Vbox2/Marigin/Vbox/名字"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 7
+
+[node name="Title" type="Panel" parent="Control/Vbox/Hbox/Panel/Vbox2/Marigin/Vbox/名字/Vbox"]
+margin_right = 460.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+custom_styles/panel = SubResource( 8 )
+
+[node name="Label" type="Label" parent="Control/Vbox/Hbox/Panel/Vbox2/Marigin/Vbox/名字/Vbox/Title"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0.639216, 0.541176, 0.321569, 1 )
+custom_fonts/font = ExtResource( 10 )
+text = "姓名"
+align = 1
+valign = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Vbox/Hbox/Panel/Vbox2/Marigin/Vbox/名字/Vbox"]
+margin_top = 37.0
+margin_right = 460.0
+margin_bottom = 77.0
+custom_constants/margin_right = 20
+custom_constants/margin_left = 20
+
+[node name="LineEdit" type="LineEdit" parent="Control/Vbox/Hbox/Panel/Vbox2/Marigin/Vbox/名字/Vbox/MarginContainer"]
+margin_left = 20.0
+margin_right = 440.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 5 )
+align = 1
+
+[node name="Panel" type="Panel" parent="Control/Vbox/Hbox/Panel/Vbox2/Marigin/Vbox/名字"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 9 )
+
+[node name="性别" type="Panel" parent="Control/Vbox/Hbox/Panel/Vbox2/Marigin/Vbox"]
+margin_top = 120.0
+margin_right = 460.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 300, 100 )
+custom_styles/panel = SubResource( 6 )
+
+[node name="Vbox" type="VBoxContainer" parent="Control/Vbox/Hbox/Panel/Vbox2/Marigin/Vbox/性别"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 7
+
+[node name="Title" type="Panel" parent="Control/Vbox/Hbox/Panel/Vbox2/Marigin/Vbox/性别/Vbox"]
+margin_right = 460.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+custom_styles/panel = SubResource( 8 )
+
+[node name="Label" type="Label" parent="Control/Vbox/Hbox/Panel/Vbox2/Marigin/Vbox/性别/Vbox/Title"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0.639216, 0.541176, 0.321569, 1 )
+custom_fonts/font = ExtResource( 10 )
+text = "性别"
+align = 1
+valign = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Vbox/Hbox/Panel/Vbox2/Marigin/Vbox/性别/Vbox"]
+margin_top = 37.0
+margin_right = 460.0
+margin_bottom = 87.0
+custom_constants/margin_right = 20
+custom_constants/margin_left = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Vbox/Hbox/Panel/Vbox2/Marigin/Vbox/性别/Vbox/MarginContainer"]
+margin_left = 20.0
+margin_right = 440.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+custom_constants/separation = 22
+alignment = 1
+
+[node name="男" type="Button" parent="Control/Vbox/Hbox/Panel/Vbox2/Marigin/Vbox/性别/Vbox/MarginContainer/HBoxContainer"]
+margin_left = 59.0
+margin_right = 199.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 140, 0 )
+custom_colors/font_color = Color( 0.992157, 0.792157, 0.568627, 1 )
+custom_colors/font_color_hover = Color( 0.992157, 0.792157, 0.568627, 1 )
+custom_colors/font_color_pressed = Color( 0.992157, 0.792157, 0.568627, 1 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+group = SubResource( 13 )
+text = "男"
+
+[node name="女" type="Button" parent="Control/Vbox/Hbox/Panel/Vbox2/Marigin/Vbox/性别/Vbox/MarginContainer/HBoxContainer"]
+margin_left = 221.0
+margin_right = 361.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 140, 0 )
+custom_colors/font_color = Color( 0.992157, 0.792157, 0.568627, 1 )
+custom_colors/font_color_hover = Color( 0.992157, 0.792157, 0.568627, 1 )
+custom_colors/font_color_pressed = Color( 0.992157, 0.792157, 0.568627, 1 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/normal = SubResource( 10 )
+group = SubResource( 13 )
+text = "女"
+
+[node name="Panel" type="Panel" parent="Control/Vbox/Hbox/Panel/Vbox2/Marigin/Vbox/性别"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 9 )
+
+[node name="Vbox" type="VBoxContainer" parent="Control/Vbox/Hbox"]
+margin_left = 1272.0
+margin_right = 1872.0
+margin_bottom = 749.0
+alignment = 1
+
+[node name="Hbox" type="HBoxContainer" parent="Control/Vbox/Hbox/Vbox"]
+margin_right = 600.0
+margin_bottom = 745.0
+alignment = 1
+
+[node name="Vbox2" type="VBoxContainer" parent="Control/Vbox/Hbox/Vbox/Hbox"]
+margin_right = 600.0
+margin_bottom = 745.0
+custom_constants/separation = 29
+alignment = 1
+
+[node name="选择脸型" type="Panel" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2"]
+margin_right = 600.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 600, 100 )
+
+[node name="Hbox" type="HBoxContainer" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择脸型"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 86
+alignment = 1
+
+[node name="上一个" type="Button" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择脸型/Hbox"]
+margin_right = 200.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 60 )
+text = "上一个"
+
+[node name="Label" type="Label" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择脸型/Hbox"]
+margin_left = 286.0
+margin_top = 38.0
+margin_right = 352.0
+margin_bottom = 61.0
+text = "脸型一"
+
+[node name="下一个" type="Button" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择脸型/Hbox"]
+margin_left = 438.0
+margin_right = 638.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 60 )
+text = "下一个"
+
+[node name="选择头发" type="Panel" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2"]
+margin_top = 129.0
+margin_right = 600.0
+margin_bottom = 229.0
+rect_min_size = Vector2( 600, 100 )
+
+[node name="Hbox" type="HBoxContainer" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择头发"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 86
+alignment = 1
+
+[node name="上一个" type="Button" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择头发/Hbox"]
+margin_right = 200.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 60 )
+text = "上一个"
+
+[node name="Label" type="Label" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择头发/Hbox"]
+margin_left = 286.0
+margin_top = 38.0
+margin_right = 352.0
+margin_bottom = 61.0
+text = "头发一"
+
+[node name="下一个" type="Button" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择头发/Hbox"]
+margin_left = 438.0
+margin_right = 638.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 60 )
+text = "下一个"
+
+[node name="选择眼睛" type="Panel" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2"]
+margin_top = 258.0
+margin_right = 600.0
+margin_bottom = 358.0
+rect_min_size = Vector2( 600, 100 )
+
+[node name="Hbox" type="HBoxContainer" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择眼睛"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 86
+alignment = 1
+
+[node name="上一个" type="Button" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择眼睛/Hbox"]
+margin_right = 200.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 60 )
+text = "上一个"
+
+[node name="Label" type="Label" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择眼睛/Hbox"]
+margin_left = 286.0
+margin_top = 38.0
+margin_right = 352.0
+margin_bottom = 61.0
+text = "眼睛一"
+
+[node name="下一个" type="Button" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择眼睛/Hbox"]
+margin_left = 438.0
+margin_right = 638.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 60 )
+text = "下一个"
+
+[node name="选择眉毛" type="Panel" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2"]
+margin_top = 387.0
+margin_right = 600.0
+margin_bottom = 487.0
+rect_min_size = Vector2( 600, 100 )
+
+[node name="Hbox" type="HBoxContainer" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择眉毛"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 86
+alignment = 1
+
+[node name="上一个" type="Button" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择眉毛/Hbox"]
+margin_right = 200.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 60 )
+text = "上一个"
+
+[node name="Label" type="Label" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择眉毛/Hbox"]
+margin_left = 286.0
+margin_top = 38.0
+margin_right = 352.0
+margin_bottom = 61.0
+text = "眉毛一"
+
+[node name="下一个" type="Button" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择眉毛/Hbox"]
+margin_left = 438.0
+margin_right = 638.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 60 )
+text = "下一个"
+
+[node name="选择嘴巴" type="Panel" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2"]
+margin_top = 516.0
+margin_right = 600.0
+margin_bottom = 616.0
+rect_min_size = Vector2( 600, 100 )
+
+[node name="Hbox" type="HBoxContainer" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择嘴巴"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 86
+alignment = 1
+
+[node name="上一个" type="Button" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择嘴巴/Hbox"]
+margin_right = 200.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 60 )
+text = "上一个"
+
+[node name="Label" type="Label" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择嘴巴/Hbox"]
+margin_left = 286.0
+margin_top = 38.0
+margin_right = 352.0
+margin_bottom = 61.0
+text = "嘴巴一"
+
+[node name="下一个" type="Button" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择嘴巴/Hbox"]
+margin_left = 438.0
+margin_right = 638.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 60 )
+text = "下一个"
+
+[node name="选择衣服" type="Panel" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2"]
+margin_top = 645.0
+margin_right = 600.0
+margin_bottom = 745.0
+rect_min_size = Vector2( 600, 100 )
+
+[node name="Hbox" type="HBoxContainer" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择衣服"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 86
+alignment = 1
+
+[node name="上一个" type="Button" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择衣服/Hbox"]
+margin_right = 200.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 60 )
+text = "上一个"
+
+[node name="Label" type="Label" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择衣服/Hbox"]
+margin_left = 286.0
+margin_top = 38.0
+margin_right = 352.0
+margin_bottom = 61.0
+text = "衣服一"
+
+[node name="下一个" type="Button" parent="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择衣服/Hbox"]
+margin_left = 438.0
+margin_right = 638.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 60 )
+text = "下一个"
+
+[node name="Hbox2" type="HBoxContainer" parent="Control/Vbox/Hbox/Vbox"]
+margin_top = 749.0
+margin_right = 600.0
+margin_bottom = 749.0
+
+[node name="Hbox2" type="HBoxContainer" parent="Control/Vbox"]
+margin_top = 949.0
+margin_right = 1920.0
+margin_bottom = 1049.0
+custom_constants/separation = 37
+alignment = 1
+
+[node name="基本信息" type="Button" parent="Control/Vbox/Hbox2"]
+margin_left = 504.0
+margin_right = 704.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 100 )
+group = SubResource( 14 )
+text = "基本信息"
+
+[node name="出身特质" type="Button" parent="Control/Vbox/Hbox2"]
+margin_left = 741.0
+margin_right = 941.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 100 )
+group = SubResource( 14 )
+text = "出身特质"
+
+[node name="世界细节" type="Button" parent="Control/Vbox/Hbox2"]
+margin_left = 978.0
+margin_right = 1178.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 100 )
+group = SubResource( 14 )
+text = "世界细节"
+
+[node name="完成" type="Button" parent="Control/Vbox/Hbox2"]
+margin_left = 1215.0
+margin_right = 1415.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 200, 100 )
+group = SubResource( 14 )
+text = "世界细节"
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -128
+
+[node name="Panel" type="Panel" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 2 )
+
+[connection signal="texture_changed" from="立绘/头/左眉毛" to="." method="_on_左眉毛_texture_changed"]
+[connection signal="texture_changed" from="立绘/头/左眼睛" to="." method="_on_左眼睛_texture_changed"]
+[connection signal="pressed" from="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择脸型/Hbox/上一个" to="." method="_on_上一个脸_pressed"]
+[connection signal="pressed" from="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择脸型/Hbox/下一个" to="." method="_on_下一个脸_pressed"]
+[connection signal="pressed" from="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择头发/Hbox/上一个" to="." method="_on_上一个头发_pressed"]
+[connection signal="pressed" from="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择头发/Hbox/下一个" to="." method="_on_下一个头发_pressed"]
+[connection signal="pressed" from="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择眼睛/Hbox/上一个" to="." method="_on_上一个眼睛_pressed"]
+[connection signal="pressed" from="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择眼睛/Hbox/下一个" to="." method="_on_下一个眼睛_pressed"]
+[connection signal="pressed" from="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择眉毛/Hbox/上一个" to="." method="_on_上一个眉毛_pressed"]
+[connection signal="pressed" from="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择眉毛/Hbox/下一个" to="." method="_on_下一个眉毛_pressed"]
+[connection signal="pressed" from="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择嘴巴/Hbox/上一个" to="." method="_on_上一个嘴巴_pressed"]
+[connection signal="pressed" from="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择嘴巴/Hbox/下一个" to="." method="_on_下一个嘴巴_pressed"]
+[connection signal="pressed" from="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择衣服/Hbox/上一个" to="." method="_on_上一个衣服_pressed"]
+[connection signal="pressed" from="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择衣服/Hbox/下一个" to="." method="_on_下一个衣服_pressed"]
+[connection signal="pressed" from="Control/Vbox/Hbox2/完成" to="." method="_on_完成_pressed"]

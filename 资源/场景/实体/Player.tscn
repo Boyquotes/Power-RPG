@@ -3,7 +3,7 @@
 [ext_resource path="res://资源/图片/UI/icon/玩家.png" type="Texture" id=1]
 [ext_resource path="res://脚本/玩家/Player.gd" type="Script" id=2]
 
-[node name="Player" type="KinematicBody2D" groups=["Player"]]
+[node name="Player" type="Node2D" groups=["Player"]]
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]

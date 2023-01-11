@@ -34,6 +34,29 @@ class map_block:
 		print("[MapBlock]: 索引:%s 名称:%s 食物:%s 木材:%s 事件:%s NPC:%s 金币:%s 时间:%s"
 		%[type, name, food, wood, event, npcs, coin, time])
 
+class npcs:
+	var name
+	var age: int
+	var gender: int
+	# [脸型，头发，眼睛，眉毛，嘴巴，鼻子，衣服]
+	var portrait: Array
+	var feel: int
+	
+
+# 存档相关
+var key_list = []
+var key = 0
+# 数组的顺序
+var num = 0
+
+func born_key():
+	mmkv.initMMKV("厉害RPG", "save.default")
+	for i in 999999:
+		randomize()
+		key = str(i) + str(rand_range(0, 1000)) + str(OS.get_unix_time())
+		key_list.append(key)
+		
+
 #关于大地图
 var map_data = []
 
@@ -77,19 +100,19 @@ var 敌人立绘 = "res://资源/图片/立绘/主角小.png"
 var 行动点 = 0
 
 #背包相关
-var player_bag_temp
-var player_bag = [100001]
-func add_item(item_id):
-	player_bag.push_back(item_id)
-
-func add_武器(item_id):
-	player_bag.push_back(item_id)
-
-func add_技能(item_id):
-	player_bag.push_back(item_id)
-
-func add_装备(item_id):
-	player_bag.push_back(item_id)
+#var player_bag_temp
+#var player_bag = [100001]
+#func add_item(item_id):
+#	player_bag.push_back(item_id)
+#
+#func add_武器(item_id):
+#	player_bag.push_back(item_id)
+#
+#func add_技能(item_id):
+#	player_bag.push_back(item_id)
+#
+#func add_装备(item_id):
+#	player_bag.push_back(item_id)
 
 
 #系统相关

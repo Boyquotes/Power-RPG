@@ -1,0 +1,173 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://资源/主题.tres" type="Theme" id=1]
+[ext_resource path="res://资源/图片/捏脸/脸型/脸型1.png" type="Texture" id=2]
+[ext_resource path="res://资源/字体/思源黑体/思源黑_粗16.tres" type="DynamicFont" id=3]
+[ext_resource path="res://资源/字体/思源黑体/思源黑_R12.tres" type="DynamicFont" id=4]
+[ext_resource path="res://资源/字体/思源黑体/思源黑_R14.tres" type="DynamicFont" id=5]
+[ext_resource path="res://脚本/UI/地图NPC信息框.gd" type="Script" id=6]
+[ext_resource path="res://脚本/UI/NPC信息框BOX.gd" type="Script" id=7]
+[ext_resource path="res://资源/图片/捏脸/头发/头发1.png" type="Texture" id=8]
+[ext_resource path="res://资源/图片/捏脸/眉毛/眉毛1.png" type="Texture" id=9]
+[ext_resource path="res://资源/图片/捏脸/眼睛/眼睛1.png" type="Texture" id=10]
+[ext_resource path="res://资源/图片/捏脸/鼻子/鼻子1.png" type="Texture" id=11]
+[ext_resource path="res://资源/图片/捏脸/嘴巴/嘴巴1.png" type="Texture" id=12]
+[ext_resource path="res://资源/图片/捏脸/衣服/衣服1.png" type="Texture" id=13]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.137255, 0.14902, 0.176471, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.427451, 0.392157, 0.333333, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.137255, 0.14902, 0.176471, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.192157, 0.203922, 0.231373, 1 )
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="NPC信息框" type="Panel"]
+anchor_right = 0.104
+anchor_bottom = 0.093
+margin_right = -30.68
+margin_bottom = -12.44
+rect_min_size = Vector2( 200, 100 )
+theme = ExtResource( 1 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 6 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -90.0
+margin_top = -40.0
+margin_right = 90.0
+margin_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 180, 80 )
+custom_styles/panel = SubResource( 2 )
+
+[node name="肖像" type="Node2D" parent="Panel"]
+position = Vector2( 19, 4 )
+scale = Vector2( 0.1, 0.1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="衣服" type="Sprite" parent="Panel/肖像"]
+position = Vector2( 120, 450 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="脸型" type="Sprite" parent="Panel/肖像"]
+position = Vector2( 110, 126.667 )
+texture = ExtResource( 2 )
+
+[node name="头发" type="Sprite" parent="Panel/肖像"]
+position = Vector2( 110, 126.667 )
+texture = ExtResource( 8 )
+
+[node name="左眉毛" type="Sprite" parent="Panel/肖像"]
+position = Vector2( 80, 120 )
+texture = ExtResource( 9 )
+
+[node name="右眉毛" type="Sprite" parent="Panel/肖像"]
+position = Vector2( 140, 120 )
+texture = ExtResource( 9 )
+flip_h = true
+
+[node name="左眼睛" type="Sprite" parent="Panel/肖像"]
+position = Vector2( 80, 150 )
+texture = ExtResource( 10 )
+
+[node name="右眼睛" type="Sprite" parent="Panel/肖像"]
+position = Vector2( 140, 150 )
+texture = ExtResource( 10 )
+flip_h = true
+
+[node name="鼻子" type="Sprite" parent="Panel/肖像"]
+position = Vector2( 110, 170 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 11 )
+
+[node name="嘴巴" type="Sprite" parent="Panel/肖像"]
+position = Vector2( 110, 210 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Hbox" type="HBoxContainer" parent="Panel"]
+anchor_left = 0.664
+anchor_top = 0.5
+anchor_right = 0.664
+anchor_bottom = 0.5
+margin_left = -57.52
+margin_top = -40.0
+margin_right = 57.48
+margin_bottom = 40.0
+script = ExtResource( 7 )
+
+[node name="Mar" type="MarginContainer" parent="Panel/Hbox"]
+margin_right = 48.0
+margin_bottom = 80.0
+custom_constants/margin_top = 8
+
+[node name="Vbox" type="VBoxContainer" parent="Panel/Hbox/Mar"]
+margin_top = 8.0
+margin_right = 48.0
+margin_bottom = 80.0
+custom_constants/separation = 8
+
+[node name="Vbox2" type="VBoxContainer" parent="Panel/Hbox/Mar/Vbox"]
+margin_right = 48.0
+margin_bottom = 51.0
+
+[node name="名称" type="Label" parent="Panel/Hbox/Mar/Vbox/Vbox2"]
+margin_right = 48.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0.992157, 0.792157, 0.568627, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "小王"
+
+[node name="好感" type="Label" parent="Panel/Hbox/Mar/Vbox/Vbox2"]
+margin_top = 21.0
+margin_right = 48.0
+margin_bottom = 34.0
+custom_colors/font_color = Color( 0.756863, 0.709804, 0.635294, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "陌生"
+
+[node name="年龄" type="Label" parent="Panel/Hbox/Mar/Vbox/Vbox2"]
+margin_top = 38.0
+margin_right = 48.0
+margin_bottom = 51.0
+custom_colors/font_color = Color( 0.756863, 0.709804, 0.635294, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "78"
+
+[node name="称号" type="Label" parent="Panel/Hbox/Mar/Vbox"]
+margin_top = 59.0
+margin_right = 48.0
+margin_bottom = 72.0
+custom_colors/font_color = Color( 0.984314, 0.282353, 0.254902, 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "黑帮教父"
+
+[connection signal="gui_input" from="." to="." method="_on_NPC信息框_gui_input"]
+[connection signal="texture_changed" from="Panel/肖像/左眉毛" to="." method="_on_左眉毛_texture_changed"]
+[connection signal="texture_changed" from="Panel/肖像/左眼睛" to="." method="_on_左眼睛_texture_changed"]
+[connection signal="gui_input" from="Panel/Hbox" to="Panel/Hbox" method="_on_Hbox_gui_input"]

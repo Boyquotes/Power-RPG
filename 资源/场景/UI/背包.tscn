@@ -1,151 +1,42 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://资源/主题.tres" type="Theme" id=1]
-[ext_resource path="res://资源/字体/思源宋体/思源宋R-80.tres" type="DynamicFont" id=2]
-[ext_resource path="res://资源/场景/UI/占位符.tscn" type="PackedScene" id=3]
-[ext_resource path="res://资源/场景/UI/标题.tscn" type="PackedScene" id=4]
+[ext_resource path="res://addons/FlowerInventory/src/InventoryNode.gd" type="Script" id=2]
+[ext_resource path="res://Settings/dist/数据表/Weapons.gd" type="Script" id=3]
+[ext_resource path="res://资源/场景/UI/物品模板.tscn" type="PackedScene" id=4]
 [ext_resource path="res://脚本/UI/背包.gd" type="Script" id=6]
 
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 1, 1, 1, 0 )
-
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 1, 1, 1, 1 )
-
 [node name="背包" type="Control" groups=["背包"]]
-anchor_right = 1.0
-anchor_bottom = 1.0
+margin_right = 1559.0
+margin_bottom = 764.0
 theme = ExtResource( 1 )
 script = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="背景" type="CanvasLayer" parent="."]
-layer = -128
+[node name="Inventory" type="Node" parent="."]
+script = ExtResource( 2 )
+data = "res://Settings/dist/Settings.gd"
+item_data = ExtResource( 3 )
+inventory_base_path = NodePath("../Panel/MarginContainer/GridContainer")
+item_template = ExtResource( 4 )
+item_name = "Panel/name"
+item_num = "Panel/num"
+item_icon = "Panel/icon"
 
-[node name="TextureRect" type="TextureRect" parent="背景"]
+[node name="Panel" type="Panel" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="容器1" type="HBoxContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-custom_constants/separation = -46
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+anchor_left = 0.064
+anchor_top = 0.141
+anchor_right = 0.936
+anchor_bottom = 0.859
+margin_left = 0.223999
+margin_top = 0.276001
+margin_right = -0.224121
+margin_bottom = -0.276001
 
-[node name="功能" type="VBoxContainer" parent="容器1"]
-margin_right = 1320.0
-margin_bottom = 1080.0
-rect_min_size = Vector2( 1320, 1080 )
-custom_constants/separation = 26
-
-[node name="容器2" type="HBoxContainer" parent="容器1/功能"]
-margin_right = 1320.0
-margin_bottom = 1080.0
-
-[node name="占位符" parent="容器1/功能/容器2" instance=ExtResource( 3 )]
-
-[node name="容器3" type="VBoxContainer" parent="容器1/功能/容器2"]
-margin_left = 29.0
-margin_right = 1229.0
-margin_bottom = 1080.0
-custom_constants/separation = 40
-
-[node name="标题" parent="容器1/功能/容器2/容器3" instance=ExtResource( 4 )]
-
-[node name="装备格" type="HBoxContainer" parent="容器1/功能/容器2/容器3"]
-margin_top = 185.0
-margin_right = 1200.0
-margin_bottom = 1035.0
-rect_min_size = Vector2( 1200, 850 )
-custom_constants/separation = -58
-
-[node name="格子" type="GridContainer" parent="容器1/功能/容器2/容器3/装备格"]
-margin_right = 1100.0
-margin_bottom = 850.0
-rect_min_size = Vector2( 1100, 850 )
-custom_constants/vseparation = 30
-custom_constants/hseparation = 30
+[node name="GridContainer" type="GridContainer" parent="Panel/MarginContainer"]
+margin_right = 1358.0
+margin_bottom = 548.0
 columns = 5
-
-[node name="滑动条" type="VSlider" parent="容器1/功能/容器2/容器3/装备格"]
-margin_left = 1042.0
-margin_right = 1163.0
-margin_bottom = 850.0
-rect_min_size = Vector2( 16, 0 )
-rounded = true
-
-[node name="信息" type="VBoxContainer" parent="容器1"]
-margin_left = 1274.0
-margin_right = 1874.0
-margin_bottom = 1080.0
-rect_min_size = Vector2( 600, 1080 )
-custom_constants/separation = 79
-
-[node name="占位符" type="Panel" parent="容器1/信息"]
-margin_right = 600.0
-custom_styles/panel = SubResource( 3 )
-
-[node name="第一部分" type="VBoxContainer" parent="容器1/信息"]
-margin_top = 79.0
-margin_right = 600.0
-margin_bottom = 252.0
-
-[node name="物品名" type="Label" parent="容器1/信息/第一部分"]
-margin_right = 600.0
-margin_bottom = 116.0
-custom_fonts/font = ExtResource( 2 )
-text = "玫瑰派"
-valign = 1
-
-[node name="物品类型" type="Label" parent="容器1/信息/第一部分"]
-margin_top = 120.0
-margin_right = 600.0
-margin_bottom = 173.0
-text = "武器 枪"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="物品介绍" type="Label" parent="容器1/信息"]
-margin_top = 331.0
-margin_right = 600.0
-margin_bottom = 664.0
-text = "枪柄上印着玫瑰派图标的枪，流行在王室之间。
-
-明明是很普通的枪，却在王室之间如此流行，是有什么原因吗？"
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="分割线" type="Panel" parent="容器1/信息"]
-margin_top = 743.0
-margin_right = 600.0
-margin_bottom = 745.0
-rect_min_size = Vector2( 600, 2 )
-custom_styles/panel = SubResource( 1 )
-
-[node name="按钮" type="VBoxContainer" parent="容器1/信息"]
-margin_top = 824.0
-margin_right = 600.0
-margin_bottom = 942.0
-
-[node name="装备" type="Button" parent="容器1/信息/按钮"]
-margin_right = 600.0
-margin_bottom = 57.0
-text = "装备"
-
-[node name="丢弃" type="Button" parent="容器1/信息/按钮"]
-margin_top = 61.0
-margin_right = 600.0
-margin_bottom = 118.0
-text = "丢弃"
-
-[connection signal="pressed" from="容器1/信息/按钮/装备" to="." method="_on_装备_pressed"]

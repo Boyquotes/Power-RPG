@@ -2,7 +2,9 @@
 
 [ext_resource path="res://资源/图片/图块/图块.png" type="Texture" id=1]
 [ext_resource path="res://脚本/地图/格子模板.gd" type="Script" id=2]
-[ext_resource path="res://addons/save_node/main/save_node.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 41.7193, 41.7193 )
 
 [node name="格子模板" type="Area2D" groups=["图块"]]
 script = ExtResource( 2 )
@@ -12,14 +14,9 @@ texture = ExtResource( 1 )
 hframes = 15
 vframes = 15
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 0, -64, 64, 0, 0, 63, -64, 0 )
-
-[node name="SaveNode" type="Node" parent="."]
-script = ExtResource( 3 )
-file_directory = "C:\\Users\\Administrator\\AppData\\Roaming\\Godot\\app_userdata\\厉害RPG"
-data_dictionary = {
-}
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 0.785398
+shape = SubResource( 1 )
 
 [connection signal="input_event" from="." to="." method="_on_格子模板_input_event"]
 [connection signal="mouse_entered" from="." to="." method="_on_格子模板_mouse_entered"]

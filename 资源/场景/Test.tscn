@@ -2,7 +2,7 @@
 
 [ext_resource path="res://资源/地图/图块.tres" type="TileSet" id=1]
 [ext_resource path="res://资源/场景/实体/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://addons/save_node/main/save_node.gd" type="Script" id=3]
+[ext_resource path="res://脚本/地图/AstarTilemap.gd" type="Script" id=3]
 [ext_resource path="res://脚本/地图/Test.gd" type="Script" id=4]
 [ext_resource path="res://资源/场景/UI/地图名.tscn" type="PackedScene" id=5]
 [ext_resource path="res://资源/音乐/top.wav" type="AudioStream" id=7]
@@ -18,9 +18,8 @@ cell_size = Vector2( 128, 128 )
 cell_custom_transform = Transform2D( 64, 64, -64, 64, 0, 0 )
 centered_textures = true
 format = 1
-
-[node name="Player" parent="TileMap" instance=ExtResource( 2 )]
-scale = Vector2( 0.5, 0.5 )
+tile_data = PoolIntArray( -262142, 2, 0, -262141, 2, 0, -196606, 2, 0, -196605, 2, 0 )
+script = ExtResource( 3 )
 
 [node name="地图名" parent="." instance=ExtResource( 5 )]
 
@@ -32,8 +31,41 @@ current = true
 zoom = Vector2( 0.5, 0.5 )
 smoothing_enabled = true
 
-[node name="SaveNode" type="Node" parent="."]
-script = ExtResource( 3 )
-file_directory = "D:/111"
-data_dictionary = {
-}
+[node name="Button" type="Button" parent="."]
+margin_left = 143.0
+margin_top = -28.0
+margin_right = 312.0
+margin_bottom = 39.0
+text = "save"
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 144.0
+margin_top = 62.0
+margin_right = 313.0
+margin_bottom = 129.0
+text = "load"
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 146.0
+margin_top = 146.0
+margin_right = 325.0
+margin_bottom = 221.0
+text = "build"
+
+[node name="AstarDebug" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Line" type="Line2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 64, 64 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Line2D" type="Line2D" parent="."]
+
+[connection signal="pressed" from="Button" to="." method="_on_save_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_build_pressed"]

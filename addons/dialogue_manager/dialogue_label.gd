@@ -1,18 +1,16 @@
 extends RichTextLabel
 
-
 signal spoke(letter, speed)
 signal paused(duration)
 signal finished()
 
-
-const Line = preload("res://addons/dialogue_manager/dialogue_line.gd")
-
+export var skip_action: String = "ui_cancel"
 export var seconds_per_step: float = 0.02
 
-
-var dialogue: Line
-
+var dialogue_line: Dictionary
+var 说明框 = preload("res://资源/场景/UI/信息框.tscn")
+var 临时说明框
+var 临时说明信息
 var index: int = 0
 var percent_per_index: float = 0
 var last_wait_index: int = -1
@@ -22,19 +20,31 @@ var is_typing: bool = false
 var has_finished: bool = false
 
 
+func _ready() -> void:
+	bbcode_text = ""
+
+
 func _process(delta: float) -> void:
 	if is_typing:
 		# Type out text
 		if percent_visible < 1:
 			# If cancel is pressed then skip typing it out
-			if Input.is_action_pressed("ui_cancel"):
+			if Input.is_action_just_pressed(skip_action):
 				percent_visible = 1
+				# Run any inline mutations that haven't been run yet
+				for i in range(index, get_total_character_count()):
+					mutate_inline_mutations(i)
+				has_finished = true
+				emit_signal("finished")
+				return
 			
-			# Otherwise, keep typing
-			elif waiting_seconds > 0:
-				waiting_seconds = max(0, waiting_seconds - delta)
-			else:
-				type_next(delta, 0)
+			# Otherwise, see if we are waiting
+			if waiting_seconds > 0:
+				waiting_seconds = waiting_seconds - delta
+			
+			# If we are no longer waiting then keep typing
+			if waiting_seconds <= 0:
+				type_next(delta, waiting_seconds)
 		else:
 			is_typing = false
 			if has_finished == false:
@@ -42,34 +52,140 @@ func _process(delta: float) -> void:
 				emit_signal("finished")
 
 
+func reset_height() -> void:
+	# If there is no dialogue then this label should have no height
+	if dialogue_line.text == "":
+		fit_content_height = false
+		rect_min_size = Vector2(rect_size.x, 0)
+		rect_size = Vector2.ZERO
+		yield(get_tree(), "idle_frame")
+		return
+	
+	fit_content_height = true
+	
+	# For some reason, RichTextLabels within containers don't resize properly when their content 
+	# changes so we make a clone that isn't bound by a VBox
+	var size_check_label = duplicate(0)
+	size_check_label.modulate.a = 0
+	get_tree().current_scene.add_child(size_check_label)
+	size_check_label.rect_size.x = rect_size.x
+	size_check_label.bbcode_text = dialogue_line.text
+	
+	# Give the size check a chance to resize
+	yield(get_tree(), "idle_frame")
+	
+	# Resize our dialogue label with the new size hint
+	rect_min_size = Vector2(rect_size.x, size_check_label.get_content_height())
+	rect_size = Vector2.ZERO
+	
+	# Destroy our clone
+	size_check_label.queue_free()
+	
+
+
 func type_next(delta: float, seconds_needed: float) -> void:
 	if last_mutation_index != index:
 		last_mutation_index = index
-		dialogue.mutate_inline_mutations(index)
+		mutate_inline_mutations(index)
 	
-	if last_wait_index != index and dialogue.get_pause(index) > 0:
+	if last_wait_index != index and get_pause(index) > 0:
 		last_wait_index = index
-		waiting_seconds += dialogue.get_pause(index)
-		emit_signal("paused", dialogue.get_pause(index))
+		waiting_seconds += get_pause(index)
+		emit_signal("paused", get_pause(index))
 	else:
 		percent_visible += percent_per_index
 		index += 1
-		seconds_needed += seconds_per_step * (1.0 / dialogue.get_speed(index))
+		seconds_needed += seconds_per_step * (1.0 / get_speed(index))
 		if seconds_needed > delta:
 			waiting_seconds += seconds_needed
 			if index < text.length():
-				emit_signal("spoke", text[index - 1], dialogue.get_speed(index))
+				emit_signal("spoke", text[index - 1], get_speed(index))
 		else:
 			type_next(delta, seconds_needed)
 
-
 func type_out() -> void:
-	bbcode_text = dialogue.dialogue
+	text_desc_show(dialogue_line)
+	bbcode_text = dialogue_line.text
 	percent_visible = 0
 	index = 0
 	has_finished = false
 	waiting_seconds = 0
+	
 	# Text isn't calculated until the next frame
 	yield(get_tree(), "idle_frame")
-	percent_per_index = 100.0 / float(get_total_character_count()) / 100.0
-	is_typing = true
+	if not get_total_character_count():
+		emit_signal("finished")
+		queue_free()
+		return
+	
+	if seconds_per_step == 0:
+		is_typing = false
+		percent_visible = 1
+		# Run any inline mutations
+		for i in range(index, get_total_character_count()):
+			mutate_inline_mutations(i)
+	else:
+		percent_per_index = 100.0 / float(get_total_character_count()) / 100.0
+		is_typing = true
+
+
+# Get the pause for the current typing position if there is one
+func get_pause(at_index: int) -> float:
+	return dialogue_line.pauses.get(at_index, 0)
+
+
+# Get the speed for the current typing position
+func get_speed(at_index: int) -> float:
+	var speed: float = 1
+	for index in dialogue_line.speeds:
+		if index > at_index:
+			return speed
+		speed = dialogue_line.speeds[index]
+	return speed
+
+
+# Run any mutations at the current typing position
+func mutate_inline_mutations(index: int) -> void:
+	for inline_mutation in dialogue_line.inline_mutations:
+		# inline mutations are an array of arrays in the form of [character index, resolvable function]
+		if inline_mutation[0] > index:
+			return
+		if inline_mutation[0] == index:
+			# The DialogueManager can't be referenced directly here so we need to get it by its path
+			get_node("/root/DialogueManager").mutate(inline_mutation[1])
+
+# ============= 自定义的格式 =============
+func text_desc_show(dialogue_line):
+	# t就是对话文本
+	var t = dialogue_line.text
+	# 使用正则解析描述
+	var reg = RegEx.new()
+	reg.compile('\\[name="(.+?)", desc="(.+?)"\\]')
+	var result = reg.search_all(t)
+	临时说明信息 = reg.get_names()
+	var item_list = []
+	
+	for i in result:
+		item_list.append(i.strings[1])
+		t = t.replace(i.strings[0], '')
+		
+	for i in item_list:
+		t += '[color=#179089][url]%s[/url][/color]' % i
+	
+	dialogue_line.text = t
+
+# 离开特殊标签触发
+func _on_DialogueLabel_meta_hover_ended(meta):
+	临时说明框.queue_free()
+
+# 进入特殊标签触发
+func _on_DialogueLabel_meta_hover_started(meta):
+	var t = 说明框.instance()
+	t.rect_global_position = get_global_mouse_position() + Vector2(20, 0)
+	get_parent().owner.add_child(t)
+	# 更新信息
+	t.set_info(临时说明信息)
+	# 进行位置移动
+	if (t.rect_position.y + t.rect_size.y) > OS.window_size.y:
+		t.rect_position.y -= t.rect_position.y + t.rect_size.y - OS.window_size.y
+	临时说明框 = t
