@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://资源/主题.tres" type="Theme" id=1]
 [ext_resource path="res://资源/字体/思源黑体/思源黑_粗22.tres" type="DynamicFont" id=2]
@@ -9,16 +9,21 @@
 [ext_resource path="res://资源/图片/UI/面板边框.png" type="Texture" id=7]
 [ext_resource path="res://资源/字体/思源黑体/思源黑_普通26.tres" type="DynamicFont" id=8]
 
-[node name="悬浮信息框" type="Popup" groups=["信息框"]]
-margin_right = 434.0
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[node name="悬浮信息框" type="Panel" groups=["信息框"]]
+margin_right = 388.0
 margin_bottom = 693.0
 mouse_filter = 2
+size_flags_horizontal = 3
 size_flags_vertical = 9
 theme = ExtResource( 1 )
+custom_styles/panel = SubResource( 1 )
 script = ExtResource( 4 )
 
 [node name="Panel" type="Panel" parent="."]
-anchor_right = 0.894
+anchor_right = 1.0
 anchor_bottom = 1.0
 size_flags_vertical = 8
 
@@ -62,30 +67,31 @@ margin_top = 90.0
 margin_right = 388.0
 margin_bottom = 425.0
 size_flags_vertical = 8
+custom_constants/margin_right = 26
 custom_constants/margin_left = 26
 
 [node name="Vbox2" type="VBoxContainer" parent="Panel/Vbox/Mar"]
 margin_left = 26.0
-margin_right = 388.0
+margin_right = 362.0
 margin_bottom = 335.0
 size_flags_vertical = 8
 custom_constants/separation = 22
 
 [node name="资源" type="VBoxContainer" parent="Panel/Vbox/Mar/Vbox2"]
-margin_right = 362.0
+margin_right = 336.0
 margin_bottom = 127.0
 size_flags_vertical = 8
 custom_constants/separation = 7
 
 [node name="标题" type="Label" parent="Panel/Vbox/Mar/Vbox2/资源"]
-margin_right = 362.0
+margin_right = 336.0
 margin_bottom = 23.0
 custom_colors/font_color = Color( 0.345098, 0.686275, 0.760784, 1 )
 text = "资源："
 
 [node name="Hbox" type="HBoxContainer" parent="Panel/Vbox/Mar/Vbox2/资源"]
 margin_top = 30.0
-margin_right = 362.0
+margin_right = 336.0
 margin_bottom = 127.0
 size_flags_vertical = 8
 custom_constants/separation = 26
@@ -241,57 +247,57 @@ valign = 2
 
 [node name="事件" type="VBoxContainer" parent="Panel/Vbox/Mar/Vbox2"]
 margin_top = 149.0
-margin_right = 362.0
+margin_right = 336.0
 margin_bottom = 233.0
 size_flags_vertical = 9
 custom_constants/separation = 7
 
 [node name="标题" type="Label" parent="Panel/Vbox/Mar/Vbox2/事件"]
-margin_right = 362.0
+margin_right = 336.0
 margin_bottom = 23.0
 custom_colors/font_color = Color( 0.345098, 0.686275, 0.760784, 1 )
 text = "事件："
 
 [node name="Vbox3" type="VBoxContainer" parent="Panel/Vbox/Mar/Vbox2/事件"]
 margin_top = 30.0
-margin_right = 362.0
+margin_right = 336.0
 margin_bottom = 84.0
 custom_constants/separation = 8
 
 [node name="Name" parent="Panel/Vbox/Mar/Vbox2/事件/Vbox3" instance=ExtResource( 5 )]
-margin_right = 362.0
+margin_right = 336.0
 text = "赶集"
 
 [node name="Name2" parent="Panel/Vbox/Mar/Vbox2/事件/Vbox3" instance=ExtResource( 5 )]
 margin_top = 31.0
-margin_right = 362.0
+margin_right = 336.0
 margin_bottom = 54.0
 text = "赶集"
 
 [node name="NPC" type="VBoxContainer" parent="Panel/Vbox/Mar/Vbox2"]
 margin_top = 255.0
-margin_right = 362.0
+margin_right = 336.0
 margin_bottom = 335.0
 size_flags_vertical = 9
 custom_constants/separation = 7
 
 [node name="标题" type="Label" parent="Panel/Vbox/Mar/Vbox2/NPC"]
-margin_right = 362.0
+margin_right = 336.0
 margin_bottom = 23.0
 custom_colors/font_color = Color( 0.345098, 0.686275, 0.760784, 1 )
 text = "所有人物："
 
 [node name="Vbox3" type="VBoxContainer" parent="Panel/Vbox/Mar/Vbox2/NPC"]
 margin_top = 30.0
-margin_right = 362.0
+margin_right = 336.0
 margin_bottom = 80.0
 
 [node name="Name" parent="Panel/Vbox/Mar/Vbox2/NPC/Vbox3" instance=ExtResource( 5 )]
-margin_right = 362.0
+margin_right = 336.0
 
 [node name="Name2" parent="Panel/Vbox/Mar/Vbox2/NPC/Vbox3" instance=ExtResource( 5 )]
 margin_top = 27.0
-margin_right = 362.0
+margin_right = 336.0
 margin_bottom = 50.0
 
 [node name="TextureRect" type="NinePatchRect" parent="Panel"]

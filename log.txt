@@ -1,2 +1,44 @@
-gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx => D:\Godot\项目\厉害RPG\Settings\dist\数据表\Item
+gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:道具表-Item => D:\Godot\项目\厉害RPG\Settings\dist\数据表\Item
+gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:武器表-Weapons => D:\Godot\项目\厉害RPG\Settings\dist\数据表\Weapons
+gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:技能表-Skills => D:\Godot\项目\厉害RPG\Settings\dist\数据表\Skills
+gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:敌人表-Enemy => D:\Godot\项目\厉害RPG\Settings\dist\数据表\Enemy
+gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:地名表-Map_name => D:\Godot\项目\厉害RPG\Settings\dist\数据表\Map_name
+gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:人名表-Npc_name => D:\Godot\项目\厉害RPG\Settings\dist\数据表\Npc_name
+gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:对话表-diglog => D:\Godot\项目\厉害RPG\Settings\dist\数据表\diglog
+gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:装备表-Armor => D:\Godot\项目\厉害RPG\Settings\dist\数据表\Armor
+gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:事件表-event => D:\Godot\项目\厉害RPG\Settings\dist\数据表\event
+gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:类型表-type => D:\Godot\项目\厉害RPG\Settings\dist\数据表\type
+gen-INFO:导出: D:\Godot\项目\厉害RPG\Settings\data\数据表.xlsx:词缀表- => D:\Godot\项目\厉害RPG\Settings\dist\数据表\词缀表
 gen-INFO:跳过 Settings.gd
+gen-ERROR:未捕获异常
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\Applications\Scoop\apps\python\current\Scripts\ee.exe\__main__.py", line 4, in <module>
+    from excelexporter.__main__ import main
+  File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\excelexporter\__main__.py", line 3, in <module>
+    main()
+  File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\click\core.py", line 1130, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\click\core.py", line 1055, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\click\core.py", line 1657, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\click\core.py", line 1404, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\click\core.py", line 760, in invoke
+    return __callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\excelexporter\cli.py", line 109, in gen_all
+    exporter.gen_all(cwd)
+  File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\excelexporter\exporter.py", line 266, in gen_all
+    on_completed()
+  File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\excelexporter\exporter.py", line 53, in on_completed
+    completed_gd()
+  File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\excelexporter\exporter.py", line 248, in completed_gd
+    f.write(code)
+io.UnsupportedOperation: not writable

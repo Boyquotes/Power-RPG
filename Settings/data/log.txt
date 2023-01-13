@@ -29,6 +29,6 @@ Traceback (most recent call last):
   File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\excelexporter\exporter.py", line 53, in on_completed
     completed_gd()
   File "D:\Applications\Scoop\apps\python\current\Lib\site-packages\excelexporter\exporter.py", line 247, in completed_gd
-    with open(settings_file_path, "w", newline="\n", encoding="utf-8") as f:
+    with open(settings_file_path, "r", newline="\n", encoding="utf-8") as f:
          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 FileNotFoundError: [Errno 2] No such file or directory: 'dist\\Settings.gd'

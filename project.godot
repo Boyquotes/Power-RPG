@@ -120,6 +120,11 @@ _global_script_class_icons={
 "Walker": ""
 }
 
+[GDExcelExporter]
+
+SettingsDir="res://Settings"
+cmd_path="ee"
+
 [application]
 
 config/name="玫瑰剑2"
@@ -150,7 +155,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/FlowerInventory/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/godot-mmkv/plugin.cfg", "res://addons/hierarchical_finite_state_machine/plugin.cfg", "res://addons/katuiche-colorful-console/plugin.cfg", "res://addons/quentincaffeino/console/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/FlowerInventory/plugin.cfg", "res://addons/FlowerSave/plugin.cfg", "res://addons/FlowerStory/plugin.cfg", "res://addons/GDEexcelExporer-Plugin-master/addons/GDExcelExporter/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/godot-mmkv/plugin.cfg", "res://addons/hierarchical_finite_state_machine/plugin.cfg", "res://addons/katuiche-colorful-console/plugin.cfg", "res://addons/quentincaffeino/console/plugin.cfg" )
 
 [importer_defaults]
 

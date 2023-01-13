@@ -74,7 +74,7 @@ func setDict(_key_name:String,_value):
 func setFloat(_key_name:String,_value:float):
 	_mmkv.setFloat(_key_name,_value)
 
-#设置一个浮点数
+#设置一个布尔
 func setBool(_key_name:String,_value:bool):
 	_mmkv.setBool(_key_name,_value)
 
@@ -93,6 +93,6 @@ func getDict(_key_name:String) -> Dictionary:
 func getFloat(_key_name:String) -> float:
 	return _mmkv.getFloat(_key_name)
 
-#读取一个浮点数
+#读取一个布尔
 func getBool(_key_name:String) -> bool:
 	return _mmkv.getBool(_key_name)

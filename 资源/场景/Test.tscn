@@ -18,7 +18,6 @@ cell_size = Vector2( 128, 128 )
 cell_custom_transform = Transform2D( 64, 64, -64, 64, 0, 0 )
 centered_textures = true
 format = 1
-tile_data = PoolIntArray( -262142, 2, 0, -262141, 2, 0, -196606, 2, 0, -196605, 2, 0 )
 script = ExtResource( 3 )
 
 [node name="地图名" parent="." instance=ExtResource( 5 )]
@@ -55,8 +54,6 @@ text = "build"
 [node name="AstarDebug" type="Control" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
-
-[node name="Line" type="Line2D" parent="."]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 64, 64 )

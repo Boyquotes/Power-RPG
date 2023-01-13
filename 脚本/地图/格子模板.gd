@@ -19,9 +19,6 @@ var event_num
 
 onready var map_name_list = 数据.Map_name_data[500001]
 
-func _init():
-	mmkv.initMMKV("厉害RPG", "save.default")
-
 # now_npc_id是一个ID数组，因为是在ready时调用，有可能没有NPC
 # 添加NPC Class
 func add_npc_class(now_npc_id):
@@ -59,29 +56,6 @@ func add_key():
 	key = 数据.key_list[数据.num]
 	数据.num += 1
 	return key
-
-func save():
-	key = add_key()
-	
-	var block_dic = {
-		"npcs": NPC数组,
-		"event": 事件数组,
-		"info": 信息数组,
-		}
-	#    存数组       key           值
-	mmkv.setDict(str(key), block_dic)
-
-# 读取存档
-func load_save():
-	# 清除数组
-	信息数组.clear()
-	NPC数组.clear()
-	事件数组.clear()
-	# 重新给数组赋值
-	事件数组 = mmkv.getDict(str(key)).event
-	信息数组 = mmkv.getDict(str(key)).info
-	NPC数组 = mmkv.getDict(str(key)).npcs
-	
 
 func _ready():
 	# 随机数
@@ -166,8 +140,7 @@ func 更新信息框():
 
 # 鼠标离开
 func _on_格子模板_mouse_exited():
-#	Uhd.die_tooltip()
-	pass
+	Uhd.die_tooltip()
 
 # 鼠标进入
 func _on_格子模板_mouse_entered():
@@ -177,9 +150,10 @@ func _on_格子模板_mouse_entered():
 	# 添加 Tooltip
 	Uhd.add_tooltip(mouse_pos, 图块索引)
 
-
 func _on_格子模板_input_event(viewport, event, shape_idx):
 	if Input.is_action_pressed("mouse_left"):
 		# 所有NPC是一个数组，里面是一个个NPC Class
 		Uhd.show_npcs(所有NPC)
-		
+
+func show_npc():
+	Uhd.show_npcs(所有NPC)

@@ -1,0 +1,307 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://资源/主题.tres" type="Theme" id=1]
+[ext_resource path="res://资源/图片/UI/面板边框.png" type="Texture" id=2]
+[ext_resource path="res://资源/图片/UI/红色bar.png" type="Texture" id=3]
+[ext_resource path="res://资源/图片/UI/金色小bar.png" type="Texture" id=4]
+[ext_resource path="res://资源/字体/思源黑体/思源黑_粗22.tres" type="DynamicFont" id=5]
+[ext_resource path="res://资源/字体/思源黑体/思源黑_普通26.tres" type="DynamicFont" id=6]
+[ext_resource path="res://脚本/UI/物品悬浮信息.gd" type="Script" id=7]
+
+[node name="物品悬浮信息" type="Panel"]
+margin_right = 388.0
+margin_bottom = 508.0
+rect_min_size = Vector2( 388, 300 )
+size_flags_vertical = 11
+theme = ExtResource( 1 )
+script = ExtResource( 7 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 200, 300 )
+size_flags_vertical = 9
+
+[node name="Vbox" type="VBoxContainer" parent="Panel"]
+anchor_right = 1.0
+margin_bottom = 63.0
+size_flags_vertical = 9
+
+[node name="VVbox" type="VBoxContainer" parent="Panel/Vbox"]
+margin_right = 388.0
+margin_bottom = 63.0
+rect_min_size = Vector2( 0, 63 )
+size_flags_vertical = 9
+custom_constants/separation = -3
+
+[node name="MarginContainer" type="TextureRect" parent="Panel/Vbox/VVbox"]
+margin_right = 388.0
+margin_bottom = 38.0
+rect_min_size = Vector2( 288, 32 )
+texture = ExtResource( 3 )
+
+[node name="武器名" type="Label" parent="Panel/Vbox/VVbox/MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 38 )
+custom_colors/font_color = Color( 0.992157, 0.792157, 0.568627, 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "迅疾 · 厉害剑 · 传奇单手剑"
+align = 1
+valign = 1
+
+[node name="bar" type="TextureRect" parent="Panel/Vbox/VVbox"]
+margin_top = 35.0
+margin_right = 388.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 1 )
+texture = ExtResource( 4 )
+
+[node name="Mar" type="MarginContainer" parent="Panel/Vbox"]
+margin_top = 67.0
+margin_right = 388.0
+margin_bottom = 387.0
+size_flags_vertical = 9
+custom_constants/margin_right = 20
+custom_constants/margin_left = 20
+
+[node name="Vbox" type="VBoxContainer" parent="Panel/Vbox/Mar"]
+margin_left = 20.0
+margin_right = 368.0
+margin_bottom = 320.0
+size_flags_vertical = 9
+custom_constants/separation = 18
+
+[node name="Vbox" type="VBoxContainer" parent="Panel/Vbox/Mar/Vbox"]
+margin_right = 348.0
+margin_bottom = 120.0
+size_flags_vertical = 9
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox"]
+margin_right = 348.0
+margin_bottom = 23.0
+custom_colors/font_color = Color( 0.345098, 0.686275, 0.760784, 1 )
+text = "基础属性："
+
+[node name="Hbox" type="HBoxContainer" parent="Panel/Vbox/Mar/Vbox/Vbox"]
+margin_top = 31.0
+margin_right = 348.0
+margin_bottom = 120.0
+size_flags_vertical = 9
+custom_constants/separation = 36
+
+[node name="Vbox" type="VBoxContainer" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox"]
+margin_right = 103.0
+margin_bottom = 89.0
+size_flags_vertical = 9
+
+[node name="Hbox" type="HBoxContainer" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox"]
+margin_right = 103.0
+margin_bottom = 27.0
+size_flags_vertical = 9
+custom_constants/separation = 14
+
+[node name="Label" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox/Hbox"]
+margin_top = 2.0
+margin_right = 44.0
+margin_bottom = 25.0
+text = "攻击"
+
+[node name="Label2" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox/Hbox"]
+margin_left = 58.0
+margin_right = 103.0
+margin_bottom = 27.0
+custom_colors/font_color = Color( 0.992157, 0.792157, 0.568627, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "588"
+
+[node name="Hbox2" type="HBoxContainer" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox"]
+margin_top = 31.0
+margin_right = 103.0
+margin_bottom = 58.0
+size_flags_vertical = 9
+custom_constants/separation = 14
+
+[node name="Label" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox/Hbox2"]
+margin_top = 2.0
+margin_right = 44.0
+margin_bottom = 25.0
+text = "防御"
+
+[node name="Label2" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox/Hbox2"]
+margin_left = 58.0
+margin_right = 103.0
+margin_bottom = 27.0
+custom_colors/font_color = Color( 0.992157, 0.792157, 0.568627, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "588"
+
+[node name="Hbox3" type="HBoxContainer" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox"]
+margin_top = 62.0
+margin_right = 103.0
+margin_bottom = 89.0
+size_flags_vertical = 9
+custom_constants/separation = 14
+
+[node name="Label" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox/Hbox3"]
+margin_top = 2.0
+margin_right = 44.0
+margin_bottom = 25.0
+text = "幸运"
+
+[node name="Label2" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox/Hbox3"]
+margin_left = 58.0
+margin_right = 103.0
+margin_bottom = 27.0
+custom_colors/font_color = Color( 0.992157, 0.792157, 0.568627, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "588"
+
+[node name="Vbox2" type="VBoxContainer" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox"]
+margin_left = 139.0
+margin_right = 242.0
+margin_bottom = 89.0
+size_flags_vertical = 9
+
+[node name="Hbox" type="HBoxContainer" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox2"]
+margin_right = 103.0
+margin_bottom = 27.0
+size_flags_vertical = 9
+custom_constants/separation = 14
+
+[node name="Label" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox2/Hbox"]
+margin_top = 2.0
+margin_right = 44.0
+margin_bottom = 25.0
+text = "速度"
+
+[node name="Label2" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox2/Hbox"]
+margin_left = 58.0
+margin_right = 103.0
+margin_bottom = 27.0
+custom_colors/font_color = Color( 0.992157, 0.792157, 0.568627, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "588"
+
+[node name="Hbox2" type="HBoxContainer" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox2"]
+margin_top = 31.0
+margin_right = 103.0
+margin_bottom = 58.0
+size_flags_vertical = 9
+custom_constants/separation = 14
+
+[node name="Label" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox2/Hbox2"]
+margin_top = 2.0
+margin_right = 44.0
+margin_bottom = 25.0
+text = "价值"
+
+[node name="Label2" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox2/Hbox2"]
+margin_left = 58.0
+margin_right = 103.0
+margin_bottom = 27.0
+custom_colors/font_color = Color( 0.992157, 0.792157, 0.568627, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "588"
+
+[node name="Hbox3" type="HBoxContainer" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox2"]
+margin_top = 62.0
+margin_right = 103.0
+margin_bottom = 89.0
+size_flags_vertical = 9
+custom_constants/separation = 14
+
+[node name="Label" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox2/Hbox3"]
+margin_top = 2.0
+margin_right = 44.0
+margin_bottom = 25.0
+text = "重量"
+
+[node name="Label2" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox2/Hbox3"]
+margin_left = 58.0
+margin_right = 103.0
+margin_bottom = 27.0
+custom_colors/font_color = Color( 0.992157, 0.792157, 0.568627, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "588"
+
+[node name="Vbox2" type="VBoxContainer" parent="Panel/Vbox/Mar/Vbox"]
+margin_top = 138.0
+margin_right = 348.0
+margin_bottom = 246.0
+size_flags_vertical = 9
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox2"]
+margin_right = 348.0
+margin_bottom = 23.0
+custom_colors/font_color = Color( 0.345098, 0.686275, 0.760784, 1 )
+text = "额外效果："
+
+[node name="Vbox" type="VBoxContainer" parent="Panel/Vbox/Mar/Vbox/Vbox2"]
+margin_top = 31.0
+margin_right = 348.0
+margin_bottom = 108.0
+
+[node name="Label" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox2/Vbox"]
+margin_right = 348.0
+margin_bottom = 23.0
+custom_colors/font_color = Color( 0.74902, 0.556863, 0.290196, 1 )
+text = "经验值 +3%"
+
+[node name="Label2" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox2/Vbox"]
+margin_top = 27.0
+margin_right = 348.0
+margin_bottom = 50.0
+custom_colors/font_color = Color( 0.74902, 0.556863, 0.290196, 1 )
+text = "经验值 +3%"
+
+[node name="Label3" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox2/Vbox"]
+margin_top = 54.0
+margin_right = 348.0
+margin_bottom = 77.0
+custom_colors/font_color = Color( 0.74902, 0.556863, 0.290196, 1 )
+text = "经验值 +3%"
+
+[node name="Vbox3" type="VBoxContainer" parent="Panel/Vbox/Mar/Vbox"]
+margin_top = 264.0
+margin_right = 348.0
+margin_bottom = 320.0
+size_flags_vertical = 9
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox3"]
+margin_right = 348.0
+margin_bottom = 23.0
+custom_colors/font_color = Color( 0.345098, 0.686275, 0.760784, 1 )
+text = "特殊效果："
+
+[node name="Vbox" type="VBoxContainer" parent="Panel/Vbox/Mar/Vbox/Vbox3"]
+margin_top = 31.0
+margin_right = 348.0
+margin_bottom = 56.0
+
+[node name="Label" type="RichTextLabel" parent="Panel/Vbox/Mar/Vbox/Vbox3/Vbox"]
+margin_right = 348.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 0, 25 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode_enabled = true
+bbcode_text = "[color=#FB4841]宗教：[/color]经验值 +3%"
+text = "宗教：经验值 +3%"
+
+[node name="TextureRect" type="NinePatchRect" parent="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+patch_margin_left = 34
+patch_margin_top = 31
+patch_margin_right = 46
+patch_margin_bottom = 40
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="Panel"]
+margin_bottom = 23.0

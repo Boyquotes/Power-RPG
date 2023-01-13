@@ -63,16 +63,17 @@ rect_min_size = Vector2( 180, 80 )
 custom_styles/panel = SubResource( 2 )
 
 [node name="肖像" type="Node2D" parent="Panel"]
-position = Vector2( 19, 4 )
-scale = Vector2( 0.1, 0.1 )
+position = Vector2( 14, 4 )
+scale = Vector2( 0.15, 0.15 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="衣服" type="Sprite" parent="Panel/肖像"]
-position = Vector2( 120, 450 )
-scale = Vector2( 1, 1 )
+position = Vector2( 120, 360 )
 texture = ExtResource( 13 )
+region_enabled = true
+region_rect = Rect2( 140, 0, 500, 350 )
 
 [node name="脸型" type="Sprite" parent="Panel/肖像"]
 position = Vector2( 110, 126.667 )
@@ -102,22 +103,20 @@ flip_h = true
 
 [node name="鼻子" type="Sprite" parent="Panel/肖像"]
 position = Vector2( 110, 170 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 11 )
 
 [node name="嘴巴" type="Sprite" parent="Panel/肖像"]
 position = Vector2( 110, 210 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 12 )
 
 [node name="Hbox" type="HBoxContainer" parent="Panel"]
-anchor_left = 0.664
+anchor_left = 0.692
 anchor_top = 0.5
-anchor_right = 0.664
+anchor_right = 0.692
 anchor_bottom = 0.5
-margin_left = -57.52
+margin_left = -54.56
 margin_top = -40.0
-margin_right = 57.48
+margin_right = 54.44
 margin_bottom = 40.0
 script = ExtResource( 7 )
 

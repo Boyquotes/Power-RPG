@@ -88,21 +88,20 @@ func connect_astar() -> void:
 
 # ========= Input函数 ==========
 func _input(event: InputEvent) -> void:
-	if get_used_rect().has_point(get_global_mouse_position()):
-		if event is InputEventMouseButton:
-			# 按左键就画线
-			if event.button_index == BUTTON_LEFT and event.is_pressed():
-				var path = 得到路径点(get_node("../Player").position, get_global_mouse_position())
-				# path : Array
-				draw_path(path)
-				get_node("..").寻路(path)
-			# 右键清除线
-			elif event.button_index == BUTTON_RIGHT and event.is_pressed():
-				draw_path([])
+	if event is InputEventMouseButton:
+		# 按左键就画线
+		if event.button_index == BUTTON_LEFT and event.is_pressed():
+			var path = 得到路径点(get_node("../Player").global_position, get_global_mouse_position())
+			# path : Array
+			draw_path(path)
+			get_node("..").寻路(path)
+		# 右键清除线
+		elif event.button_index == BUTTON_RIGHT and event.is_pressed():
+			draw_path([])
 
 # ========= 设置画线 ==========
 func set_to_position(pos: Vector2) -> void:
-	var path = 得到路径点(get_node("../Player").position, get_global_mouse_position())
+	var path = 得到路径点(get_node("../Player").global_position, get_global_mouse_position())
 	draw_path(path)
 
 # ========= 画线函数 ==========
