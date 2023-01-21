@@ -27,6 +27,7 @@ func 得到路径点(from: Vector2, to: Vector2) -> Array:
 	to = world_to_map(to)
 	# cell_map 是一个字典
 	# get_point_path 找到起点（from）和终点（to）之间的路径点
+	
 	var path: PoolVector2Array = astar.get_point_path(cell_map[from], cell_map[to])
 	var result: Array = []
 	for cell in path:
@@ -38,7 +39,7 @@ func 得到路径点(from: Vector2, to: Vector2) -> Array:
 # ========= 存图块索引数组 ==========
 func 存图块索引():
 	for i in get_child_count():
-		图块索引字典[str(world_to_map(get_child(i).position))] = i
+		图块索引字典[str(world_to_map(get_child(i).rect_position))] = i
 
 # ========= 设置图块索引（权重） ==========
 func set_tile() -> void:
@@ -135,7 +136,7 @@ func instance_tiles(tile_name, scene):
 	for pos in self.get_used_cells_by_id(id):
 		var node = scene.instance()
 		self.add_child(node)
-		node.position = self.map_to_world(pos) + self.cell_size / 2
+		node.rect_position = self.map_to_world(pos) + self.cell_size / 2
 		self.set_cellv(pos, -1)
 
 func 场景替换图块():

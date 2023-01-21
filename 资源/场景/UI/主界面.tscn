@@ -46,30 +46,33 @@ margin_bottom = -4.0
 theme = ExtResource( 3 )
 
 [node name="盒子" type="VBoxContainer" parent="Main"]
-anchor_left = 0.971
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 0.971
+anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -1085.32
-margin_top = -370.5
-margin_right = -0.32019
-margin_bottom = 354.5
+margin_left = -618.0
+margin_top = -432.0
+margin_right = 618.0
+margin_bottom = 432.0
 grow_vertical = 2
 custom_constants/separation = 88
 alignment = 2
 
 [node name="Logo" type="TextureRect" parent="Main/盒子"]
-margin_right = 1085.0
-margin_bottom = 273.0
+margin_top = 27.0
+margin_right = 1236.0
+margin_bottom = 439.0
 texture = ExtResource( 2 )
 
 [node name="Vbox" type="VBoxContainer" parent="Main/盒子"]
-margin_top = 361.0
-margin_right = 1085.0
-margin_bottom = 725.0
+margin_top = 527.0
+margin_right = 1236.0
+margin_bottom = 864.0
+custom_constants/separation = -5
+alignment = 1
 
 [node name="新游戏" type="Button" parent="Main/盒子/Vbox"]
-margin_right = 1085.0
+margin_right = 1236.0
 margin_bottom = 88.0
 focus_mode = 0
 custom_colors/font_color = Color( 0.666667, 0.686275, 0.670588, 1 )
@@ -81,12 +84,11 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
 enabled_focus_mode = 0
 text = "新游戏"
-align = 2
 
 [node name="读取存档" type="Button" parent="Main/盒子/Vbox"]
-margin_top = 92.0
-margin_right = 1085.0
-margin_bottom = 180.0
+margin_top = 83.0
+margin_right = 1236.0
+margin_bottom = 171.0
 focus_mode = 0
 custom_colors/font_color = Color( 0.666667, 0.686275, 0.670588, 1 )
 custom_colors/font_color_hover = Color( 0.886275, 0.870588, 0.827451, 1 )
@@ -97,12 +99,11 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
 enabled_focus_mode = 0
 text = "读取存档"
-align = 2
 
 [node name="设置" type="Button" parent="Main/盒子/Vbox"]
-margin_top = 184.0
-margin_right = 1085.0
-margin_bottom = 272.0
+margin_top = 166.0
+margin_right = 1236.0
+margin_bottom = 254.0
 focus_mode = 0
 custom_colors/font_color = Color( 0.666667, 0.686275, 0.670588, 1 )
 custom_colors/font_color_hover = Color( 0.886275, 0.870588, 0.827451, 1 )
@@ -113,12 +114,11 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
 enabled_focus_mode = 0
 text = "设置"
-align = 2
 
 [node name="退出" type="Button" parent="Main/盒子/Vbox"]
-margin_top = 276.0
-margin_right = 1085.0
-margin_bottom = 364.0
+margin_top = 249.0
+margin_right = 1236.0
+margin_bottom = 337.0
 focus_mode = 0
 custom_colors/font_color = Color( 0.666667, 0.686275, 0.670588, 1 )
 custom_colors/font_color_hover = Color( 0.886275, 0.870588, 0.827451, 1 )
@@ -129,7 +129,6 @@ custom_styles/pressed = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
 enabled_focus_mode = 0
 text = "退出"
-align = 2
 
 [node name="存档" type="VBoxContainer" parent="Main"]
 anchor_left = 0.5

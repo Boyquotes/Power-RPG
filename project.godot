@@ -9,41 +9,6 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Control",
-"class": "CtrlInventory",
-"language": "GDScript",
-"path": "res://addons/gloot/ctrl_inventory.gd"
-}, {
-"base": "Control",
-"class": "CtrlInventoryGrid",
-"language": "GDScript",
-"path": "res://addons/gloot/ctrl_inventory_grid.gd"
-}, {
-"base": "CtrlInventoryGrid",
-"class": "CtrlInventoryGridEx",
-"language": "GDScript",
-"path": "res://addons/gloot/ctrl_inventory_grid_ex.gd"
-}, {
-"base": "Control",
-"class": "CtrlInventoryItemRect",
-"language": "GDScript",
-"path": "res://addons/gloot/ctrl_inventory_item_rect.gd"
-}, {
-"base": "CtrlInventory",
-"class": "CtrlInventoryStacked",
-"language": "GDScript",
-"path": "res://addons/gloot/ctrl_inventory_stacked.gd"
-}, {
-"base": "Control",
-"class": "CtrlItemSlot",
-"language": "GDScript",
-"path": "res://addons/gloot/ctrl_item_slot.gd"
-}, {
-"base": "CtrlItemSlot",
-"class": "CtrlItemSlotEx",
-"language": "GDScript",
-"path": "res://addons/gloot/ctrl_item_slot_ex.gd"
-}, {
 "base": "Resource",
 "class": "DialogueResource",
 "language": "GDScript",
@@ -55,36 +20,6 @@ _global_script_classes=[ {
 "path": "res://addons/godot-mmkv/frame_timer.gd"
 }, {
 "base": "Node",
-"class": "Inventory",
-"language": "GDScript",
-"path": "res://addons/gloot/inventory.gd"
-}, {
-"base": "Inventory",
-"class": "InventoryGrid",
-"language": "GDScript",
-"path": "res://addons/gloot/inventory_grid.gd"
-}, {
-"base": "Node",
-"class": "InventoryItem",
-"language": "GDScript",
-"path": "res://addons/gloot/inventory_item.gd"
-}, {
-"base": "Inventory",
-"class": "InventoryStacked",
-"language": "GDScript",
-"path": "res://addons/gloot/inventory_stacked.gd"
-}, {
-"base": "Resource",
-"class": "ItemProtoset",
-"language": "GDScript",
-"path": "res://addons/gloot/item_protoset.gd"
-}, {
-"base": "Node",
-"class": "ItemSlot",
-"language": "GDScript",
-"path": "res://addons/gloot/item_slot.gd"
-}, {
-"base": "Node",
 "class": "NodeMMKV",
 "language": "GDScript",
 "path": "res://addons/godot-mmkv/mmkv.gd"
@@ -93,31 +28,12 @@ _global_script_classes=[ {
 "class": "Print",
 "language": "GDScript",
 "path": "res://addons/katuiche-colorful-console/class/print.gd"
-}, {
-"base": "Node",
-"class": "Walker",
-"language": "GDScript",
-"path": "res://脚本/数据/walker.gd"
 } ]
 _global_script_class_icons={
-"CtrlInventory": "",
-"CtrlInventoryGrid": "",
-"CtrlInventoryGridEx": "",
-"CtrlInventoryItemRect": "",
-"CtrlInventoryStacked": "",
-"CtrlItemSlot": "",
-"CtrlItemSlotEx": "",
 "DialogueResource": "",
 "FrameTimer": "",
-"Inventory": "",
-"InventoryGrid": "",
-"InventoryItem": "",
-"InventoryStacked": "",
-"ItemProtoset": "",
-"ItemSlot": "",
 "NodeMMKV": "",
-"Print": "res://addons/katuiche-colorful-console/class/icons/class.svg",
-"Walker": ""
+"Print": "res://addons/katuiche-colorful-console/class/icons/class.svg"
 }
 
 [GDExcelExporter]
@@ -128,7 +44,7 @@ cmd_path="ee"
 [application]
 
 config/name="玫瑰剑2"
-run/main_scene="res://资源/场景/UI/主界面.tscn"
+run/main_scene="res://资源/场景/UI/开场动画.tscn"
 boot_splash/image="res://资源/图片/welcome.png"
 config/icon="res://icon.png"
 
@@ -142,6 +58,7 @@ Uhd="*res://资源/场景/UI/UHD.tscn"
 GameState="*res://game_state.gd"
 mmkv="*res://addons/godot-mmkv/mmkv.gd"
 Console="*res://addons/quentincaffeino/console/src/Console.tscn"
+Persistence="*res://addons/nested-saving/Persistence.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [display]
@@ -155,7 +72,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/FlowerInventory/plugin.cfg", "res://addons/FlowerSave/plugin.cfg", "res://addons/FlowerStory/plugin.cfg", "res://addons/GDEexcelExporer-Plugin-master/addons/GDExcelExporter/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/godot-mmkv/plugin.cfg", "res://addons/hierarchical_finite_state_machine/plugin.cfg", "res://addons/katuiche-colorful-console/plugin.cfg", "res://addons/quentincaffeino/console/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/FlowerInventory/plugin.cfg", "res://addons/FlowerProcess/plugin.cfg", "res://addons/FlowerSave/plugin.cfg", "res://addons/FlowerStory/plugin.cfg", "res://addons/GDEexcelExporer-Plugin-master/addons/GDExcelExporter/plugin.cfg", "res://addons/dialogue_manager/plugin.cfg", "res://addons/gdscript_console/plugin.cfg", "res://addons/godot-mmkv/plugin.cfg", "res://addons/hierarchical_finite_state_machine/plugin.cfg", "res://addons/katuiche-colorful-console/plugin.cfg", "res://addons/nested-saving/plugin.cfg", "res://addons/quentincaffeino/console/plugin.cfg" )
 
 [importer_defaults]
 

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/FlowerProcess/src/Assets/Theme.tres" type="Theme" id=1]
+[ext_resource path="res://addons/FlowerProcess/src/Script/BaseNode.gd" type="Script" id=2]
+
+[node name="BaseNode" type="GraphNode"]
+margin_right = 200.0
+margin_bottom = 180.0
+rect_min_size = Vector2( 200, 180 )
+theme = ExtResource( 1 )
+title = "base_node"
+show_close = true
+resizable = true
+selected = true
+script = ExtResource( 2 )
+
+[connection signal="close_request" from="." to="." method="_on_BaseNode_close_request"]
+[connection signal="resize_request" from="." to="." method="_on_BaseNode_resize_request"]

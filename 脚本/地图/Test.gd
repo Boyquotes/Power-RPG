@@ -21,7 +21,7 @@ func _init():
 	mmkv.initMMKV("厉害RPG", "save.default") 
 
 func _ready():
-	Uhd.get_node("UHD顶栏").show()
+	Uhd.get_node("UI/UHD顶栏").show()
 
 # ============ 寻路 ============
 func 寻路(路径点):
@@ -38,7 +38,7 @@ func 寻路(路径点):
 	from = tilemap.图块索引字典[from]
 	var block = tilemap.get_child(from).block
 	Uhd.UHD顶栏更新(block)
-#	get_tree().call_group("图块", "show_npc")
+	get_tree().call_group("图块", "show_npc")
 
 func _process(delta):
 	#添加一个镜头缩放缓动效果

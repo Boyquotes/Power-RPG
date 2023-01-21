@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 var block
 var map_name_text
@@ -58,9 +58,7 @@ func add_key():
 	return key
 
 func _ready():
-	# 随机数
 	random.randomize()
-	# 实例化新图块
 	block = 数据.map_block.new()
 	# 添加地名
 	var number = random.randi_range(500001, 500864)
@@ -136,17 +134,16 @@ func add_event():
 # 当悬浮，更新信息
 func 更新信息框():
 	get_tree().call_group("信息框", "更新", 信息数组, 事件数组, NPC数组)
-	
 
-# 鼠标离开
 func _on_格子模板_mouse_exited():
 	Uhd.die_tooltip()
 
-# 鼠标进入
 func _on_格子模板_mouse_entered():
 	# 获取鼠标坐标
-	var mouse_pos = get_viewport().get_mouse_position()
-	var 图块索引 = self.get_index()
+	var mouse_pos:Vector2
+	mouse_pos.x = get_viewport().get_mouse_position().x + 10
+	mouse_pos.y = get_viewport().get_mouse_position().y + 10
+	var 图块索引:int = self.get_index()
 	# 添加 Tooltip
 	Uhd.add_tooltip(mouse_pos, 图块索引)
 
@@ -157,3 +154,6 @@ func _on_格子模板_input_event(viewport, event, shape_idx):
 
 func show_npc():
 	Uhd.show_npcs(所有NPC)
+
+
+

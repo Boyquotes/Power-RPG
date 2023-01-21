@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://addons/hierarchical_finite_state_machine/script/source/subresource/transition_subresource/expression_condition_res.gd" type="Script" id=1]
 [ext_resource path="res://addons/hierarchical_finite_state_machine/script/source/subresource/transition_subresource/variable_condition_res.gd" type="Script" id=2]
@@ -7,7 +7,8 @@
 [ext_resource path="res://addons/hierarchical_finite_state_machine/script/source/nested_fsm_res.gd" type="Script" id=5]
 [ext_resource path="res://addons/hierarchical_finite_state_machine/script/source/subresource/state_res.gd" type="Script" id=6]
 [ext_resource path="res://addons/hierarchical_finite_state_machine/script/hfsm.gd" type="Script" id=7]
-[ext_resource path="res://资源/图片/图块/Hex/ALL.png" type="Texture" id=8]
+[ext_resource path="res://资源/图片/图块/EXE图块.png" type="Texture" id=8]
+[ext_resource path="res://脚本/地图/战斗场景.gd" type="Script" id=10]
 
 [sub_resource type="Resource" id=1]
 script = ExtResource( 6 )
@@ -67,11 +68,11 @@ transition_comment_visible = true
 transition_editor_folded = false
 
 [sub_resource type="TileSet" id=8]
-0/name = "ALL.png 0"
+0/name = "EXE图块.png 0"
 0/texture = ExtResource( 8 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 0, 16, 32, 32 )
+0/region = Rect2( 0, 192, 128, 64 )
 0/tile_mode = 0
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
@@ -81,78 +82,9 @@ transition_editor_folded = false
 0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
-1/name = "ALL.png 1"
-1/texture = ExtResource( 8 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 32, 16, 32, 32 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape_one_way = false
-1/shape_one_way_margin = 0.0
-1/shapes = [  ]
-1/z_index = 0
-2/name = "ALL.png 2"
-2/texture = ExtResource( 8 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 48, 32, 32 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape_one_way = false
-2/shape_one_way_margin = 0.0
-2/shapes = [  ]
-2/z_index = 0
-3/name = "ALL.png 3"
-3/texture = ExtResource( 8 )
-3/tex_offset = Vector2( 0, 0 )
-3/modulate = Color( 1, 1, 1, 1 )
-3/region = Rect2( 32, 48, 32, 32 )
-3/tile_mode = 0
-3/occluder_offset = Vector2( 0, 0 )
-3/navigation_offset = Vector2( 0, 0 )
-3/shape_offset = Vector2( 0, 0 )
-3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape_one_way = false
-3/shape_one_way_margin = 0.0
-3/shapes = [  ]
-3/z_index = 0
-4/name = "ALL.png 4"
-4/texture = ExtResource( 8 )
-4/tex_offset = Vector2( 0, 0 )
-4/modulate = Color( 1, 1, 1, 1 )
-4/region = Rect2( 0, 80, 32, 32 )
-4/tile_mode = 0
-4/occluder_offset = Vector2( 0, 0 )
-4/navigation_offset = Vector2( 0, 0 )
-4/shape_offset = Vector2( 0, 0 )
-4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape_one_way = false
-4/shape_one_way_margin = 0.0
-4/shapes = [  ]
-4/z_index = 0
-5/name = "ALL.png 5"
-5/texture = ExtResource( 8 )
-5/tex_offset = Vector2( 0, 0 )
-5/modulate = Color( 1, 1, 1, 1 )
-5/region = Rect2( 32, 80, 32, 32 )
-5/tile_mode = 0
-5/occluder_offset = Vector2( 0, 0 )
-5/navigation_offset = Vector2( 0, 0 )
-5/shape_offset = Vector2( 0, 0 )
-5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape_one_way = false
-5/shape_one_way_margin = 0.0
-5/shapes = [  ]
-5/z_index = 0
 
 [node name="战斗场景" type="Node2D"]
+script = ExtResource( 10 )
 
 [node name="HFSM" type="Node" parent="."]
 script = ExtResource( 7 )
@@ -174,12 +106,14 @@ layer = -128
 [node name="ColorRect" type="ColorRect" parent="Background"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.188235, 0.207843, 0.239216, 1 )
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="BattleUHD" type="CanvasLayer" parent="."]
+
+[node name="Tilemap" type="TileMap" parent="."]
+position = Vector2( 64, 0 )
+scale = Vector2( 1.4, 1.4 )
 tile_set = SubResource( 8 )
-cell_size = Vector2( 32, 32 )
-cell_custom_transform = Transform2D( 16, 16, -16, 16, 0, 0 )
+cell_size = Vector2( 140, 80 )
 centered_textures = true
 format = 1
-tile_data = PoolIntArray( 786478, 2, 0, 786479, 2, 0, 786480, 2, 0, 786481, 2, 0, 786482, 2, 0, 786483, 2, 0, 852014, 2, 0, 852015, 2, 0, 852016, 2, 0, 852017, 2, 0, 852018, 2, 0, 852019, 2, 0, 917550, 2, 0, 917551, 2, 0, 917552, 2, 0, 917553, 2, 0, 917554, 2, 0, 917555, 2, 0, 983086, 2, 0, 983087, 2, 0, 983088, 2, 0, 983089, 2, 0, 983090, 2, 0, 983091, 2, 0, 1048622, 2, 0, 1048623, 2, 0, 1048624, 2, 0, 1048625, 2, 0, 1048626, 2, 0, 1048627, 2, 0, 1114163, 2, 0 )
+tile_data = PoolIntArray( 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0 )

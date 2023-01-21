@@ -1,7 +1,7 @@
 extends Control
 
 func _ready():
-	Uhd.get_node("UHD顶栏").hide()
+	Uhd.get_node("UI").hide()
 
 func _on_新游戏_pressed():
 	mmkv.initMMKV("厉害RPG", "save.default")

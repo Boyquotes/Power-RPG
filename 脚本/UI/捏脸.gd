@@ -30,7 +30,6 @@ onready var 玩家性别 = $Control/Vbox/Hbox/Panel/Vbox2/Marigin/Vbox/性别/Vb
 
 func _ready():
 	初始化捏脸值()
-	
 
 func 初始化捏脸值():
 	脸型的值 = 1
@@ -40,7 +39,6 @@ func 初始化捏脸值():
 	衣服的值 = 1
 	眼睛的值 = 1
 	头发的值 = 1
-	
 
 func 捏脸改变(当前值, 总值, 顺序, 路径, 类型):
 	if 顺序 == "下一个":
@@ -155,9 +153,3 @@ func _on_左眉毛_texture_changed():
 
 func _on_左眼睛_texture_changed():
 	$立绘/头/右眼睛.texture = $立绘/头/左眼睛.texture
-
-
-func _on_完成_pressed():
-	print("玩家名：" + 玩家名.text)
-	print("玩家性别：" + 玩家性别.group.get_pressed_button().name)
-	

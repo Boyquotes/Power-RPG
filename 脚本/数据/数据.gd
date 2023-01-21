@@ -8,7 +8,6 @@ var Weapons_data = Settings.Weapons.data()
 var Enemy_data = Settings.Enemy.data()
 var Map_name_data = Settings.Map_name.data()
 var Npc_name_data = Settings.Npc_name.data()
-var Dialog_data = Settings.diglog.data()
 var Event_data = Settings.event.data()
 
 var dialog = "res://资源/场景/UI/对话.tscn"

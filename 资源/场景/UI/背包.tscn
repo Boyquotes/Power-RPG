@@ -9,8 +9,8 @@
 [ext_resource path="res://资源/场景/UI/label.tscn" type="PackedScene" id=7]
 
 [node name="背包" type="Control" groups=["背包"]]
-anchor_right = 1.0
-anchor_bottom = 1.0
+margin_right = 1559.0
+margin_bottom = 746.0
 mouse_filter = 2
 theme = ExtResource( 1 )
 script = ExtResource( 6 )
@@ -18,25 +18,29 @@ script = ExtResource( 6 )
 [node name="Inventory" type="Node" parent="."]
 script = ExtResource( 2 )
 data = "res://Settings/dist/Settings.gd"
-inventory_base_path = NodePath("../Panel/MarginContainer/GridContainer")
+inventory_base_path = NodePath("../Panel/Margin/Vbox2/Scroll/Grid")
 item_template = ExtResource( 4 )
-item_name = "Panel/name"
-item_num = "Panel/num"
-item_icon = "Panel/icon"
+item_name = "Panel/Hbox/Vbox/name"
+item_num = "Panel/Hbox/Vbox/num"
+item_icon = "Panel/Hbox/icon"
+affix_front = 700001
+affix_end = 700430
+effect_front = 1
+effect_end = 430
 
 [node name="SaveLoad" type="Node" parent="."]
 script = ExtResource( 5 )
 
 [node name="Story" type="Node" parent="."]
 script = ExtResource( 3 )
-story_board = NodePath("../Panel/MarginContainer/Vbox")
+story_board = NodePath("../Panel/Margin/Vbox")
 story_line = ExtResource( 7 )
 data = "res://Settings/dist/Settings.gd"
 type = "Map_name"
 map_name_key = "地名"
 map_num = [ 500001, 500864 ]
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." groups=["Persist"]]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -47,24 +51,63 @@ margin_right = 779.5
 margin_bottom = 382.0
 mouse_filter = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel"]
-anchor_left = 0.064
-anchor_top = 0.141
-anchor_right = 0.936
-anchor_bottom = 0.859
-margin_left = 0.223999
-margin_top = 0.276001
-margin_right = -0.224121
-margin_bottom = -0.276001
+[node name="Margin" type="MarginContainer" parent="Panel" groups=["Persist"]]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -725.5
+margin_top = -330.0
+margin_right = 725.5
+margin_bottom = 330.0
 mouse_filter = 2
 
-[node name="GridContainer" type="GridContainer" parent="Panel/MarginContainer"]
+[node name="Vbox2" type="VBoxContainer" parent="Panel/Margin"]
+margin_right = 1451.0
+margin_bottom = 660.0
+
+[node name="Button" type="HBoxContainer" parent="Panel/Margin/Vbox2"]
+margin_right = 1451.0
+margin_bottom = 50.0
+
+[node name="Base" type="OptionButton" parent="Panel/Margin/Vbox2/Button"]
+margin_right = 100.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+text = "重量"
+
+[node name="Sort" type="OptionButton" parent="Panel/Margin/Vbox2/Button"]
+margin_left = 104.0
+margin_right = 204.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+text = "排序"
+
+[node name="Type" type="OptionButton" parent="Panel/Margin/Vbox2/Button"]
+margin_left = 208.0
+margin_right = 308.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 100, 50 )
+text = "分类"
+
+[node name="Scroll" type="ScrollContainer" parent="Panel/Margin/Vbox2"]
+margin_top = 54.0
+margin_right = 1451.0
+margin_bottom = 602.0
+rect_min_size = Vector2( 1451, 548 )
+
+[node name="Grid" type="GridContainer" parent="Panel/Margin/Vbox2/Scroll" groups=["Persist"]]
 margin_right = 1358.0
 margin_bottom = 548.0
+rect_min_size = Vector2( 1358, 548 )
 mouse_filter = 2
+custom_constants/vseparation = 20
+custom_constants/hseparation = 140
 columns = 5
 
-[node name="Vbox" type="VBoxContainer" parent="Panel/MarginContainer"]
-margin_right = 1358.0
-margin_bottom = 548.0
+[node name="Vbox" type="VBoxContainer" parent="Panel/Margin"]
+margin_right = 1451.0
+margin_bottom = 660.0
 mouse_filter = 2
+
+[connection signal="item_selected" from="Panel/Margin/Vbox2/Button/Sort" to="." method="_on_Sort_item_selected"]

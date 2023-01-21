@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=32 format=2]
+[gd_resource type="Theme" load_steps=33 format=2]
 
 [ext_resource path="res://资源/字体/思源黑体/思源黑_普通22.tres" type="DynamicFont" id=1]
 [ext_resource path="res://资源/图片/UI/方块指示器.png" type="Texture" id=2]
@@ -52,6 +52,9 @@ border_color = Color( 1, 1, 1, 0.509804 )
 bg_color = Color( 1, 1, 1, 0 )
 border_width_bottom = 2
 border_color = Color( 0.403922, 0.403922, 0.403922, 1 )
+
+[sub_resource type="StyleBoxFlat" id=36]
+bg_color = Color( 0.639216, 0.541176, 0.321569, 1 )
 
 [sub_resource type="StyleBoxFlat" id=15]
 bg_color = Color( 0.137255, 0.14902, 0.176471, 1 )
@@ -194,6 +197,8 @@ ColorPickerButton/styles/normal = SubResource( 35 )
 LineEdit/styles/focus = SubResource( 4 )
 LineEdit/styles/normal = SubResource( 5 )
 LineEdit/styles/read_only = SubResource( 6 )
+OptionButton/fonts/font = ExtResource( 1 )
+OptionButton/styles/normal = SubResource( 36 )
 Panel/styles/panel = SubResource( 15 )
 PopupDialog/styles/panel = SubResource( 14 )
 ProgressBar/styles/bg = SubResource( 16 )

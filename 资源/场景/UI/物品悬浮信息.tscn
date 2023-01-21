@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://资源/主题.tres" type="Theme" id=1]
 [ext_resource path="res://资源/图片/UI/面板边框.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://资源/字体/思源黑体/思源黑_粗22.tres" type="DynamicFont" id=5]
 [ext_resource path="res://资源/字体/思源黑体/思源黑_普通26.tres" type="DynamicFont" id=6]
 [ext_resource path="res://脚本/UI/物品悬浮信息.gd" type="Script" id=7]
+[ext_resource path="res://资源/字体/思源黑体/思源黑_普通22.tres" type="DynamicFont" id=8]
 
 [node name="物品悬浮信息" type="Panel"]
 margin_right = 388.0
@@ -60,7 +61,7 @@ texture = ExtResource( 4 )
 [node name="Mar" type="MarginContainer" parent="Panel/Vbox"]
 margin_top = 67.0
 margin_right = 388.0
-margin_bottom = 387.0
+margin_bottom = 310.0
 size_flags_vertical = 9
 custom_constants/margin_right = 20
 custom_constants/margin_left = 20
@@ -68,7 +69,7 @@ custom_constants/margin_left = 20
 [node name="Vbox" type="VBoxContainer" parent="Panel/Vbox/Mar"]
 margin_left = 20.0
 margin_right = 368.0
-margin_bottom = 320.0
+margin_bottom = 243.0
 size_flags_vertical = 9
 custom_constants/separation = 18
 
@@ -82,6 +83,7 @@ custom_constants/separation = 8
 margin_right = 348.0
 margin_bottom = 23.0
 custom_colors/font_color = Color( 0.345098, 0.686275, 0.760784, 1 )
+custom_fonts/font = ExtResource( 8 )
 text = "基础属性："
 
 [node name="Hbox" type="HBoxContainer" parent="Panel/Vbox/Mar/Vbox/Vbox"]
@@ -106,6 +108,7 @@ custom_constants/separation = 14
 margin_top = 2.0
 margin_right = 44.0
 margin_bottom = 25.0
+custom_fonts/font = ExtResource( 8 )
 text = "攻击"
 
 [node name="Label2" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox/Hbox"]
@@ -127,6 +130,7 @@ custom_constants/separation = 14
 margin_top = 2.0
 margin_right = 44.0
 margin_bottom = 25.0
+custom_fonts/font = ExtResource( 8 )
 text = "防御"
 
 [node name="Label2" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox/Hbox2"]
@@ -148,6 +152,7 @@ custom_constants/separation = 14
 margin_top = 2.0
 margin_right = 44.0
 margin_bottom = 25.0
+custom_fonts/font = ExtResource( 8 )
 text = "幸运"
 
 [node name="Label2" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox/Hbox3"]
@@ -174,6 +179,7 @@ custom_constants/separation = 14
 margin_top = 2.0
 margin_right = 44.0
 margin_bottom = 25.0
+custom_fonts/font = ExtResource( 8 )
 text = "速度"
 
 [node name="Label2" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox2/Hbox"]
@@ -195,6 +201,7 @@ custom_constants/separation = 14
 margin_top = 2.0
 margin_right = 44.0
 margin_bottom = 25.0
+custom_fonts/font = ExtResource( 8 )
 text = "价值"
 
 [node name="Label2" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox2/Hbox2"]
@@ -216,6 +223,7 @@ custom_constants/separation = 14
 margin_top = 2.0
 margin_right = 44.0
 margin_bottom = 25.0
+custom_fonts/font = ExtResource( 8 )
 text = "重量"
 
 [node name="Label2" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox/Hbox/Vbox2/Hbox3"]
@@ -229,7 +237,7 @@ text = "588"
 [node name="Vbox2" type="VBoxContainer" parent="Panel/Vbox/Mar/Vbox"]
 margin_top = 138.0
 margin_right = 348.0
-margin_bottom = 246.0
+margin_bottom = 169.0
 size_flags_vertical = 9
 custom_constants/separation = 8
 
@@ -237,37 +245,18 @@ custom_constants/separation = 8
 margin_right = 348.0
 margin_bottom = 23.0
 custom_colors/font_color = Color( 0.345098, 0.686275, 0.760784, 1 )
+custom_fonts/font = ExtResource( 8 )
 text = "额外效果："
 
 [node name="Vbox" type="VBoxContainer" parent="Panel/Vbox/Mar/Vbox/Vbox2"]
 margin_top = 31.0
 margin_right = 348.0
-margin_bottom = 108.0
-
-[node name="Label" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox2/Vbox"]
-margin_right = 348.0
-margin_bottom = 23.0
-custom_colors/font_color = Color( 0.74902, 0.556863, 0.290196, 1 )
-text = "经验值 +3%"
-
-[node name="Label2" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox2/Vbox"]
-margin_top = 27.0
-margin_right = 348.0
-margin_bottom = 50.0
-custom_colors/font_color = Color( 0.74902, 0.556863, 0.290196, 1 )
-text = "经验值 +3%"
-
-[node name="Label3" type="Label" parent="Panel/Vbox/Mar/Vbox/Vbox2/Vbox"]
-margin_top = 54.0
-margin_right = 348.0
-margin_bottom = 77.0
-custom_colors/font_color = Color( 0.74902, 0.556863, 0.290196, 1 )
-text = "经验值 +3%"
+margin_bottom = 31.0
 
 [node name="Vbox3" type="VBoxContainer" parent="Panel/Vbox/Mar/Vbox"]
-margin_top = 264.0
+margin_top = 187.0
 margin_right = 348.0
-margin_bottom = 320.0
+margin_bottom = 243.0
 size_flags_vertical = 9
 custom_constants/separation = 8
 
@@ -275,6 +264,7 @@ custom_constants/separation = 8
 margin_right = 348.0
 margin_bottom = 23.0
 custom_colors/font_color = Color( 0.345098, 0.686275, 0.760784, 1 )
+custom_fonts/font = ExtResource( 8 )
 text = "特殊效果："
 
 [node name="Vbox" type="VBoxContainer" parent="Panel/Vbox/Mar/Vbox/Vbox3"]
@@ -287,6 +277,11 @@ margin_right = 348.0
 margin_bottom = 25.0
 rect_min_size = Vector2( 0, 25 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_fonts/mono_font = ExtResource( 8 )
+custom_fonts/bold_italics_font = ExtResource( 8 )
+custom_fonts/italics_font = ExtResource( 8 )
+custom_fonts/bold_font = ExtResource( 8 )
+custom_fonts/normal_font = ExtResource( 8 )
 bbcode_enabled = true
 bbcode_text = "[color=#FB4841]宗教：[/color]经验值 +3%"
 text = "宗教：经验值 +3%"

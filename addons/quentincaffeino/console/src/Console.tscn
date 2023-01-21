@@ -39,10 +39,10 @@ tracks/1/keys = {
 }
 
 [sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 0.176471, 0.176471, 0.176471, 1 )
+bg_color = Color( 0.305882, 0.317647, 0.337255, 1 )
 
 [sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.0862745, 0.0862745, 0.0862745, 1 )
+bg_color = Color( 0, 0, 0, 0.317647 )
 
 [node name="Console" type="CanvasLayer"]
 pause_mode = 2
@@ -65,7 +65,7 @@ mouse_filter = 2
 
 [node name="ConsoleText" type="RichTextLabel" parent="ConsoleBox/Container"]
 margin_right = 1920.0
-margin_bottom = 509.0
+margin_bottom = 486.0
 focus_neighbour_left = NodePath("../LineEdit")
 focus_neighbour_top = NodePath("../LineEdit")
 focus_neighbour_right = NodePath("../LineEdit")
@@ -84,9 +84,10 @@ custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
 
 [node name="ConsoleLine" type="LineEdit" parent="ConsoleBox/Container"]
-margin_top = 513.0
+margin_top = 490.0
 margin_right = 1920.0
 margin_bottom = 540.0
+rect_min_size = Vector2( 0, 50 )
 focus_neighbour_left = NodePath(".")
 focus_neighbour_top = NodePath(".")
 focus_neighbour_right = NodePath(".")

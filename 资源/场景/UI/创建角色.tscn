@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://资源/主题.tres" type="Theme" id=1]
 [ext_resource path="res://脚本/UI/捏脸.gd" type="Script" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://资源/图片/捏脸/鼻子/鼻子1.png" type="Texture" id=8]
 [ext_resource path="res://资源/图片/捏脸/衣服/衣服1.png" type="Texture" id=9]
 [ext_resource path="res://资源/字体/思源黑体/思源黑_普通22.tres" type="DynamicFont" id=10]
+[ext_resource path="res://脚本/UI/创建角色.gd" type="Script" id=11]
+[ext_resource path="res://addons/FlowerSave/src/SaveloadNode.gd" type="Script" id=12]
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.101961, 0.113725, 0.141176, 1 )
@@ -161,6 +163,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 rect_min_size = Vector2( 1920, 1080 )
 theme = ExtResource( 1 )
+script = ExtResource( 11 )
 
 [node name="Vbox" type="VBoxContainer" parent="Control"]
 anchor_right = 1.0
@@ -590,7 +593,7 @@ margin_right = 1415.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 200, 100 )
 group = SubResource( 14 )
-text = "世界细节"
+text = "创建完成"
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -128
@@ -599,6 +602,9 @@ layer = -128
 anchor_right = 1.0
 anchor_bottom = 1.0
 custom_styles/panel = SubResource( 2 )
+
+[node name="SaveLoad" type="Node" parent="."]
+script = ExtResource( 12 )
 
 [connection signal="texture_changed" from="立绘/头/左眉毛" to="." method="_on_左眉毛_texture_changed"]
 [connection signal="texture_changed" from="立绘/头/左眼睛" to="." method="_on_左眼睛_texture_changed"]
@@ -614,4 +620,4 @@ custom_styles/panel = SubResource( 2 )
 [connection signal="pressed" from="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择嘴巴/Hbox/下一个" to="." method="_on_下一个嘴巴_pressed"]
 [connection signal="pressed" from="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择衣服/Hbox/上一个" to="." method="_on_上一个衣服_pressed"]
 [connection signal="pressed" from="Control/Vbox/Hbox/Vbox/Hbox/Vbox2/选择衣服/Hbox/下一个" to="." method="_on_下一个衣服_pressed"]
-[connection signal="pressed" from="Control/Vbox/Hbox2/完成" to="." method="_on_完成_pressed"]
+[connection signal="pressed" from="Control/Vbox/Hbox2/完成" to="Control" method="_on_完成_pressed"]
